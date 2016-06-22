@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
-#import "Movie.h"
+
 @interface ArchiverHandle : NSObject
 
 singleton_interface(ArchiverHandle)

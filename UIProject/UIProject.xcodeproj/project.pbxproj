@@ -15,6 +15,7 @@
 		D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C21D1A961E00F51C6F /* LaunchScreen.storyboard */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
+		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,9 @@
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		D6D0119F1D1AAC050076477D /* ArchiverHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverHandle.h; sourceTree = "<group>"; };
 		D6D011A01D1AAC050076477D /* ArchiverHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverHandle.m; sourceTree = "<group>"; };
+		D6D011A21D1AACEA0076477D /* DB_URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DB_URL.h; sourceTree = "<group>"; };
+		D6D011A31D1AAF570076477D /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		D6D011A41D1AAF570076477D /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D6D0119E1D1AABB70076477D /* Singleton.h */,
+				D6D011A21D1AACEA0076477D /* DB_URL.h */,
 			);
 			path = Marco;
 			sourceTree = "<group>";
@@ -139,6 +144,8 @@
 		D6D011961D1AAB3D0076477D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D6D011A31D1AAF570076477D /* Model.h */,
+				D6D011A41D1AAF570076477D /* Model.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
 				D632F4B91D1A961E00F51C6F /* AppDelegate.m in Sources */,
+				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
 			);
