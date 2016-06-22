@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
 		D632F4B61D1A961E00F51C6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D632F4B51D1A961E00F51C6F /* main.m */; };
 		D632F4B91D1A961E00F51C6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D632F4B81D1A961E00F51C6F /* AppDelegate.m */; };
 		D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632F4BB1D1A961E00F51C6F /* ViewController.m */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.release.xcconfig"; sourceTree = "<group>"; };
+		D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D632F4B11D1A961E00F51C6F /* UIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D632F4B51D1A961E00F51C6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D632F4B71D1A961E00F51C6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,18 +48,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43C9EF205169BA820B42A223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C93799ED9227F6E02FF1D45E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */,
+				CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D632F4A81D1A961E00F51C6F = {
 			isa = PBXGroup;
 			children = (
 				D6D011911D1AAB3D0076477D /* classes */,
 				D632F4B31D1A961E00F51C6F /* UIProject */,
 				D632F4B21D1A961E00F51C6F /* Products */,
+				C93799ED9227F6E02FF1D45E /* Pods */,
+				43C9EF205169BA820B42A223 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D632F4C81D1A961E00F51C6F /* Build configuration list for PBXNativeTarget "UIProject" */;
 			buildPhases = (
+				5BE01AD4ED75166FF98025A5 /* 📦 Check Pods Manifest.lock */,
 				D632F4AD1D1A961E00F51C6F /* Sources */,
 				D632F4AE1D1A961E00F51C6F /* Frameworks */,
 				D632F4AF1D1A961E00F51C6F /* Resources */,
+				A33BE8A815BDB338C48FC683 /* 📦 Embed Pods Frameworks */,
+				0D0E32D4C25803B1C3007A0A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +262,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D0E32D4C25803B1C3007A0A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIProject/Pods-UIProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BE01AD4ED75166FF98025A5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A33BE8A815BDB338C48FC683 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIProject/Pods-UIProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D632F4AD1D1A961E00F51C6F /* Sources */ = {
@@ -354,6 +429,7 @@
 		};
 		D632F4C91D1A961E00F51C6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIProject/Info.plist;
@@ -365,6 +441,7 @@
 		};
 		D632F4CA1D1A961E00F51C6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIProject/Info.plist;
