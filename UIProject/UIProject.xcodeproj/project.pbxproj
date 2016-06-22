@@ -13,6 +13,8 @@
 		D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4BD1D1A961E00F51C6F /* Main.storyboard */; };
 		D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C01D1A961E00F51C6F /* Assets.xcassets */; };
 		D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C21D1A961E00F51C6F /* LaunchScreen.storyboard */; };
+		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
+		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		D632F4C01D1A961E00F51C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D632F4C31D1A961E00F51C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D632F4C51D1A961E00F51C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
+		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
+		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		D6D0119F1D1AAC050076477D /* ArchiverHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverHandle.h; sourceTree = "<group>"; };
+		D6D011A01D1AAC050076477D /* ArchiverHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverHandle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 		D632F4A81D1A961E00F51C6F = {
 			isa = PBXGroup;
 			children = (
+				D6D011911D1AAB3D0076477D /* classes */,
 				D632F4B31D1A961E00F51C6F /* UIProject */,
 				D632F4B21D1A961E00F51C6F /* Products */,
 			);
@@ -77,6 +85,83 @@
 				D632F4B51D1A961E00F51C6F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6D011911D1AAB3D0076477D /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				D6D011921D1AAB3D0076477D /* AppDelegate */,
+				D6D011931D1AAB3D0076477D /* General */,
+				D6D011941D1AAB3D0076477D /* Helper */,
+				D6D011951D1AAB3D0076477D /* Marco */,
+				D6D011961D1AAB3D0076477D /* Models */,
+				D6D011971D1AAB3D0076477D /* Resources */,
+				D6D011981D1AAB3D0076477D /* Sences */,
+				D6D011991D1AAB3D0076477D /* Vendors */,
+			);
+			name = classes;
+			path = UIProject/classes;
+			sourceTree = "<group>";
+		};
+		D6D011921D1AAB3D0076477D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D6D011931D1AAB3D0076477D /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		D6D011941D1AAB3D0076477D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */,
+				D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */,
+				D6D0119F1D1AAC050076477D /* ArchiverHandle.h */,
+				D6D011A01D1AAC050076477D /* ArchiverHandle.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D6D011951D1AAB3D0076477D /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				D6D0119E1D1AABB70076477D /* Singleton.h */,
+			);
+			path = Marco;
+			sourceTree = "<group>";
+		};
+		D6D011961D1AAB3D0076477D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6D011971D1AAB3D0076477D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6D011981D1AAB3D0076477D /* Sences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sences;
+			sourceTree = "<group>";
+		};
+		D6D011991D1AAB3D0076477D /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
+				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
 				D632F4B91D1A961E00F51C6F /* AppDelegate.m in Sources */,
+				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +385,7 @@
 				D632F4CA1D1A961E00F51C6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
