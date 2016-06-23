@@ -13,6 +13,19 @@
 		D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4BD1D1A961E00F51C6F /* Main.storyboard */; };
 		D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C01D1A961E00F51C6F /* Assets.xcassets */; };
 		D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C21D1A961E00F51C6F /* LaunchScreen.storyboard */; };
+		D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */; };
+		D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */; };
+		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
+		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
+		D68AC7C51D1BB2E800EBB00B /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */; };
+		D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */; };
+		D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7C81D1BB33F00EBB00B /* Secret.m */; };
+		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
+		D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CE1D1BB37C00EBB00B /* Travel.m */; };
+		D68AC7D31D1BB43F00EBB00B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7D11D1BB43F00EBB00B /* UserViewController.m */; };
+		D68AC7D41D1BB43F00EBB00B /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7D21D1BB43F00EBB00B /* UserViewController.xib */; };
+		D68AC7D71D1BB46000EBB00B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7D61D1BB46000EBB00B /* User.m */; };
+		D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7DD1D1BB58300EBB00B /* RootViewController.m */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -31,6 +44,28 @@
 		D632F4C01D1A961E00F51C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D632F4C31D1A961E00F51C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D632F4C51D1A961E00F51C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68AC7B81D1BB2AE00EBB00B /* SecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretViewController.h; sourceTree = "<group>"; };
+		D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretViewController.m; sourceTree = "<group>"; };
+		D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecretViewController.xib; sourceTree = "<group>"; };
+		D68AC7BD1D1BB2CB00EBB00B /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
+		D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
+		D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
+		D68AC7C21D1BB2E800EBB00B /* TravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelViewController.h; sourceTree = "<group>"; };
+		D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelViewController.m; sourceTree = "<group>"; };
+		D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelViewController.xib; sourceTree = "<group>"; };
+		D68AC7C71D1BB33F00EBB00B /* Secret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secret.h; sourceTree = "<group>"; };
+		D68AC7C81D1BB33F00EBB00B /* Secret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secret.m; sourceTree = "<group>"; };
+		D68AC7CA1D1BB35400EBB00B /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		D68AC7CB1D1BB35400EBB00B /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		D68AC7CD1D1BB37C00EBB00B /* Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Travel.h; sourceTree = "<group>"; };
+		D68AC7CE1D1BB37C00EBB00B /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
+		D68AC7D01D1BB43F00EBB00B /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		D68AC7D11D1BB43F00EBB00B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		D68AC7D21D1BB43F00EBB00B /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		D68AC7D51D1BB46000EBB00B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D68AC7D61D1BB46000EBB00B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D68AC7DC1D1BB58300EBB00B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D68AC7DD1D1BB58300EBB00B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -113,6 +148,159 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D68AC5661D1B93A600EBB00B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7A41D1B94A600EBB00B /* Controllers */,
+				D68AC7A51D1B94A600EBB00B /* Models */,
+				D68AC7A61D1B94A600EBB00B /* Views */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D68AC7A41D1B94A600EBB00B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7D01D1BB43F00EBB00B /* UserViewController.h */,
+				D68AC7D11D1BB43F00EBB00B /* UserViewController.m */,
+				D68AC7D21D1BB43F00EBB00B /* UserViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D68AC7A51D1B94A600EBB00B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7D51D1BB46000EBB00B /* User.h */,
+				D68AC7D61D1BB46000EBB00B /* User.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68AC7A61D1B94A600EBB00B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68AC7AC1D1BB28200EBB00B /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7AD1D1BB28200EBB00B /* Controller */,
+				D68AC7AE1D1BB28200EBB00B /* Models */,
+				D68AC7AF1D1BB28200EBB00B /* Views */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		D68AC7AD1D1BB28200EBB00B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7B81D1BB2AE00EBB00B /* SecretViewController.h */,
+				D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */,
+				D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D68AC7AE1D1BB28200EBB00B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7C71D1BB33F00EBB00B /* Secret.h */,
+				D68AC7C81D1BB33F00EBB00B /* Secret.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68AC7AF1D1BB28200EBB00B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68AC7B01D1BB28200EBB00B /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7B11D1BB28200EBB00B /* Controller */,
+				D68AC7B21D1BB28300EBB00B /* Models */,
+				D68AC7B31D1BB28300EBB00B /* Views */,
+			);
+			path = Song;
+			sourceTree = "<group>";
+		};
+		D68AC7B11D1BB28200EBB00B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7BD1D1BB2CB00EBB00B /* SongViewController.h */,
+				D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */,
+				D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D68AC7B21D1BB28300EBB00B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7CA1D1BB35400EBB00B /* Song.h */,
+				D68AC7CB1D1BB35400EBB00B /* Song.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68AC7B31D1BB28300EBB00B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68AC7B41D1BB28300EBB00B /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7B51D1BB28300EBB00B /* Controller */,
+				D68AC7B61D1BB28300EBB00B /* Models */,
+				D68AC7B71D1BB28300EBB00B /* Views */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		D68AC7B51D1BB28300EBB00B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7C21D1BB2E800EBB00B /* TravelViewController.h */,
+				D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */,
+				D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D68AC7B61D1BB28300EBB00B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7CD1D1BB37C00EBB00B /* Travel.h */,
+				D68AC7CE1D1BB37C00EBB00B /* Travel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68AC7B71D1BB28300EBB00B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68AC7D81D1BB50200EBB00B /* RootVC */ = {
+			isa = PBXGroup;
+			children = (
+				D68AC7DC1D1BB58300EBB00B /* RootViewController.h */,
+				D68AC7DD1D1BB58300EBB00B /* RootViewController.m */,
+			);
+			path = RootVC;
+			sourceTree = "<group>";
+		};
 		D6D011911D1AAB3D0076477D /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +322,7 @@
 			children = (
 				D6D011A61D1AD3090076477D /* AppDelegate.h */,
 				D6D011A71D1AD3090076477D /* AppDelegate.m */,
+				D68AC7D81D1BB50200EBB00B /* RootVC */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -184,6 +373,10 @@
 		D6D011981D1AAB3D0076477D /* Sences */ = {
 			isa = PBXGroup;
 			children = (
+				D68AC7AC1D1BB28200EBB00B /* Secret */,
+				D68AC7B01D1BB28200EBB00B /* Song */,
+				D68AC7B41D1BB28300EBB00B /* Travel */,
+				D68AC5661D1B93A600EBB00B /* User */,
 			);
 			path = Sences;
 			sourceTree = "<group>";
@@ -256,6 +449,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
+				D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */,
+				D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */,
+				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
+				D68AC7D41D1BB43F00EBB00B /* UserViewController.xib in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
 			);
@@ -316,11 +513,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
+				D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */,
+				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
+				D68AC7D71D1BB46000EBB00B /* User.m in Sources */,
+				D68AC7C51D1BB2E800EBB00B /* TravelViewController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
+				D68AC7D31D1BB43F00EBB00B /* UserViewController.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
+				D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */,
+				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
+				D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */,
 				D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
