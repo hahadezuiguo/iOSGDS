@@ -17,4 +17,10 @@
 
 
 
+#define SECRET_LIST_URL @"http://wp.asopeixun.com:5000/get_post_from_category_id?category_id=191"
+
+#define HEALTH_URL @"http://api.bbwansha.com:8080/bbwssubclass2/index.php/Home/Doctor/doctorlist?type=2&page=1"
+
+#define COOK_URL @"http://api.bbwansha.com:8080/bbwssubclass2/index.php/Home/Healthy/healthylist?type=2&page=1"
+
 #endif /* DB_URL_h */
