@@ -13,20 +13,28 @@
 		D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4BD1D1A961E00F51C6F /* Main.storyboard */; };
 		D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C01D1A961E00F51C6F /* Assets.xcassets */; };
 		D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C21D1A961E00F51C6F /* LaunchScreen.storyboard */; };
-		D668FDBB1D1BD51F00DB29C8 /* where.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDBA1D1BD51F00DB29C8 /* where.png */; };
-		D668FDF91D1C0C8E00DB29C8 /* WhereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */; };
-		D668FDFA1D1C0C8E00DB29C8 /* WhereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */; };
-		D668FDFB1D1C0C8E00DB29C8 /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF61D1C0C8E00DB29C8 /* where1.png */; };
-		D668FDFC1D1C0C8E00DB29C8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF71D1C0C8E00DB29C8 /* 1.png */; };
-		D668FDFD1D1C0C8E00DB29C8 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF81D1C0C8E00DB29C8 /* 11.png */; };
-		D668FE011D1C0D9C00DB29C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */; };
-		D668FE021D1C0D9C00DB29C8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */; };
+		D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99E1D1D786D00D0CC3E /* where1.png */; };
+		D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99F1D1D786D00D0CC3E /* 1.png */; };
+		D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A01D1D786D00D0CC3E /* 11.png */; };
+		D65FA9A71D1D786D00D0CC3E /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A11D1D786D00D0CC3E /* go.png */; };
+		D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A21D1D786D00D0CC3E /* 11副本.png */; };
+		D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A31D1D786D00D0CC3E /* weather.jpeg */; };
+		D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9AB1D1D78CE00D0CC3E /* WhereViewController.m */; };
+		D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9AC1D1D78CE00D0CC3E /* WhereViewController.xib */; };
+		D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9B01D1D78E000D0CC3E /* TravelViewController.m */; };
+		D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */; };
+		D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B41D1D78ED00D0CC3E /* weather1.jpeg */; };
+		D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B51D1D78ED00D0CC3E /* where.png */; };
+		D65FA9BA1D1D78FF00D0CC3E /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9B91D1D78FF00D0CC3E /* Weather.m */; };
+		D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */; };
+		D65FA9C11D1D794600D0CC3E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BF1D1D794600D0CC3E /* MapViewController.m */; };
+		D65FA9C21D1D794600D0CC3E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9C01D1D794600D0CC3E /* MapViewController.xib */; };
+		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
+		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
 		D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */; };
 		D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */; };
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
 		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
-		D68AC7C51D1BB2E800EBB00B /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */; };
-		D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */; };
 		D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7C81D1BB33F00EBB00B /* Secret.m */; };
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
 		D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CE1D1BB37C00EBB00B /* Travel.m */; };
@@ -59,25 +67,37 @@
 		D632F4C01D1A961E00F51C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D632F4C31D1A961E00F51C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D632F4C51D1A961E00F51C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D668FDBA1D1BD51F00DB29C8 /* where.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where.png; sourceTree = "<group>"; };
-		D668FDF31D1C0C8E00DB29C8 /* WhereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereViewController.h; sourceTree = "<group>"; };
-		D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereViewController.m; sourceTree = "<group>"; };
-		D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereViewController.xib; sourceTree = "<group>"; };
-		D668FDF61D1C0C8E00DB29C8 /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
-		D668FDF71D1C0C8E00DB29C8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		D668FDF81D1C0C8E00DB29C8 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		D668FDFE1D1C0D9C00DB29C8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D65FA99E1D1D786D00D0CC3E /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
+		D65FA99F1D1D786D00D0CC3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		D65FA9A01D1D786D00D0CC3E /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		D65FA9A11D1D786D00D0CC3E /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
+		D65FA9A21D1D786D00D0CC3E /* 11副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11副本.png"; sourceTree = "<group>"; };
+		D65FA9A31D1D786D00D0CC3E /* weather.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather.jpeg; sourceTree = "<group>"; };
+		D65FA9AA1D1D78CE00D0CC3E /* WhereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereViewController.h; sourceTree = "<group>"; };
+		D65FA9AB1D1D78CE00D0CC3E /* WhereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereViewController.m; sourceTree = "<group>"; };
+		D65FA9AC1D1D78CE00D0CC3E /* WhereViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereViewController.xib; sourceTree = "<group>"; };
+		D65FA9AF1D1D78E000D0CC3E /* TravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelViewController.h; sourceTree = "<group>"; };
+		D65FA9B01D1D78E000D0CC3E /* TravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelViewController.m; sourceTree = "<group>"; };
+		D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelViewController.xib; sourceTree = "<group>"; };
+		D65FA9B41D1D78ED00D0CC3E /* weather1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather1.jpeg; sourceTree = "<group>"; };
+		D65FA9B51D1D78ED00D0CC3E /* where.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where.png; sourceTree = "<group>"; };
+		D65FA9B81D1D78FF00D0CC3E /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		D65FA9B91D1D78FF00D0CC3E /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		D65FA9BB1D1D793900D0CC3E /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
+		D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
+		D65FA9BE1D1D794600D0CC3E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D65FA9BF1D1D794600D0CC3E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D65FA9C01D1D794600D0CC3E /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D65FA9C71D1D79CF00D0CC3E /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
+		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
 		D68AC7B81D1BB2AE00EBB00B /* SecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretViewController.h; sourceTree = "<group>"; };
 		D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretViewController.m; sourceTree = "<group>"; };
 		D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecretViewController.xib; sourceTree = "<group>"; };
 		D68AC7BD1D1BB2CB00EBB00B /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
 		D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
 		D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
-		D68AC7C21D1BB2E800EBB00B /* TravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelViewController.h; sourceTree = "<group>"; };
-		D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelViewController.m; sourceTree = "<group>"; };
-		D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelViewController.xib; sourceTree = "<group>"; };
 		D68AC7C71D1BB33F00EBB00B /* Secret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secret.h; sourceTree = "<group>"; };
 		D68AC7C81D1BB33F00EBB00B /* Secret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secret.m; sourceTree = "<group>"; };
 		D68AC7CA1D1BB35400EBB00B /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
@@ -120,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */,
+				D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +203,15 @@
 				D632F4B51D1A961E00F51C6F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D65FA9CA1D1D7D2D00D0CC3E /* APIStoreSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */,
+				D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */,
+			);
+			path = APIStoreSDK;
 			sourceTree = "<group>";
 		};
 		D68AC7AC1D1BB28200EBB00B /* Secret */ = {
@@ -269,19 +299,12 @@
 		D68AC7B51D1BB28300EBB00B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D668FDF31D1C0C8E00DB29C8 /* WhereViewController.h */,
-				D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */,
-				D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */,
-				D668FDF61D1C0C8E00DB29C8 /* where1.png */,
-				D668FDF71D1C0C8E00DB29C8 /* 1.png */,
-				D668FDF81D1C0C8E00DB29C8 /* 11.png */,
-				D68AC7C21D1BB2E800EBB00B /* TravelViewController.h */,
-				D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */,
-				D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */,
-				D668FDBA1D1BD51F00DB29C8 /* where.png */,
-				D668FDFE1D1C0D9C00DB29C8 /* MapViewController.h */,
-				D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */,
-				D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */,
+				D65FA9AF1D1D78E000D0CC3E /* TravelViewController.h */,
+				D65FA9B01D1D78E000D0CC3E /* TravelViewController.m */,
+				D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */,
+				D65FA9AA1D1D78CE00D0CC3E /* WhereViewController.h */,
+				D65FA9AB1D1D78CE00D0CC3E /* WhereViewController.m */,
+				D65FA9AC1D1D78CE00D0CC3E /* WhereViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +312,8 @@
 		D68AC7B61D1BB28300EBB00B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D65FA9B81D1D78FF00D0CC3E /* Weather.h */,
+				D65FA9B91D1D78FF00D0CC3E /* Weather.m */,
 				D68AC7CD1D1BB37C00EBB00B /* Travel.h */,
 				D68AC7CE1D1BB37C00EBB00B /* Travel.m */,
 			);
@@ -298,6 +323,8 @@
 		D68AC7B71D1BB28300EBB00B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D65FA9C71D1D79CF00D0CC3E /* MessageView.h */,
+				D65FA9C81D1D79CF00D0CC3E /* MessageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +341,7 @@
 		D6D011911D1AAB3D0076477D /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				D65FA9CA1D1D7D2D00D0CC3E /* APIStoreSDK */,
 				D6D011921D1AAB3D0076477D /* AppDelegate */,
 				D6D011931D1AAB3D0076477D /* General */,
 				D6D011941D1AAB3D0076477D /* Helper */,
@@ -340,6 +368,8 @@
 		D6D011931D1AAB3D0076477D /* General */ = {
 			isa = PBXGroup;
 			children = (
+				D65FA9BB1D1D793900D0CC3E /* NSString+JSON.h */,
+				D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -376,6 +406,14 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D65FA99E1D1D786D00D0CC3E /* where1.png */,
+				D65FA99F1D1D786D00D0CC3E /* 1.png */,
+				D65FA9A01D1D786D00D0CC3E /* 11.png */,
+				D65FA9A11D1D786D00D0CC3E /* go.png */,
+				D65FA9A21D1D786D00D0CC3E /* 11副本.png */,
+				D65FA9A31D1D786D00D0CC3E /* weather.jpeg */,
+				D65FA9B41D1D78ED00D0CC3E /* weather1.jpeg */,
+				D65FA9B51D1D78ED00D0CC3E /* where.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -420,6 +458,9 @@
 				D6F8F1E71D1CE8B700D39982 /* UserViewController.h */,
 				D6F8F1E81D1CE8B700D39982 /* UserViewController.m */,
 				D6F8F1E91D1CE8B700D39982 /* UserViewController.xib */,
+				D65FA9BE1D1D794600D0CC3E /* MapViewController.h */,
+				D65FA9BF1D1D794600D0CC3E /* MapViewController.m */,
+				D65FA9C01D1D794600D0CC3E /* MapViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -505,21 +546,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D668FDFC1D1C0C8E00DB29C8 /* 1.png in Resources */,
+				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
+				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
+				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
+				D65FA9C21D1D794600D0CC3E /* MapViewController.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
-				D668FE021D1C0D9C00DB29C8 /* MapViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
-				D668FDBB1D1BD51F00DB29C8 /* where.png in Resources */,
 				D6F8F1F61D1CE8B700D39982 /* RegistViewController.xib in Resources */,
 				D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */,
-				D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */,
+				D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */,
+				D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */,
+				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
+				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
-				D668FDFD1D1C0C8E00DB29C8 /* 11.png in Resources */,
-				D668FDFA1D1C0C8E00DB29C8 /* WhereViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
+				D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */,
+				D65FA9A71D1D786D00D0CC3E /* go.png in Resources */,
+				D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
-				D668FDFB1D1C0C8E00DB29C8 /* where1.png in Resources */,
 				D6F8F1FB1D1CE8B700D39982 /* CollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,26 +624,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */,
 				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
 				D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */,
 				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
+				D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */,
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
-				D68AC7C51D1BB2E800EBB00B /* TravelViewController.m in Sources */,
 				D6F8F1F51D1CE8B700D39982 /* RegistViewController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D6F8F1F71D1CE8B700D39982 /* UserViewController.m in Sources */,
+				D65FA9BA1D1D78FF00D0CC3E /* Weather.m in Sources */,
 				D6F8F1F31D1CE8B700D39982 /* LoginViewController.m in Sources */,
 				D6F8F1FA1D1CE8B700D39982 /* CollectionCell.m in Sources */,
+				D65FA9C11D1D794600D0CC3E /* MapViewController.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
-				D668FDF91D1C0C8E00DB29C8 /* WhereViewController.m in Sources */,
 				D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */,
+				D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */,
+				D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */,
 				D6F8F1FC1D1CE8B700D39982 /* CollectionView.m in Sources */,
-				D668FE011D1C0D9C00DB29C8 /* MapViewController.m in Sources */,
 				D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +760,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -724,6 +776,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

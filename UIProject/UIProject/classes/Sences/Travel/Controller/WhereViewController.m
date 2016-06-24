@@ -108,7 +108,7 @@
     int offset = CGRectGetMaxY(self.view.frame) - (self.view.frame.size.height - height);
     if (offset > 0) {
         //整个视图向上移动
-        self.view.frame = CGRectMake(0, -offset, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+        self.view.frame = CGRectMake(0, -offset + self.navigationController.navigationBar.frame.size.height + self.tabBarController.tabBar.frame.size.height + 35, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     }
     
 }

@@ -57,8 +57,6 @@
     
     geoCodeSearchOption.address = self.searchString;
     
-    //    geoCodeSearchOption.city= @"北京市";
-    //    geoCodeSearchOption.address = @"海淀区上地10街10号";
     BOOL flag = [_searcher geoCode:geoCodeSearchOption];
     
     
@@ -77,8 +75,10 @@
     self.navigationItem.rightBarButtonItems = @[traffic];
 
     
-    
 }
+
+
+
 
 static BOOL isOpen = YES;
 -(void)openTrafficAction:(id)sender {
@@ -92,7 +92,7 @@ static BOOL isOpen = YES;
         isOpen = NO;
     }
     
-    
+
 }
 
 
@@ -110,8 +110,6 @@ static BOOL isOpen = YES;
         [_mapView removeOverlays:array];
         
         //添加大头针
-        
-        
         // 添加一个PointAnnotation
         BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
         
@@ -187,14 +185,6 @@ static BOOL isOpen = YES;
         NSLog(@"抱歉，未找到结果");
     }
 }
-
-
-
-
-
-
-
-
 
 // Override
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
