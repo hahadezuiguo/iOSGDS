@@ -8,7 +8,7 @@
 
 #import "ClassViewController.h"
 #import <AFNetworking.h>
-#import "URL.h"
+#import "DB_URL.h"
 #import <UIImageView+WebCache.h>
 #import "ListModel.h"
 #import "ClassTableViewCell.h"

@@ -10,7 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "RootView.h"
 #import <AFNetworking.h>
-#import "URL.h"
+#import "DB_URL.h"
 #import "ListModel.h"
 #import "CollectionViewCell.h"
 #import <UIImageView+WebCache.h>
