@@ -26,6 +26,14 @@
 		D68AC7D41D1BB43F00EBB00B /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7D21D1BB43F00EBB00B /* UserViewController.xib */; };
 		D68AC7D71D1BB46000EBB00B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7D61D1BB46000EBB00B /* User.m */; };
 		D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7DD1D1BB58300EBB00B /* RootViewController.m */; };
+		D68AC7E41D1BD11700EBB00B /* userBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7E31D1BD11700EBB00B /* userBackgroundImage.png */; };
+		D68AC7E71D1BD7DE00EBB00B /* CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7E61D1BD7DE00EBB00B /* CollectionView.m */; };
+		D68AC7EB1D1BDEAD00EBB00B /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7E91D1BDEAD00EBB00B /* CollectionCell.m */; };
+		D68AC7EC1D1BDEAD00EBB00B /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7EA1D1BDEAD00EBB00B /* CollectionCell.xib */; };
+		D68AC8531D1C24DE00EBB00B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC8511D1C24DE00EBB00B /* LoginViewController.m */; };
+		D68AC8541D1C24DE00EBB00B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC8521D1C24DE00EBB00B /* LoginViewController.xib */; };
+		D68AC8581D1C288F00EBB00B /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC8561D1C288F00EBB00B /* RegistViewController.m */; };
+		D68AC8591D1C288F00EBB00B /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC8571D1C288F00EBB00B /* RegistViewController.xib */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -66,6 +74,18 @@
 		D68AC7D61D1BB46000EBB00B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D68AC7DC1D1BB58300EBB00B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D68AC7DD1D1BB58300EBB00B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D68AC7E31D1BD11700EBB00B /* userBackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userBackgroundImage.png; sourceTree = "<group>"; };
+		D68AC7E51D1BD7DE00EBB00B /* CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionView.h; sourceTree = "<group>"; };
+		D68AC7E61D1BD7DE00EBB00B /* CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionView.m; sourceTree = "<group>"; };
+		D68AC7E81D1BDEAD00EBB00B /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		D68AC7E91D1BDEAD00EBB00B /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		D68AC7EA1D1BDEAD00EBB00B /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		D68AC8501D1C24DE00EBB00B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D68AC8511D1C24DE00EBB00B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D68AC8521D1C24DE00EBB00B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D68AC8551D1C288E00EBB00B /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		D68AC8561D1C288F00EBB00B /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		D68AC8571D1C288F00EBB00B /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -164,6 +184,12 @@
 				D68AC7D01D1BB43F00EBB00B /* UserViewController.h */,
 				D68AC7D11D1BB43F00EBB00B /* UserViewController.m */,
 				D68AC7D21D1BB43F00EBB00B /* UserViewController.xib */,
+				D68AC8501D1C24DE00EBB00B /* LoginViewController.h */,
+				D68AC8511D1C24DE00EBB00B /* LoginViewController.m */,
+				D68AC8521D1C24DE00EBB00B /* LoginViewController.xib */,
+				D68AC8551D1C288E00EBB00B /* RegistViewController.h */,
+				D68AC8561D1C288F00EBB00B /* RegistViewController.m */,
+				D68AC8571D1C288F00EBB00B /* RegistViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +206,11 @@
 		D68AC7A61D1B94A600EBB00B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D68AC7E51D1BD7DE00EBB00B /* CollectionView.h */,
+				D68AC7E61D1BD7DE00EBB00B /* CollectionView.m */,
+				D68AC7E81D1BDEAD00EBB00B /* CollectionCell.h */,
+				D68AC7E91D1BDEAD00EBB00B /* CollectionCell.m */,
+				D68AC7EA1D1BDEAD00EBB00B /* CollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,6 +397,7 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D68AC7E31D1BD11700EBB00B /* userBackgroundImage.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -448,12 +480,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68AC8541D1C24DE00EBB00B /* LoginViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
 				D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */,
 				D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */,
+				D68AC7EC1D1BDEAD00EBB00B /* CollectionCell.xib in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
+				D68AC7E41D1BD11700EBB00B /* userBackgroundImage.png in Resources */,
 				D68AC7D41D1BB43F00EBB00B /* UserViewController.xib in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
+				D68AC8591D1C288F00EBB00B /* RegistViewController.xib in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +551,7 @@
 			files = (
 				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
 				D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */,
+				D68AC7E71D1BD7DE00EBB00B /* CollectionView.m in Sources */,
 				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
@@ -522,9 +559,12 @@
 				D68AC7C51D1BB2E800EBB00B /* TravelViewController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D68AC7D31D1BB43F00EBB00B /* UserViewController.m in Sources */,
+				D68AC7EB1D1BDEAD00EBB00B /* CollectionCell.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
+				D68AC8581D1C288F00EBB00B /* RegistViewController.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
 				D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */,
+				D68AC8531D1C24DE00EBB00B /* LoginViewController.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */,
 				D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */,
