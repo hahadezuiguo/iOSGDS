@@ -13,6 +13,14 @@
 		D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4BD1D1A961E00F51C6F /* Main.storyboard */; };
 		D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C01D1A961E00F51C6F /* Assets.xcassets */; };
 		D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4C21D1A961E00F51C6F /* LaunchScreen.storyboard */; };
+		D668FDBB1D1BD51F00DB29C8 /* where.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDBA1D1BD51F00DB29C8 /* where.png */; };
+		D668FDF91D1C0C8E00DB29C8 /* WhereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */; };
+		D668FDFA1D1C0C8E00DB29C8 /* WhereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */; };
+		D668FDFB1D1C0C8E00DB29C8 /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF61D1C0C8E00DB29C8 /* where1.png */; };
+		D668FDFC1D1C0C8E00DB29C8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF71D1C0C8E00DB29C8 /* 1.png */; };
+		D668FDFD1D1C0C8E00DB29C8 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D668FDF81D1C0C8E00DB29C8 /* 11.png */; };
+		D668FE011D1C0D9C00DB29C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */; };
+		D668FE021D1C0D9C00DB29C8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */; };
 		D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */; };
 		D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */; };
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
@@ -44,6 +52,16 @@
 		D632F4C01D1A961E00F51C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D632F4C31D1A961E00F51C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D632F4C51D1A961E00F51C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D668FDBA1D1BD51F00DB29C8 /* where.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where.png; sourceTree = "<group>"; };
+		D668FDF31D1C0C8E00DB29C8 /* WhereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereViewController.h; sourceTree = "<group>"; };
+		D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereViewController.m; sourceTree = "<group>"; };
+		D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereViewController.xib; sourceTree = "<group>"; };
+		D668FDF61D1C0C8E00DB29C8 /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
+		D668FDF71D1C0C8E00DB29C8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		D668FDF81D1C0C8E00DB29C8 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		D668FDFE1D1C0D9C00DB29C8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		D68AC7B81D1BB2AE00EBB00B /* SecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretViewController.h; sourceTree = "<group>"; };
 		D68AC7B91D1BB2AE00EBB00B /* SecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretViewController.m; sourceTree = "<group>"; };
 		D68AC7BA1D1BB2AE00EBB00B /* SecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecretViewController.xib; sourceTree = "<group>"; };
@@ -269,9 +287,19 @@
 		D68AC7B51D1BB28300EBB00B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D668FDF31D1C0C8E00DB29C8 /* WhereViewController.h */,
+				D668FDF41D1C0C8E00DB29C8 /* WhereViewController.m */,
+				D668FDF51D1C0C8E00DB29C8 /* WhereViewController.xib */,
+				D668FDF61D1C0C8E00DB29C8 /* where1.png */,
+				D668FDF71D1C0C8E00DB29C8 /* 1.png */,
+				D668FDF81D1C0C8E00DB29C8 /* 11.png */,
 				D68AC7C21D1BB2E800EBB00B /* TravelViewController.h */,
 				D68AC7C31D1BB2E800EBB00B /* TravelViewController.m */,
 				D68AC7C41D1BB2E800EBB00B /* TravelViewController.xib */,
+				D668FDBA1D1BD51F00DB29C8 /* where.png */,
+				D668FDFE1D1C0D9C00DB29C8 /* MapViewController.h */,
+				D668FDFF1D1C0D9C00DB29C8 /* MapViewController.m */,
+				D668FE001D1C0D9C00DB29C8 /* MapViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,13 +476,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D668FDFC1D1C0C8E00DB29C8 /* 1.png in Resources */,
+				D668FE021D1C0D9C00DB29C8 /* MapViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
+				D668FDBB1D1BD51F00DB29C8 /* where.png in Resources */,
 				D68AC7BC1D1BB2AE00EBB00B /* SecretViewController.xib in Resources */,
 				D68AC7C61D1BB2E800EBB00B /* TravelViewController.xib in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
 				D68AC7D41D1BB43F00EBB00B /* UserViewController.xib in Resources */,
+				D668FDFD1D1C0C8E00DB29C8 /* 11.png in Resources */,
+				D668FDFA1D1C0C8E00DB29C8 /* WhereViewController.xib in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
+				D668FDFB1D1C0C8E00DB29C8 /* where1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,9 +558,11 @@
 				D68AC7D31D1BB43F00EBB00B /* UserViewController.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
+				D668FDF91D1C0C8E00DB29C8 /* WhereViewController.m in Sources */,
 				D68AC7C91D1BB33F00EBB00B /* Secret.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D68AC7BB1D1BB2AE00EBB00B /* SecretViewController.m in Sources */,
+				D668FE011D1C0D9C00DB29C8 /* MapViewController.m in Sources */,
 				D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

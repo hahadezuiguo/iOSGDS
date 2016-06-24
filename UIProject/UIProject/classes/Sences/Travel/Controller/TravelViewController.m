@@ -7,7 +7,7 @@
 //
 
 #import "TravelViewController.h"
-
+#import "WhereViewController.h"
 @interface TravelViewController ()
 
 @end
@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)GoAction:(id)sender {
+    self.hidesBottomBarWhenPushed = YES;
+    WhereViewController *whereVC = [[WhereViewController alloc]init];
+    [self.navigationController pushViewController:whereVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)didReceiveMemoryWarning {
