@@ -10,8 +10,11 @@
 
 #import "RootVC/RootViewController.h"
 
-@interface AppDelegate ()
+//引入头文件
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 
+@interface AppDelegate ()
+@property (nonatomic, strong) BMKMapManager *mapManager;
 @end
 
 @implementation AppDelegate
@@ -24,6 +27,17 @@
     [self.window makeKeyAndVisible];
     
     self.window.rootViewController = [[RootViewController alloc] init];
+    
+    
+    
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"Aeudmrgf0hjML4BnrKhnSMCGP91Q1fIP"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+
+    
     
     return YES;
 }
