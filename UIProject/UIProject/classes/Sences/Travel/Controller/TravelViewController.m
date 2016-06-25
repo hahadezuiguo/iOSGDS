@@ -16,6 +16,8 @@
 #import "APIStoreSDK.h"
 #import "Weather.h"
 
+#import "MBProgressHUD+GifHUD.h"
+
 @interface TravelViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
@@ -89,40 +91,45 @@
     
     //请求API
         [ApiStoreSDK executeWithURL:url method:method apikey:@"c2c6467774885923b4629db0ab700dc0" parameter:parameter callBack:callBack];
-    
-    
-    
-    
-    
-    
-    
-}
-- (IBAction)GoAction:(id)sender {
-    
-    if (self.messageView == nil) {
-        self.messageView = [[MessageView alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100)];
-        self.messageView.center = self.view.center;
-        
-        [self.view addSubview:self.messageView];
-        
-        [self.messageView.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    
-   
+
 }
 
--(void)buttonAction:(UIButton *)sender {
-    if (self.messageView) {
-     [self.messageView removeFromSuperview];
-    }
+
+- (void)showGifView {
+    //加载等待视图
+    [MBProgressHUD setUpGifWithFrame:CGRectMake(0, 0, 150,150) gifName:@"where" text:self.weatherText.text andShowToView:self.messageView];
+}
+-(void)hideGifView {
+    [MBProgressHUD hideHUDForView:self.messageView animated:YES];
+}
+
+
+
+
+
+- (IBAction)GoAction:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:2 animations:^{
+            weakSelf.messageView = [[MessageView alloc]initWithFrame:weakSelf.view.bounds];
+            [weakSelf.view addSubview:weakSelf.messageView];
+            [weakSelf showGifView];
+    } completion:^(BOOL finished) {
+        
+        [self performSelector:@selector(pushNextController) withObject:nil afterDelay:5.0f];
+        
+    }];
+  
+}
+
+
+-(void)pushNextController {
+     [self hideGifView];
+    [self.messageView removeFromSuperview];
     self.hidesBottomBarWhenPushed = YES;
     WhereViewController *whereVC = [[WhereViewController alloc]init];
     [self.navigationController pushViewController:whereVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -12,9 +12,7 @@
 
 @property (nonatomic, strong) UIImageView *MgImageView;
 
-@property (nonatomic, strong) UITextView *MgTextView;
 
 
-@property (nonatomic, strong) UIButton *button;
 
 @end

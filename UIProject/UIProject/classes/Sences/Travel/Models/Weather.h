@@ -19,8 +19,4 @@
 
 @property (nonatomic, strong) NSDictionary *suggestion;
 
-
-
-
-
 @end
