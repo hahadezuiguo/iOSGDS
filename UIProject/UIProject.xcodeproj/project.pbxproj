@@ -19,6 +19,9 @@
 		D6390A2A1D1E7E01003F1964 /* ClassDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6390A291D1E7E01003F1964 /* ClassDetailViewController.m */; };
 		D6390A501D1E86F4003F1964 /* HealthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6390A4F1D1E86F4003F1964 /* HealthDetailViewController.m */; };
 		D6390A531D1EA7B7003F1964 /* CookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6390A521D1EA7B7003F1964 /* CookDetailViewController.m */; };
+		D646F42C1D1E1415008D21EE /* MBProgressHUD+GifHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D646F42B1D1E1415008D21EE /* MBProgressHUD+GifHUD.m */; };
+		D646F42E1D1E1531008D21EE /* where.gif in Resources */ = {isa = PBXBuildFile; fileRef = D646F42D1D1E1531008D21EE /* where.gif */; };
+		D646F4301D1E1BFA008D21EE /* weather.gif in Resources */ = {isa = PBXBuildFile; fileRef = D646F42F1D1E1BFA008D21EE /* weather.gif */; };
 		D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99E1D1D786D00D0CC3E /* where1.png */; };
 		D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99F1D1D786D00D0CC3E /* 1.png */; };
 		D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A01D1D786D00D0CC3E /* 11.png */; };
@@ -109,6 +112,10 @@
 		D6390A4F1D1E86F4003F1964 /* HealthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthDetailViewController.m; sourceTree = "<group>"; };
 		D6390A511D1EA7B7003F1964 /* CookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookDetailViewController.h; sourceTree = "<group>"; };
 		D6390A521D1EA7B7003F1964 /* CookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookDetailViewController.m; sourceTree = "<group>"; };
+		D646F42A1D1E1415008D21EE /* MBProgressHUD+GifHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GifHUD.h"; sourceTree = "<group>"; };
+		D646F42B1D1E1415008D21EE /* MBProgressHUD+GifHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+GifHUD.m"; sourceTree = "<group>"; };
+		D646F42D1D1E1531008D21EE /* where.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = where.gif; path = SDCycleScrollView/where.gif; sourceTree = "<group>"; };
+		D646F42F1D1E1BFA008D21EE /* weather.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weather.gif; sourceTree = "<group>"; };
 		D65FA99E1D1D786D00D0CC3E /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
 		D65FA99F1D1D786D00D0CC3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		D65FA9A01D1D786D00D0CC3E /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -484,6 +491,8 @@
 			children = (
 				D65FA9BB1D1D793900D0CC3E /* NSString+JSON.h */,
 				D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */,
+				D646F42A1D1E1415008D21EE /* MBProgressHUD+GifHUD.h */,
+				D646F42B1D1E1415008D21EE /* MBProgressHUD+GifHUD.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -522,6 +531,8 @@
 			children = (
 				D6F456AE1D1D84A100C957B9 /* SDCycleScrollView */,
 				D6F456A01D1D846800C957B9 /* bigger.jpg */,
+				D646F42D1D1E1531008D21EE /* where.gif */,
+				D646F42F1D1E1BFA008D21EE /* weather.gif */,
 				D6F456A11D1D846800C957B9 /* head1.jpg */,
 				D6F456A21D1D846800C957B9 /* head2.jpg */,
 				D6F456A31D1D846800C957B9 /* head3.jpg */,
@@ -712,9 +723,11 @@
 				D6F456A81D1D846800C957B9 /* head1.jpg in Resources */,
 				D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */,
 				D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */,
+				D646F42E1D1E1531008D21EE /* where.gif in Resources */,
 				D6F456AA1D1D846800C957B9 /* head3.jpg in Resources */,
 				D6390A271D1E6171003F1964 /* HealthTableViewCell.xib in Resources */,
 				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
+				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
@@ -802,6 +815,7 @@
 				D6F456BE1D1D84A100C957B9 /* TAAbstractDotView.m in Sources */,
 				D6F456D81D1D856200C957B9 /* Secret.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
+				D646F42C1D1E1415008D21EE /* MBProgressHUD+GifHUD.m in Sources */,
 				D6F8F1F51D1CE8B700D39982 /* RegistViewController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
