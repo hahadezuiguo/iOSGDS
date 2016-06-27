@@ -13,6 +13,10 @@
 //引入头文件
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 
+//引入语音
+#import "iflyMSC/IFlySpeechUtility.h"
+
+
 @interface AppDelegate ()
 @property (nonatomic, strong) BMKMapManager *mapManager;
 @end
@@ -32,10 +36,16 @@
     
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"Aeudmrgf0hjML4BnrKhnSMCGP91Q1fIP"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"s8AIKKpdESCLzHYNdXekAMTlILgOmpPK"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+
+    
+    //第二步：登录科大讯飞语音平台
+    NSString *appID = [NSString stringWithFormat:@"appid=%@",@"5750d5ff"];
+    [IFlySpeechUtility createUtility:appID];
+    
 
     
     
