@@ -17,8 +17,13 @@
 ///头像
 @property (nonatomic, copy) NSString *avatar;
 ///id
-@property (nonatomic, copy) NSString *Id;
+@property (nonatomic, copy) NSString *userId;
 ///是否处于登录状态
 @property (nonatomic, assign) BOOL isLogin;
+
+///邮箱
+@property (nonatomic,copy) NSString *email;
+///电话号码
+@property (nonatomic,copy) NSString *telephone;
 
 @end

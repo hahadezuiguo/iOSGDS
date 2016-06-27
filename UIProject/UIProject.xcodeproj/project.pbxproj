@@ -57,6 +57,9 @@
 		D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEEC81D1FF41100C7127D /* CoreTelephony.framework */; };
 		D68AEECB1D1FF42300C7127D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEECA1D1FF42300C7127D /* CoreLocation.framework */; };
 		D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEECC1D1FF42B00C7127D /* libz.tbd */; };
+		D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */; };
+		D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C511D20BC2900395FB4 /* FindPasswordController.m */; };
+		D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6902C521D20BC2900395FB4 /* FindPasswordController.xib */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -174,6 +177,11 @@
 		D68AEEC81D1FF41100C7127D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D68AEECA1D1FF42300C7127D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D68AEECC1D1FF42B00C7127D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D6902C4D1D20BB3500395FB4 /* UserFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFileHandle.h; sourceTree = "<group>"; };
+		D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFileHandle.m; sourceTree = "<group>"; };
+		D6902C501D20BC2900395FB4 /* FindPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordController.h; sourceTree = "<group>"; };
+		D6902C511D20BC2900395FB4 /* FindPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordController.m; sourceTree = "<group>"; };
+		D6902C521D20BC2900395FB4 /* FindPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPasswordController.xib; sourceTree = "<group>"; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -555,6 +563,8 @@
 				D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */,
 				D6D0119F1D1AAC050076477D /* ArchiverHandle.h */,
 				D6D011A01D1AAC050076477D /* ArchiverHandle.m */,
+				D6902C4D1D20BB3500395FB4 /* UserFileHandle.h */,
+				D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -671,6 +681,12 @@
 				D6F8F1E71D1CE8B700D39982 /* UserViewController.h */,
 				D6F8F1E81D1CE8B700D39982 /* UserViewController.m */,
 				D6F8F1E91D1CE8B700D39982 /* UserViewController.xib */,
+				D65FA9BE1D1D794600D0CC3E /* MapViewController.h */,
+				D65FA9BF1D1D794600D0CC3E /* MapViewController.m */,
+				D65FA9C01D1D794600D0CC3E /* MapViewController.xib */,
+				D6902C501D20BC2900395FB4 /* FindPasswordController.h */,
+				D6902C511D20BC2900395FB4 /* FindPasswordController.m */,
+				D6902C521D20BC2900395FB4 /* FindPasswordController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -760,6 +776,7 @@
 				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
 				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
 				D658290F1D20D0960095A091 /* MapViewController.xib in Resources */,
+				D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */,
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
 				D6F456E61D1D878A00C957B9 /* ClassTableViewCell.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
@@ -847,6 +864,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6390A221D1E2442003F1964 /* HealthViewController.m in Sources */,
+				D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */,
 				D6F456CA1D1D850900C957B9 /* ClassViewController.m in Sources */,
 				D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */,
 				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
@@ -888,6 +906,7 @@
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D6F456BF1D1D84A100C957B9 /* TAAnimatedDotView.m in Sources */,
+				D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */,
 				D6F456C21D1D84A100C957B9 /* SDCollectionViewCell.m in Sources */,
 				D6F8F1FC1D1CE8B700D39982 /* CollectionView.m in Sources */,
 				D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */,
@@ -1010,7 +1029,8 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1035,7 +1055,8 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,6 +10,11 @@
 
 #import "RootVC/RootViewController.h"
 
+#pragma mark - 新添代码
+#import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudIM/AVOSCloudIM.h>
+
+
 //引入头文件
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 
@@ -48,6 +53,10 @@
     
 
     
+#pragma mark - 新添代码
+    // applicationId 即 App Id，clientKey 是 App Key。
+    [AVOSCloud setApplicationId:@"BjC7DlP0qrXJ33QGnfu5bBWa-gzGzoHsz"
+                      clientKey:@"LFWCQxtyfi6s80V9SfsGbJG7"];
     
     return YES;
 }
