@@ -24,5 +24,18 @@
 #define COOK_URL @"http://api.bbwansha.com:8080/bbwssubclass2/index.php/Home/Healthy/healthylist?type=2&page=1"
 
 #define CLASS_BASE_URL @"http://wp.asopeixun.com/archives/"
+//歌曲界面
+#define SONG_ALLLIST_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedan&page_no=1&page_size=30&from=ios&version=5.7.2&from=ios&channel=appstore&operator=3"
+//collection1
+#define SONG_C1_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=6727&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
 
+#define SONG_C2_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=3305&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
+
+#define SONG_C3_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=4861&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
+
+#define SONG_C4_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=6721&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
+
+#define SONG_C5_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=5429&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
+
+#define SONG_C6_URL @"http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.diy.gedanInfo&from=ios&listid=6725&isUGC=0&version=5.7.2&from=ios&channel=appstore&operator=3"
 #endif /* DB_URL_h */
