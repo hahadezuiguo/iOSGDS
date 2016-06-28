@@ -41,6 +41,8 @@
 		D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */; };
 		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
+		D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */; };
+		D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */; };
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
 		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
@@ -169,6 +171,11 @@
 		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
+		D67F0C2E1D22223E004B10DC /* EGORefreshTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableFooterView.h; sourceTree = "<group>"; };
+		D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableFooterView.m; sourceTree = "<group>"; };
+		D67F0C301D22223E004B10DC /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		D67F0C321D22223E004B10DC /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
 		D68AC7BD1D1BB2CB00EBB00B /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
 		D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
 		D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
@@ -387,6 +394,18 @@
 				D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */,
 			);
 			path = APIStoreSDK;
+			sourceTree = "<group>";
+		};
+		D67F0C2D1D22223E004B10DC /* EGORefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				D67F0C2E1D22223E004B10DC /* EGORefreshTableFooterView.h */,
+				D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */,
+				D67F0C301D22223E004B10DC /* EGORefreshTableHeaderView.h */,
+				D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */,
+				D67F0C321D22223E004B10DC /* EGOViewCommon.h */,
+			);
+			path = EGORefreshView;
 			sourceTree = "<group>";
 		};
 		D68AC7AC1D1BB28200EBB00B /* Secret */ = {
@@ -637,6 +656,7 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D67F0C2D1D22223E004B10DC /* EGORefreshView */,
 				D6F456AE1D1D84A100C957B9 /* SDCycleScrollView */,
 				D6F456A01D1D846800C957B9 /* bigger.jpg */,
 				D646F42D1D1E1531008D21EE /* where.gif */,
@@ -913,12 +933,14 @@
 			files = (
 				D6390A221D1E2442003F1964 /* HealthViewController.m in Sources */,
 				D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */,
+				D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */,
 				D6F456CA1D1D850900C957B9 /* ClassViewController.m in Sources */,
 				D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */,
 				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
 				D6F456D51D1D856200C957B9 /* CookModel.m in Sources */,
 				D6F456EB1D1D878A00C957B9 /* RootView.m in Sources */,
 				D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */,
+				D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */,
 				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
 				D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */,
 				D6F456E91D1D878A00C957B9 /* FootCollectionReusableView.m in Sources */,
