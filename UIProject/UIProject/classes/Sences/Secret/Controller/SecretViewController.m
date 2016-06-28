@@ -23,6 +23,7 @@
 #import "ClassDetailViewController.h"
 #import "HealthDetailViewController.h"
 #import "CookDetailViewController.h"
+#import <MBProgressHUD.h>
 
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kSpace 8
@@ -72,15 +73,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
     self.mainScroll = [[UIScrollView alloc] initWithFrame:self.view.frame];
     self.mainScroll.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 600);
     [self.view addSubview:self.mainScroll];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self initcycle];
     
     self.rootView = [[RootView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.width*0.3, [UIScreen mainScreen].bounds.size.width, kItemSize * 2 + 100)];
     [self.mainScroll addSubview:self.rootView];
-    [self initCook];
-
+  
     self.navigationController.navigationBar.translucent = NO;
     self.rootView.collectionView.delegate = self;
     self.rootView.collectionView.dataSource = self;
@@ -89,6 +91,7 @@
     //注册collectionView的头视图
     [self.rootView.collectionView registerClass:[HeadCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headView"];
     
+    
     //育儿课堂网络请求
     [self netClassRequest];
     //健康护理网络请求
@@ -96,12 +99,8 @@
     //营养饮食网络请求
     [self netCookRequest];
     
-    
-    // 集成刷新控件
-    //[self setupRefresh];
-       
+        
 }
-
 
 //
 - (void)initCook{
@@ -138,14 +137,16 @@
         imageV.tag = i;
         imageV.layer.cornerRadius = 20;
         imageV.layer.masksToBounds = YES;
-        imageV.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.imageurl]]];
-        imageV.userInteractionEnabled = YES;
+        [imageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+
+           imageV.userInteractionEnabled = YES;
         [imageV addGestureRecognizer:tapGesture];
         [self.cookScroll addSubview:imageV];
         
     }
 
    [self.mainScroll addSubview:self.cookScroll];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 }
 
@@ -200,11 +201,12 @@
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [weakSelf.rootView.collectionView reloadData];
+                if (weakSelf.allHealthData.count > 0) {
+                    [weakSelf.rootView.collectionView reloadData];
+                }
+                
             });
         }
-        
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"数据请求失败");
     }];
@@ -212,11 +214,11 @@
 }
 //健康护理网络请求
 - (void)netHealthRequest{
-    
     __weak typeof(self)weakSelf = self;
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
     [manager GET:HEALTH_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *array = responseObject[@"data"];
+       
         if (array.count > 0) {
             for (int i = 0; i < 3; i++) {
                 HealthModel *model = [[HealthModel alloc] init];
@@ -226,7 +228,10 @@
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                [weakSelf.rootView.collectionView reloadData];
+                if (weakSelf.allDataArray.count > 0) {
+                    [weakSelf.rootView.collectionView reloadData];
+                }
+                
             });
         }
         
@@ -234,8 +239,6 @@
         
         NSLog(@"健康护理数据请求失败");
     }];
-
-    
 }
 
 //营养饮食网络请求
@@ -251,7 +254,9 @@
                 [weakSelf.allCookData addObject:model];
             }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf initCook];
+            
+                [weakSelf initCook];
+            
         });
         }
    
@@ -271,17 +276,13 @@
     switch (section) {
         case 0:
             return self.allDataArray.count;
-            break;
+            
         case 1:
             return self.allHealthData.count;
-            break;
             
         default:
             return 1;
-            break;
     }
-    
-    return 1;
     
 }
 //返回cell
@@ -294,12 +295,14 @@
             
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
             NSLog(@"11111111111111111");
+            return cell;
             break;}
         case 1:{
             HealthModel *model = self.allHealthData[indexPath.row];
             cell.listTitle.text = model.title;
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
             NSLog(@"222222222222");
+            return cell;
             break;}
             
         default:
@@ -354,14 +357,17 @@
         //weakSelf.view.frame = CGRectMake(-500, 100, 0, 0);
         weakSelf.view.center = CGPointMake(-500, 0);
             } completion:^(BOOL finished) {
-    [self.navigationController pushViewController:classVC animated:NO];
-       
+                weakSelf.hidesBottomBarWhenPushed = YES;
+                
+    [weakSelf.navigationController pushViewController:classVC animated:NO];
+     weakSelf.hidesBottomBarWhenPushed = NO;
     }];
     
 }
 
 //健康护理：“更多”按钮的点击事件
 - (void)healthMore{
+    
     __weak typeof(self)weakSelf = self;
  HealthViewController *healthVC = [[HealthViewController alloc] init];
     
@@ -369,7 +375,9 @@
         //weakSelf.view.frame = CGRectMake(-500, 100, 0, 0);
         weakSelf.view.center = CGPointMake(-500, 0);
     } completion:^(BOOL finished) {
-        [self.navigationController pushViewController:healthVC animated:NO];
+        weakSelf.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:healthVC animated:NO];
+        weakSelf.hidesBottomBarWhenPushed = NO;
        
     }];
 }
@@ -392,9 +400,6 @@
     
     
 }
-
-
-
 
 
 @end

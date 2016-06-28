@@ -16,11 +16,24 @@
 #import <UIImageView+WebCache.h>
 #import "ClassDetailViewController.h"
 
-@interface ClassViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "EGOViewCommon.h"
+#import "EGORefreshTableHeaderView.h"
+#import "EGORefreshTableFooterView.h"
+//
+//const CGFloat kTableHeaderViewHeight = 65.f;
+//const CGFloat kTableFooterViewHeight = 65.f;
+
+@interface ClassViewController ()<UITableViewDelegate,UITableViewDataSource,EGORefreshTableDelegate>
 
 @property (nonatomic, strong) UITableView *listTable;
 // 声明可变数组存放解析出的育儿课堂数据
 @property (nonatomic, strong) NSMutableArray *allDataArray;
+//下载状态
+@property (nonatomic, assign) BOOL isLoading;
+//下拉刷新添加的顶部视图
+@property (nonatomic, strong) EGORefreshTableHeaderView *refreshHeaderView;
+//上拉刷新的底部视图
+@property (nonatomic, strong) EGORefreshTableFooterView *refreshFooterView;
 
 @end
 
@@ -40,7 +53,8 @@
     // Do any additional setup after loading the view.
     //[self setupRefresh];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.listTable = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+    self.listTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
+    self.listTable.separatorStyle = NO;
     [self.view addSubview:self.listTable];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];//加到self.view上并且"View must not be nil."
@@ -58,6 +72,8 @@
     
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    _isLoading = NO;
+    [self setHeaderView];
     
 }
 
@@ -147,6 +163,65 @@
     [self.navigationController pushViewController:detailVC animated:YES];
    
 }
+
+#pragma mark - Private Methods
+- (void)setHeaderView
+{
+    if (_refreshHeaderView == nil)
+    {
+        // create the header view
+        UIColor *viewTextColoer = [UIColor colorWithRed:216.0/255.0 green:196.0/255.0 blue:172.0/255.0 alpha:0.7f];
+        UIColor *viewBackgroundColor = [UIColor colorWithRed:251.0/255.0 green:243.0/255.0 blue:231.0/255.0 alpha:1.0f];
+        _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, -65, self.listTable.frame.size.width, 65)
+                                                               arrowImageName:@"refresh_up_arrow"
+                                                             loadingImageNmae:@"refresh_loading"
+                                                                    textColor:viewTextColoer];
+        _refreshHeaderView.backgroundColor = viewBackgroundColor;
+        _refreshHeaderView.delegate = self;
+        
+        [self.listTable addSubview:_refreshHeaderView];
+    }
+}
+
+#pragma mark - ScrollView Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+#pragma mark - EGORefreshTableView Delegate
+- (void)egoRefreshTableDidTriggerRefresh:(EGORefreshPos)aRefreshPos
+{
+    [self beginReloadData];
+}
+
+- (BOOL)egoRefreshTableDataSourceIsLoading:(UIView*)view
+{
+    return _isLoading;
+}
+
+- (NSDate*)egoRefreshTableDataSourceLastUpdated:(UIView*)view{
+    return [NSDate date];
+}
+
+- (void)beginReloadData
+{
+    _isLoading = YES;
+    
+    // 模拟异步请求刷新数据
+    __weak typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.listTable reloadData];
+        _isLoading = NO;
+        [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:weakSelf.listTable];
+    });
+}
+
 
 
 @end

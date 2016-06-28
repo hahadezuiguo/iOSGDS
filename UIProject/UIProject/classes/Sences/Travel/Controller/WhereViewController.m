@@ -11,23 +11,40 @@
 @interface WhereViewController ()<UITextFieldDelegate>
 //医院
 @property (weak, nonatomic) IBOutlet UIView *hospitalView;
+@property (weak, nonatomic) IBOutlet UILabel *hospitalLabel;
+
 //美食
 @property (weak, nonatomic) IBOutlet UIView *cateView;
+@property (weak, nonatomic) IBOutlet UILabel *cateLabel;
+
 //药店
 @property (weak, nonatomic) IBOutlet UIView *drugstore;
+@property (weak, nonatomic) IBOutlet UILabel *drugstoreLabel;
+
 //公园
 @property (weak, nonatomic) IBOutlet UIView *parkView;
+@property (weak, nonatomic) IBOutlet UILabel *parkLabel;
+
 //机场
 @property (weak, nonatomic) IBOutlet UIView *airdromeView;
+@property (weak, nonatomic) IBOutlet UILabel *airdromeLabel;
+
 //洗手间
 @property (weak, nonatomic) IBOutlet UIView *ToiletView;
+@property (weak, nonatomic) IBOutlet UILabel *toiletLabel;
+
 //超市
 @property (weak, nonatomic) IBOutlet UIView *SupermarketView;
+@property (weak, nonatomic) IBOutlet UILabel *supermarketLabel;
+
 //游乐场
 @property (weak, nonatomic) IBOutlet UIView *Playground;
+@property (weak, nonatomic) IBOutlet UILabel *playgroundLabel;
+
 //银行
 @property (weak, nonatomic) IBOutlet UIView *bankView;
 
+@property (weak, nonatomic) IBOutlet UILabel *bankLabel;
 
 @property (nonatomic, strong) UITapGestureRecognizer * ViewTap;
 
@@ -35,6 +52,8 @@
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textFieldHeight;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
 
 @end
 
@@ -46,16 +65,24 @@
     
     [self viewAddTap];
     [self textFieldAction];
-    self.navigationController.navigationBar.translucent = NO;
+    
+    
+    
     
 }
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.tabBar.translucent = YES;
+    self.tabBarController.tabBar.hidden = YES;
+   
+}
 
 - (IBAction)GoAction:(id)sender {
+    self.hidesBottomBarWhenPushed = YES;
     MapViewController *mapVC = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
     [self.navigationController pushViewController:mapVC animated:YES];
     mapVC.searchString = self.textField.text;
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 
@@ -78,45 +105,23 @@
 
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
-    //获取键盘的高度
-    /*
-     iphone 6:
-     中文
-     2014-12-31 11:16:23.643 Demo[686:41289] 键盘高度是  258
-     2014-12-31 11:16:23.644 Demo[686:41289] 键盘宽度是  375
-     英文
-     2014-12-31 11:55:21.417 Demo[1102:58972] 键盘高度是  216
-     2014-12-31 11:55:21.417 Demo[1102:58972] 键盘宽度是  375
-     
-     iphone  6 plus：
-     英文：
-     2014-12-31 11:31:14.669 Demo[928:50593] 键盘高度是  226
-     2014-12-31 11:31:14.669 Demo[928:50593] 键盘宽度是  414
-     中文：
-     2015-01-07 09:22:49.438 Demo[622:14908] 键盘高度是  271
-     2015-01-07 09:22:49.439 Demo[622:14908] 键盘宽度是  414
-     
-     iphone 5 :
-     2014-12-31 11:19:36.452 Demo[755:43233] 键盘高度是  216
-     2014-12-31 11:19:36.452 Demo[755:43233] 键盘宽度是  320
-     */
-    NSDictionary *userInfo = [aNotification userInfo];
+     NSDictionary *userInfo = [aNotification userInfo];
     NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardRect = [aValue CGRectValue];
     int height = keyboardRect.size.height;
     
-    int offset = CGRectGetMaxY(self.view.frame) - (self.view.frame.size.height - height);
-    if (offset > 0) {
-        //整个视图向上移动
-        self.view.frame = CGRectMake(0, -offset + self.navigationController.navigationBar.frame.size.height + self.tabBarController.tabBar.frame.size.height + 35, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    }
-    
+
+    self.textFieldHeight.constant = height;
+   
 }
 
 //当键退出时调用
 - (void)keyboardWillHide:(NSNotification *)aNotification
 {
-    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+
+    self.textFieldHeight.constant = 10;
+  
+
 }
 
 //view添加事件
@@ -125,9 +130,9 @@
         
         self.ViewTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
         [[self.view viewWithTag:i] addGestureRecognizer:self.ViewTap];
+        
     }
-    
-
+   
 }
 
 
@@ -141,7 +146,16 @@
     
     
     [tap.view.layer addAnimation:springAnimation forKey:@"springAnimation"];
-    NSLog(@"点击");
+    
+    UILabel *label = [tap.view viewWithTag:101];
+    
+    NSLog(@"%@", label.text);
+  
+    self.textField.text = label.text;
+
+    [self performSelector:@selector(GoAction:) withObject:nil afterDelay:1.5f];
+    
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
