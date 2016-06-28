@@ -11,14 +11,23 @@
                 <outlet property="Playground" destination="Thp-J5-bqh" id="OEl-PI-vLF"/>
                 <outlet property="SupermarketView" destination="q0J-Fx-FAg" id="7av-1C-DCx"/>
                 <outlet property="ToiletView" destination="6b4-Cg-MTk" id="HzY-GA-T4c"/>
+                <outlet property="airdromeLabel" destination="zs0-8V-IK3" id="lOV-ya-scP"/>
                 <outlet property="airdromeView" destination="MhG-sb-wTD" id="6sN-Kb-HPz"/>
+                <outlet property="bankLabel" destination="tvJ-of-bxV" id="clb-ad-E7n"/>
                 <outlet property="bankView" destination="V56-BN-y0x" id="BiD-z4-owF"/>
+                <outlet property="cateLabel" destination="yxc-g4-w1V" id="WnC-pb-hmM"/>
                 <outlet property="cateView" destination="NOw-H6-AAR" id="nT3-JB-T01"/>
-                <outlet property="drugstore" destination="RBG-zH-Fmg" id="YPM-xc-7pr"/>
+                <outlet property="drugstore" destination="Y66-fe-nd2" id="yCb-zm-IJo"/>
+                <outlet property="drugstoreLabel" destination="Y66-fe-nd2" id="71I-ym-mwm"/>
+                <outlet property="hospitalLabel" destination="cwe-ZU-jYj" id="0u9-zI-dBB"/>
                 <outlet property="hospitalView" destination="SSx-EL-wNb" id="dot-XT-C9D"/>
+                <outlet property="parkLabel" destination="8tI-2L-c0A" id="vGP-bg-vQ5"/>
                 <outlet property="parkView" destination="vbo-6o-R4C" id="lSV-oo-s8W"/>
+                <outlet property="playgroundLabel" destination="Fad-nS-sT7" id="sZn-SM-Az0"/>
+                <outlet property="supermarketLabel" destination="U6G-7r-H5g" id="b08-ct-ApG"/>
                 <outlet property="textField" destination="xDQ-5F-yWJ" id="GSp-jp-d7V"/>
                 <outlet property="textFieldHeight" destination="KB4-Fj-ZVP" id="pst-Ek-9bf"/>
+                <outlet property="toiletLabel" destination="Ubg-4K-blI" id="Czc-yQ-HBW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,7 +45,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBs-mB-rJt">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-ZU-jYj">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-ZU-jYj">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.93780821561813354" green="0.32240116596221924" blue="0.14216312766075134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +70,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-VJ-U2P">
                             <rect key="frame" x="0.0" y="0.0" width="87" height="53"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美食" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-g4-w1V">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美食" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-g4-w1V">
                             <rect key="frame" x="0.0" y="0.0" width="87" height="53"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" red="0.089638300240039825" green="0.70602434873580933" blue="0.092699684202671051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,7 +95,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xf3-BX-Gvi">
                             <rect key="frame" x="0.0" y="0.0" width="96" height="55"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="药店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y66-fe-nd2">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="药店" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y66-fe-nd2">
                             <rect key="frame" x="0.0" y="0.0" width="96" height="55"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.95170861482620239" green="0.084860347211360931" blue="0.74534779787063599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,7 +120,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NL4-8u-HA9">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-2L-c0A">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-2L-c0A">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,7 +145,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="MiK-70-CCa">
                             <rect key="frame" x="0.0" y="0.0" width="61" height="46"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs0-8V-IK3">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs0-8V-IK3">
                             <rect key="frame" x="0.0" y="0.0" width="61" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,7 +170,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ruK-R1-NWY">
                             <rect key="frame" x="0.0" y="0.0" width="83" height="53"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="洗手间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-4K-blI">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="洗手间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-4K-blI">
                             <rect key="frame" x="0.0" y="0.0" width="83" height="53"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.072754553814935896" green="0.016308198518036887" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,7 +195,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="A1o-en-sLL">
                             <rect key="frame" x="0.0" y="0.0" width="81" height="54"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-7r-H5g">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-7r-H5g">
                             <rect key="frame" x="0.0" y="0.0" width="81" height="54"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,7 +220,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DZO-tN-xz4">
                             <rect key="frame" x="0.0" y="0.0" width="95" height="59"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-of-bxV">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-of-bxV">
                             <rect key="frame" x="0.0" y="0.0" width="95" height="59"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" red="0.19346433877944946" green="0.048460282385349274" blue="0.96796208620071411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,7 +245,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CAf-AS-YcD">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游乐场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-nS-sT7">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游乐场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-nS-sT7">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.10552448779344559" green="0.86880224943161011" blue="0.94723016023635864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
