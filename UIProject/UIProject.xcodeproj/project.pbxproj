@@ -40,6 +40,8 @@
 		D65FA9C21D1D794600D0CC3E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9C01D1D794600D0CC3E /* MapViewController.xib */; };
 		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
+		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
+		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
 		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
@@ -144,6 +146,9 @@
 		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
+		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		D68AC7BD1D1BB2CB00EBB00B /* SongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongViewController.h; sourceTree = "<group>"; };
 		D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongViewController.m; sourceTree = "<group>"; };
 		D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
@@ -636,6 +641,9 @@
 				D6902C501D20BC2900395FB4 /* FindPasswordController.h */,
 				D6902C511D20BC2900395FB4 /* FindPasswordController.m */,
 				D6902C521D20BC2900395FB4 /* FindPasswordController.xib */,
+				D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */,
+				D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */,
+				D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -746,6 +754,7 @@
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
 				D6F456E81D1D878A00C957B9 /* CollectionViewCell.xib in Resources */,
+				D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
 				D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */,
 				D6F456CC1D1D850900C957B9 /* SecretViewController.xib in Resources */,
@@ -856,6 +865,7 @@
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D6F456BF1D1D84A100C957B9 /* TAAnimatedDotView.m in Sources */,
+				D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */,
 				D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */,
 				D6F456C21D1D84A100C957B9 /* SDCollectionViewCell.m in Sources */,
 				D6F8F1FC1D1CE8B700D39982 /* CollectionView.m in Sources */,
