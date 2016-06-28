@@ -91,7 +91,7 @@
     UIImage *image = change[NSKeyValueChangeNewKey];
     //获取cell位置
     NSIndexPath *indexPath = (__bridge NSIndexPath *)context;
-#warning first
+    
     //获取cell
     SongCollectionViewCell *cell = (SongCollectionViewCell *)[self.rootView.collection cellForItemAtIndexPath:indexPath];
     cell.UpImage.image = image;
