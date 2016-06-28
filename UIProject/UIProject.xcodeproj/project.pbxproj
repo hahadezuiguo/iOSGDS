@@ -22,9 +22,9 @@
 		D646F42C1D1E1415008D21EE /* MBProgressHUD+GifHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D646F42B1D1E1415008D21EE /* MBProgressHUD+GifHUD.m */; };
 		D646F42E1D1E1531008D21EE /* where.gif in Resources */ = {isa = PBXBuildFile; fileRef = D646F42D1D1E1531008D21EE /* where.gif */; };
 		D646F4301D1E1BFA008D21EE /* weather.gif in Resources */ = {isa = PBXBuildFile; fileRef = D646F42F1D1E1BFA008D21EE /* weather.gif */; };
-		D65D90D31D20B974000E4432 /* SongCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65D90D21D20B974000E4432 /* SongCollectionView.m */; };
 		D658290E1D20D0960095A091 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D658290C1D20D0960095A091 /* MapViewController.m */; };
 		D658290F1D20D0960095A091 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D658290D1D20D0960095A091 /* MapViewController.xib */; };
+		D65D90D31D20B974000E4432 /* SongCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65D90D21D20B974000E4432 /* SongCollectionView.m */; };
 		D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99E1D1D786D00D0CC3E /* where1.png */; };
 		D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99F1D1D786D00D0CC3E /* 1.png */; };
 		D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A01D1D786D00D0CC3E /* 11.png */; };
@@ -46,12 +46,6 @@
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
 		D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CE1D1BB37C00EBB00B /* Travel.m */; };
 		D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7DD1D1BB58300EBB00B /* RootViewController.m */; };
-		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
-		D6A0F6CB1D211A050057CE15 /* SongDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */; };
-		D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */; };
-		D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6CE1D211BBC0057CE15 /* SongList.m */; };
-		D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */; };
-		D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */; };
 		D68AEEB71D1FEF8100C7127D /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEEB61D1FEF8100C7127D /* iflyMSC.framework */; };
 		D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEEB81D1FF3B900C7127D /* CoreGraphics.framework */; };
 		D68AEEBB1D1FF3C100C7127D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEEBA1D1FF3C100C7127D /* Foundation.framework */; };
@@ -67,6 +61,12 @@
 		D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */; };
 		D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C511D20BC2900395FB4 /* FindPasswordController.m */; };
 		D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6902C521D20BC2900395FB4 /* FindPasswordController.xib */; };
+		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
+		D6A0F6CB1D211A050057CE15 /* SongDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */; };
+		D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */; };
+		D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6CE1D211BBC0057CE15 /* SongList.m */; };
+		D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */; };
+		D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -142,11 +142,11 @@
 		D646F42B1D1E1415008D21EE /* MBProgressHUD+GifHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+GifHUD.m"; sourceTree = "<group>"; };
 		D646F42D1D1E1531008D21EE /* where.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = where.gif; path = SDCycleScrollView/where.gif; sourceTree = "<group>"; };
 		D646F42F1D1E1BFA008D21EE /* weather.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weather.gif; sourceTree = "<group>"; };
-		D65D90D11D20B974000E4432 /* SongCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCollectionView.h; sourceTree = "<group>"; };
-		D65D90D21D20B974000E4432 /* SongCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCollectionView.m; sourceTree = "<group>"; };
 		D658290B1D20D0960095A091 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		D658290C1D20D0960095A091 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D658290D1D20D0960095A091 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D65D90D11D20B974000E4432 /* SongCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCollectionView.h; sourceTree = "<group>"; };
+		D65D90D21D20B974000E4432 /* SongCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCollectionView.m; sourceTree = "<group>"; };
 		D65FA99E1D1D786D00D0CC3E /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
 		D65FA99F1D1D786D00D0CC3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		D65FA9A01D1D786D00D0CC3E /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -178,16 +178,6 @@
 		D68AC7CE1D1BB37C00EBB00B /* Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Travel.m; sourceTree = "<group>"; };
 		D68AC7DC1D1BB58300EBB00B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D68AC7DD1D1BB58300EBB00B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
-		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
-		D6A0F6C81D211A050057CE15 /* SongDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewCell.h; sourceTree = "<group>"; };
-		D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewCell.m; sourceTree = "<group>"; };
-		D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongDetailViewCell.xib; sourceTree = "<group>"; };
-		D6A0F6CD1D211BBC0057CE15 /* SongList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongList.h; sourceTree = "<group>"; };
-		D6A0F6CE1D211BBC0057CE15 /* SongList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongList.m; sourceTree = "<group>"; };
-		D6A0F6D01D211DE10057CE15 /* SongPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPlayViewController.h; sourceTree = "<group>"; };
-		D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPlayViewController.m; sourceTree = "<group>"; };
-		D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongPlayViewController.xib; sourceTree = "<group>"; };
 		D68AEEB61D1FEF8100C7127D /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		D68AEEB81D1FF3B900C7127D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D68AEEBA1D1FF3C100C7127D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -205,6 +195,16 @@
 		D6902C501D20BC2900395FB4 /* FindPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordController.h; sourceTree = "<group>"; };
 		D6902C511D20BC2900395FB4 /* FindPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordController.m; sourceTree = "<group>"; };
 		D6902C521D20BC2900395FB4 /* FindPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPasswordController.xib; sourceTree = "<group>"; };
+		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
+		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
+		D6A0F6C81D211A050057CE15 /* SongDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewCell.h; sourceTree = "<group>"; };
+		D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewCell.m; sourceTree = "<group>"; };
+		D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongDetailViewCell.xib; sourceTree = "<group>"; };
+		D6A0F6CD1D211BBC0057CE15 /* SongList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongList.h; sourceTree = "<group>"; };
+		D6A0F6CE1D211BBC0057CE15 /* SongList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongList.m; sourceTree = "<group>"; };
+		D6A0F6D01D211DE10057CE15 /* SongPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPlayViewController.h; sourceTree = "<group>"; };
+		D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPlayViewController.m; sourceTree = "<group>"; };
+		D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongPlayViewController.xib; sourceTree = "<group>"; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -728,9 +728,6 @@
 				D6F8F1E71D1CE8B700D39982 /* UserViewController.h */,
 				D6F8F1E81D1CE8B700D39982 /* UserViewController.m */,
 				D6F8F1E91D1CE8B700D39982 /* UserViewController.xib */,
-				D65FA9BE1D1D794600D0CC3E /* MapViewController.h */,
-				D65FA9BF1D1D794600D0CC3E /* MapViewController.m */,
-				D65FA9C01D1D794600D0CC3E /* MapViewController.xib */,
 				D6902C501D20BC2900395FB4 /* FindPasswordController.h */,
 				D6902C511D20BC2900395FB4 /* FindPasswordController.m */,
 				D6902C521D20BC2900395FB4 /* FindPasswordController.xib */,
@@ -827,7 +824,6 @@
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
 				D6F456E61D1D878A00C957B9 /* ClassTableViewCell.xib in Resources */,
 				D6E2DF061D20BDA100DCBF0D /* SongCollectionViewCell.xib in Resources */,
-				D65FA9C21D1D794600D0CC3E /* MapViewController.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
 				D6F456A71D1D846800C957B9 /* bigger.jpg in Resources */,
@@ -1088,7 +1084,6 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1114,7 +1109,6 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
