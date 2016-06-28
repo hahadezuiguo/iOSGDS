@@ -296,7 +296,6 @@
             [weakSelf showGifView];
     } completion:^(BOOL finished) {
         
-//        [self performSelector:@selector(pushNextController) withObject:nil afterDelay:5.0f];
         
     }];
   
