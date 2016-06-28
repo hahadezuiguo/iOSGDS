@@ -62,7 +62,17 @@
 
 @implementation TravelViewController
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    NSLog(@"WILL");
+    //请求天气数据
+    [self requestWeather];
+
+}
+
 - (void)viewDidLoad {
+    
+    NSLog(@"我是 viewDidLoad");
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -73,9 +83,9 @@
     [self createSynthesizer];
       //定位
     [self locationService];
-        //请求天气数据
-    [self requestWeather];
-   
+//        //请求天气数据
+//    [self requestWeather];
+//   
     
     //播放第一条并加入Timer设定切换间隔时间
     [self msgChange];
@@ -141,7 +151,7 @@
     if (self.city) {
         [parameter setObject:self.city forKey:@"city"];
     }else {
-        [parameter setObject:@"北京" forKey:@"city"];
+        [parameter setObject:@"承德" forKey:@"city"];
     }
     
     //请求API
@@ -201,7 +211,7 @@
     //设置文字识别对象的关键属性
     [self.synthesizer setParameter:@"50" forKey:[IFlySpeechConstant SPEED]];
     [self.synthesizer setParameter:@"50" forKey:[IFlySpeechConstant VOLUME]];
-    [self.synthesizer setParameter:@"XIAOYAN" forKey:[IFlySpeechConstant VOICE_NAME]];
+    [self.synthesizer setParameter:@"vils" forKey:[IFlySpeechConstant VOICE_NAME]];
     [self.synthesizer setParameter:@"8000" forKey:[IFlySpeechConstant SAMPLE_RATE]];
     [self.synthesizer setParameter:@"temp.pcm" forKey:[IFlySpeechConstant TTS_AUDIO_PATH]];
     [self.synthesizer setParameter:@"custom" forKey:[IFlySpeechConstant PARAMS]];
@@ -244,7 +254,7 @@
 
 - (void)showGifView {
     //加载等待视图
-    [MBProgressHUD setUpGifWithFrame:CGRectMake(0, 0, 150,150) gifName:@"where" text:self.weatherText.text andShowToView:self.messageView];
+    [MBProgressHUD setUpGifWithFrame:CGRectMake(0, 0, 150,150) gifName:@"where" text:self.messageArray[1] andShowToView:self.messageView];
 }
 -(void)hideGifView {
     [MBProgressHUD hideHUDForView:self.messageView animated:YES];
@@ -257,25 +267,26 @@
 - (IBAction)GoAction:(id)sender {
     
    
-    NSString *string2 = [[_weather.suggestion objectForKey:@"comf"]objectForKey:@"brf"];
+//    NSString *string2 = [[_weather.suggestion objectForKey:@"comf"]objectForKey:@"brf"];
     NSString *string22 = [[_weather.suggestion objectForKey:@"comf"]objectForKey:@"txt"];
     
-    NSString *string3 = [[_weather.suggestion objectForKey:@"flu"]objectForKey:@"brf"];
+//    NSString *string3 = [[_weather.suggestion objectForKey:@"flu"]objectForKey:@"brf"];
     NSString *string33 = [[_weather.suggestion objectForKey:@"flu"]objectForKey:@"txt"];
 
-    NSString *string4 = [[_weather.suggestion objectForKey:@"sport"]objectForKey:@"brf"];
+//    NSString *string4 = [[_weather.suggestion objectForKey:@"sport"]objectForKey:@"brf"];
     NSString *string44 = [[_weather.suggestion objectForKey:@"sport"]objectForKey:@"txt"];
 
-    NSString *string5 = [[_weather.suggestion objectForKey:@"trav"]objectForKey:@"brf"];
-    NSString *string55 = [[_weather.suggestion objectForKey:@"trav"]objectForKey:@"txt"];
+//    NSString *string5 = [[_weather.suggestion objectForKey:@"trav"]objectForKey:@"brf"];
+//    NSString *string55 = [[_weather.suggestion objectForKey:@"trav"]objectForKey:@"txt"];
+//
+//    NSString *string6 = [[_weather.suggestion objectForKey:@"uv"]objectForKey:@"brf"];
+//    NSString *string66 = [[_weather.suggestion objectForKey:@"uv"]objectForKey:@"txt"];
 
-    NSString *string6 = [[_weather.suggestion objectForKey:@"uv"]objectForKey:@"brf"];
-    NSString *string66 = [[_weather.suggestion objectForKey:@"uv"]objectForKey:@"txt"];
-
-    NSString *str = [NSString stringWithFormat:@"感觉质数为%@，%@，发病质数为%@，%@，运动质数为%@，%@，出游质数为%@，%@，紫外线质数%@，%@",string2, string22,string3,string33, string4,string44, string5,string55, string6, string66];
-
+//    NSString *str = [NSString stringWithFormat:@"感觉质数为%@，%@，发病质数为%@，%@，运动质数为%@，%@，出游质数为%@，%@，紫外线质数%@，%@",string2, string22,string3,string33, string4,string44, string5,string55, string6, string66];
+    NSString *string = [NSString stringWithFormat:@"今天%@，%@，%@",string22,string33,string44];
+    
     //把文字转成声音
-    [self.synthesizer startSpeaking:str];
+    [self.synthesizer startSpeaking:string];
 
     
     __weak typeof(self) weakSelf = self;
@@ -332,6 +343,11 @@ errorCode:(BMKSearchErrorCode)error{
       NSString *str = [string substringToIndex:string.length - 1];
       self.city = str;
    self.result = result;
+      
+      //请求天气数据
+      [self requestWeather];
+      
+      
  
 }
   else {

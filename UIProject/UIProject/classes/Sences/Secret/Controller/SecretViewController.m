@@ -293,13 +293,11 @@
             cell.listTitle.text = model.title;
             
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
-            NSLog(@"11111111111111111");
             break;}
         case 1:{
             HealthModel *model = self.allHealthData[indexPath.row];
             cell.listTitle.text = model.title;
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
-            NSLog(@"222222222222");
             break;}
             
         default:
