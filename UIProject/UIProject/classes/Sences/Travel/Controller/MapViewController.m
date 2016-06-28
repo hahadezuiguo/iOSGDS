@@ -40,6 +40,7 @@
 {
     [_mapView viewWillAppear];
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    self.navigationController.navigationBar.translucent = NO;
 }
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
@@ -153,7 +154,7 @@ static BOOL isOpen = YES;
     option.pageCapacity = 50;
     
     //搜索半径
-    option.radius = 2000;
+    option.radius = 200;
     
     //检索的中心点，经纬度
     option.location = userLocation.location.coordinate;
@@ -272,6 +273,9 @@ static BOOL isOpen = YES;
     
     if (flag) {
         NSLog(@"检索成功");
+        
+        
+        
     }
     else {
         

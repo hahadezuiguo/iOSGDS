@@ -53,6 +53,7 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textFieldHeight;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
 
 @end
 
@@ -64,12 +65,17 @@
     
     [self viewAddTap];
     [self textFieldAction];
-    self.navigationController.navigationBar.translucent = NO;
+    
+    
     
     
 }
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.tabBar.translucent = YES;
+    self.tabBarController.tabBar.hidden = YES;
+   
+}
 
 - (IBAction)GoAction:(id)sender {
     self.hidesBottomBarWhenPushed = YES;
@@ -99,45 +105,23 @@
 
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
-    //获取键盘的高度
-    /*
-     iphone 6:
-     中文
-     2014-12-31 11:16:23.643 Demo[686:41289] 键盘高度是  258
-     2014-12-31 11:16:23.644 Demo[686:41289] 键盘宽度是  375
-     英文
-     2014-12-31 11:55:21.417 Demo[1102:58972] 键盘高度是  216
-     2014-12-31 11:55:21.417 Demo[1102:58972] 键盘宽度是  375
-     
-     iphone  6 plus：
-     英文：
-     2014-12-31 11:31:14.669 Demo[928:50593] 键盘高度是  226
-     2014-12-31 11:31:14.669 Demo[928:50593] 键盘宽度是  414
-     中文：
-     2015-01-07 09:22:49.438 Demo[622:14908] 键盘高度是  271
-     2015-01-07 09:22:49.439 Demo[622:14908] 键盘宽度是  414
-     
-     iphone 5 :
-     2014-12-31 11:19:36.452 Demo[755:43233] 键盘高度是  216
-     2014-12-31 11:19:36.452 Demo[755:43233] 键盘宽度是  320
-     */
-    NSDictionary *userInfo = [aNotification userInfo];
+     NSDictionary *userInfo = [aNotification userInfo];
     NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardRect = [aValue CGRectValue];
     int height = keyboardRect.size.height;
     
-    int offset = CGRectGetMaxY(self.view.frame) - (self.view.frame.size.height - height);
-    if (offset > 0) {
-        //整个视图向上移动
-        self.view.frame = CGRectMake(0, -offset + self.navigationController.navigationBar.frame.size.height + self.tabBarController.tabBar.frame.size.height, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    }
-    
+
+    self.textFieldHeight.constant = height;
+   
 }
 
 //当键退出时调用
 - (void)keyboardWillHide:(NSNotification *)aNotification
 {
-    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+
+    self.textFieldHeight.constant = 10;
+  
+
 }
 
 //view添加事件
@@ -168,11 +152,8 @@
     NSLog(@"%@", label.text);
   
     self.textField.text = label.text;
-//    
-//    MapViewController *mapVC = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
-//    [self.navigationController pushViewController:mapVC animated:YES];
-//    mapVC.searchString = label.text;
 
+    [self performSelector:@selector(GoAction:) withObject:nil afterDelay:1.5f];
     
     
 }

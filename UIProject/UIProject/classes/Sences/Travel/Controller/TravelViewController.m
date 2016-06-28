@@ -64,7 +64,7 @@
 
 
 -(void)viewWillAppear:(BOOL)animated {
-    NSLog(@"WILL");
+    self.tabBarController.tabBar.hidden = NO;
     //请求天气数据
     [self requestWeather];
 
@@ -76,8 +76,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationController.navigationBar.translucent = NO;
-    self.tabBarController.tabBar.translucent = NO;
+    
+    
     
     //创建文字识别对象
     [self createSynthesizer];
@@ -304,6 +304,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (self.messageView) {
     [self pushNextController];
+    [self.synthesizer stopSpeaking];
     }
 }
 -(void)pushNextController {
