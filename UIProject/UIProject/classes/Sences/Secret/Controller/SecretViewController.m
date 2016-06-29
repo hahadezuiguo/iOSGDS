@@ -25,12 +25,14 @@
 #import "CookDetailViewController.h"
 #import <MBProgressHUD.h>
 #import "ShareBabyViewController.h"
+#import "SheetView.h"
+#import "SheetModel.h"
 
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kSpace 8
 #define kItemSize ([UIScreen mainScreen].bounds.size.width - 40.1) / 3
 
-@interface SecretViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface SecretViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate,SheetViewDelegate>
 
 @property (nonatomic, strong) RootView *rootView;
 // 声明可变数组存放解析出的育儿课堂数据
@@ -43,6 +45,8 @@
 @property (nonatomic, strong) UIScrollView *mainScroll;
 
 @property (nonatomic, strong) UIScrollView *cookScroll;
+//sheetArray
+@property (nonatomic, strong) NSArray *sheetArray;
 
 
 @end
@@ -74,6 +78,13 @@
         _allCookData = [NSMutableArray array];
     }
     return _allCookData;
+}
+//懒加载
+- (NSArray *)sheetArray{
+    if (_sheetArray == nil) {
+        _sheetArray = [NSArray array];
+    }
+    return _sheetArray;
 }
 
 - (void)viewDidLoad {
@@ -108,17 +119,76 @@
     //营养饮食网络请求
     [self netCookRequest];
     
+    //sheetarray
+    [self initSheet];
+    
         
+}
+
+- (void)initSheet{
+    
+    SheetModel *model1 = [[SheetModel alloc] init];
+    model1.title = @"美图欣赏";
+    
+    SheetModel *model2 = [[SheetModel alloc] init];
+    model2.title = @"宝宝健身";
+    
+    SheetModel *model3 = [[SheetModel alloc] init];
+    model3.title = @"宝宝爱喝粥";
+    
+    SheetModel *model4 = [[SheetModel alloc] init];
+    model4.title = @"宝宝吃西点";
+    
+    self.sheetArray = @[model1, model2, model3, model4];
+    
 }
 
 //晒baby
 - (void)sharePicture{
-    
-    ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
-    [self.navigationController pushViewController:shareVC animated:YES];
+//    __weak typeof(self)weakSelf = self;
+////    ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+////    [self.navigationController pushViewController:shareVC animated:YES];
+//  
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"测试" preferredStyle:UIAlertControllerStyleActionSheet];
+//    UIAlertAction *oneA = [UIAlertAction actionWithTitle:@"美图欣赏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+//        [weakSelf.navigationController pushViewController:shareVC animated:YES];
+//    }];
+//    [alert addAction:oneA];
+//    [self presentViewController:alert animated:YES completion:nil];
   
+    SheetView *sheetView = [[SheetView alloc] initWithInforArray:self.sheetArray];
+    sheetView.delegate = self;
+    [sheetView showInView:nil];
     
 }
+//sheetView的代理方法
+- (void)selectedRow:(NSInteger)index{
+    self.tabBarController.tabBar.hidden = YES;
+    switch (index) {
+        case 0:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 1:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 2:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 3:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+            
+        default:
+            break;
+    }
+    
+}
+
 
 //
 - (void)initCook{

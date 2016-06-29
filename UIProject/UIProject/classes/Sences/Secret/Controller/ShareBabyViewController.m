@@ -112,7 +112,7 @@
     WaterfallModel *model = self.allDataArray[indexPath.row];
     
     NSURL *urlString = [NSURL URLWithString:model.img];
-    [cell.waterImage sd_setImageWithURL:urlString];
+    [cell.waterImage sd_setImageWithURL:urlString placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
     
     
     return cell;
