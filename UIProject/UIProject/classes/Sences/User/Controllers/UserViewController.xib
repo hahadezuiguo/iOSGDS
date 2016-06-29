@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController">
+            <connections>
+                <outlet property="ViewHeight" destination="S8s-gd-lGf" id="rKA-G5-m32"/>
+                <outlet property="colView" destination="MiJ-X8-kOH" id="h6J-SH-R1A"/>
+                <outlet property="collectionSegment" destination="ise-Yo-xnn" id="AxU-NL-BN3"/>
+                <outlet property="userNameLabel" destination="QT3-g5-dw4" id="JPc-Hy-dlX"/>
+                <outlet property="userPhotoImage" destination="4Gq-BC-nX2" id="R73-cI-u0y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="where1.png" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-kI-Bgf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Gq-BC-nX2">
+                    <rect key="frame" x="116" y="36" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Gq-BC-nX2" secondAttribute="height" multiplier="46:45" id="NKX-Tp-5SN"/>
+                        <constraint firstAttribute="width" secondItem="4Gq-BC-nX2" secondAttribute="height" id="n4a-2R-V6u"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="NKX-Tp-5SN"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-g5-dw4">
+                    <rect key="frame" x="8" y="126" width="304" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="E9G-fo-mfQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ise-Yo-xnn">
+                    <rect key="frame" x="0.0" y="200" width="320" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Gf9-3P-iPT"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                        <segment title=""/>
+                    </segments>
+                </segmentedControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-t1-beL">
+                    <rect key="frame" x="0.0" y="230" width="320" height="338"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiJ-X8-kOH">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="370" id="S8s-gd-lGf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="MiJ-X8-kOH" secondAttribute="trailing" id="6NN-3M-D6F"/>
+                        <constraint firstItem="MiJ-X8-kOH" firstAttribute="leading" secondItem="SOX-t1-beL" secondAttribute="leading" id="Vq6-Kx-bV9"/>
+                        <constraint firstAttribute="bottom" secondItem="MiJ-X8-kOH" secondAttribute="bottom" id="bso-D6-Sg9"/>
+                        <constraint firstItem="MiJ-X8-kOH" firstAttribute="top" secondItem="SOX-t1-beL" secondAttribute="top" id="jTL-51-QSn"/>
+                        <constraint firstItem="MiJ-X8-kOH" firstAttribute="width" secondItem="SOX-t1-beL" secondAttribute="width" id="rgw-0e-zx6"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="150" id="32Y-ka-boo"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="width" secondItem="z9B-kI-Bgf" secondAttribute="width" multiplier="0.275" id="4k9-tZ-F65"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="width" secondItem="z9B-kI-Bgf" secondAttribute="height" multiplier="1:8" id="9tT-pU-vDR"/>
+                <constraint firstAttribute="trailing" secondItem="ise-Yo-xnn" secondAttribute="trailing" id="BPa-Va-YD1"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="161" id="Jxp-BN-jvH"/>
+                <constraint firstAttribute="trailing" secondItem="4Gq-BC-nX2" secondAttribute="trailing" constant="161" id="K6l-GS-F1c"/>
+                <constraint firstAttribute="trailing" secondItem="QT3-g5-dw4" secondAttribute="trailing" constant="8" id="Oc6-V8-lp0"/>
+                <constraint firstItem="ise-Yo-xnn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qca-qt-JdV"/>
+                <constraint firstItem="ise-Yo-xnn" firstAttribute="top" secondItem="QT3-g5-dw4" secondAttribute="bottom" constant="44" id="RJL-me-eHc"/>
+                <constraint firstItem="QT3-g5-dw4" firstAttribute="top" secondItem="4Gq-BC-nX2" secondAttribute="bottom" constant="2" id="Ty5-ss-m5I"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="centerX" secondItem="z9B-kI-Bgf" secondAttribute="centerX" id="Umx-68-xAL"/>
+                <constraint firstItem="SOX-t1-beL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VzN-er-RS0"/>
+                <constraint firstAttribute="trailing" secondItem="4Gq-BC-nX2" secondAttribute="trailing" constant="150" id="b4r-Vs-oh2"/>
+                <constraint firstItem="QT3-g5-dw4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="buk-oh-kgT"/>
+                <constraint firstAttribute="trailing" secondItem="SOX-t1-beL" secondAttribute="trailing" id="dWn-fH-Bii"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="eva-jh-a07"/>
+                <constraint firstItem="SOX-t1-beL" firstAttribute="top" secondItem="ise-Yo-xnn" secondAttribute="bottom" id="pW5-uz-A7k"/>
+                <constraint firstAttribute="bottom" secondItem="SOX-t1-beL" secondAttribute="bottom" id="qxP-Ut-BCV"/>
+                <constraint firstAttribute="bottom" secondItem="z9B-kI-Bgf" secondAttribute="bottom" id="rMD-Pr-cfZ"/>
+                <constraint firstAttribute="trailing" secondItem="z9B-kI-Bgf" secondAttribute="trailing" id="t1o-GC-fso"/>
+                <constraint firstItem="z9B-kI-Bgf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vYe-zp-l5L"/>
+                <constraint firstItem="4Gq-BC-nX2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="xMh-ph-agx"/>
+                <constraint firstItem="z9B-kI-Bgf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yMR-lf-NG9"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="32Y-ka-boo"/>
+                    <exclude reference="9tT-pU-vDR"/>
+                    <exclude reference="Jxp-BN-jvH"/>
+                    <exclude reference="K6l-GS-F1c"/>
+                    <exclude reference="b4r-Vs-oh2"/>
+                    <exclude reference="xMh-ph-agx"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="go.png" width="990" height="275"/>
+        <image name="where1.png" width="595" height="662"/>
+    </resources>
+</document>
