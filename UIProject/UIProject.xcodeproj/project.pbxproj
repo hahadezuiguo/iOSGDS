@@ -45,6 +45,10 @@
 		D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */; };
 		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
+
+		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
+		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
+
 		D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */; };
 		D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */; };
 		D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C351D2268D1004B10DC /* blackArrow.png */; };
@@ -56,6 +60,7 @@
 		D67F0C431D2268D1004B10DC /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C3B1D2268D1004B10DC /* whiteArrow.png */; };
 		D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C3C1D2268D1004B10DC /* whiteArrow@2x.png */; };
 		D67F0C471D22BF93004B10DC /* ShareBabyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C461D22BF93004B10DC /* ShareBabyViewController.m */; };
+
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
 		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
@@ -191,6 +196,10 @@
 		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
+
+		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		D67F0C2E1D22223E004B10DC /* EGORefreshTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableFooterView.h; sourceTree = "<group>"; };
 		D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableFooterView.m; sourceTree = "<group>"; };
 		D67F0C301D22223E004B10DC /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -798,6 +807,9 @@
 				D6902C501D20BC2900395FB4 /* FindPasswordController.h */,
 				D6902C511D20BC2900395FB4 /* FindPasswordController.m */,
 				D6902C521D20BC2900395FB4 /* FindPasswordController.xib */,
+				D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */,
+				D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */,
+				D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -918,6 +930,7 @@
 				D67F0C3F1D2268D1004B10DC /* blueArrow.png in Resources */,
 				D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */,
 				D6F456E81D1D878A00C957B9 /* CollectionViewCell.xib in Resources */,
+				D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
 				D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */,
 				D6F456CC1D1D850900C957B9 /* SecretViewController.xib in Resources */,
@@ -1042,6 +1055,7 @@
 				D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D6F456BF1D1D84A100C957B9 /* TAAnimatedDotView.m in Sources */,
+				D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */,
 				D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */,
 				D6F456C21D1D84A100C957B9 /* SDCollectionViewCell.m in Sources */,
 				D6F8F1FC1D1CE8B700D39982 /* CollectionView.m in Sources */,
