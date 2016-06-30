@@ -68,7 +68,7 @@
         loadimg = [UIImage imageNamed:loading];
 	
 		CALayer *layer = [CALayer layer];
-		layer.frame = CGRectMake(self.frame.size.width/2-50, frame.size.height - 44.0f, arrowimg.size.width, arrowimg.size.height);
+		layer.frame = CGRectMake(0, 0, arrowimg.size.width, arrowimg.size.height);
 		layer.contentsGravity = kCAGravityResizeAspect;
 		layer.contents = (id)arrowimg.CGImage;
 
@@ -164,14 +164,14 @@
         {
 			_statusLabel.text = NSLocalizedString(@"加载中...", @"Loading Status");
             _arrowImage.contents =(id) loadimg.CGImage;
-            /*
-		//	[_activityView startAnimating];
+            
+			[_activityView startAnimating];
 			[CATransaction begin];
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions]; 
-		//	_arrowImage.hidden = YES;
+			_arrowImage.hidden = YES;
             _arrowImage.transform = CATransform3DIdentity;
 			[CATransaction commit];
-             */
+            
             CABasicAnimation *animation = [ CABasicAnimation
                                            animationWithKeyPath: @"transform" ];
             animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];

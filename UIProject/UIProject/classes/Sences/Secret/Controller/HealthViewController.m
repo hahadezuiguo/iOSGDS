@@ -25,7 +25,7 @@
 const CGFloat kTableHeaderViewHeight = 65.f;
 const CGFloat kTableFooterViewHeight = 65.f;
 
-@interface HealthViewController ()<UITableViewDelegate,UITableViewDataSource,EGORefreshTableDelegate>
+@interface HealthViewController ()<UITableViewDelegate,UITableViewDataSource,EGORefreshTableDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
 @property (nonatomic, strong) UITableView *healthTable;
 // 声明可变数组存放解析出的育儿课堂数据
@@ -34,13 +34,27 @@ const CGFloat kTableFooterViewHeight = 65.f;
 @property (nonatomic, assign) BOOL isLoading;
 //下拉刷新添加的顶部视图
 @property (nonatomic, strong) EGORefreshTableHeaderView *refreshHeaderView;
-//上拉刷新的底部视图
-@property (nonatomic, strong) EGORefreshTableFooterView *refreshFooterView;
+//搜索结果数组
+@property (nonatomic, strong) NSMutableArray *resultArray;
+//搜索控制器
+@property (nonatomic, strong) UISearchController *searchVC;
 
 @end
 
 @implementation HealthViewController
 
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+- (NSMutableArray *)resultArray{
+    if (!_resultArray) {
+        _resultArray = [NSMutableArray array];
+    }
+    return _resultArray;
+}
 
 //懒加载
 -(NSMutableArray *)allDataArray {
@@ -74,8 +88,43 @@ const CGFloat kTableFooterViewHeight = 65.f;
     //健康护理网络请求
     [self netHealthRequest];
     [self setHeaderView];
+    [self search];
     
 }
+
+//搜索布局
+- (void)search{
+    self.searchVC = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchVC.searchBar.frame = CGRectMake(self.searchVC.searchBar.frame.origin.x, self.searchVC.searchBar.frame.origin.y, self.searchVC.searchBar.frame.size.width, 44.0);
+    self.healthTable.tableHeaderView = self.searchVC.searchBar;
+    //设置代理
+    self.searchVC.searchResultsUpdater = self;
+    self.searchVC.delegate = self;
+    //设置UISearchController的显示属性，以下3个属性默认为YES
+    //搜索时，背景变暗色
+    self.searchVC.dimsBackgroundDuringPresentation = NO;
+    //搜索时，背景变模糊
+    self.searchVC.obscuresBackgroundDuringPresentation = NO;
+    //隐藏导航栏
+    self.searchVC.hidesNavigationBarDuringPresentation = NO;
+}
+//search代理方法
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    //获取输入框内容
+    NSString *searchString = self.searchVC.searchBar.text;
+    //创建谓词条件
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title contains[c] %@", searchString];
+    if (self.resultArray != nil) {
+        [self.resultArray removeAllObjects];
+    }
+    //过滤数据
+    self.resultArray = [NSMutableArray arrayWithArray:[self.allDataArray filteredArrayUsingPredicate:predicate]];
+   
+    [self.healthTable reloadData];
+    
+    
+}
+
 
 
 //网络请求健康护理
@@ -111,24 +160,37 @@ const CGFloat kTableFooterViewHeight = 65.f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+   
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.searchVC.active) {
+        return self.resultArray.count;
+    }
+
     return self.allDataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (self.searchVC.active) {
+        HealthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        HealthModel *model = self.resultArray[indexPath.row];
+        [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+        cell.titleLabel.text = model.title;
+        cell.timeLabel.text = model.timer;
+        cell.timeLabel.tintColor = [UIColor lightGrayColor];
+
+        return cell;
+    }else{
     HealthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
      HealthModel *model = self.allDataArray[indexPath.row];
-//    cell.mainImageV.layer.cornerRadius = 40;
-//    cell.mainImageV.layer.masksToBounds = YES;
     [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
     cell.titleLabel.text = model.title;
     cell.timeLabel.text = model.timer;
     cell.timeLabel.tintColor = [UIColor lightGrayColor];
-    return cell;
+        return cell;}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -140,6 +202,7 @@ const CGFloat kTableFooterViewHeight = 65.f;
     HealthDetailViewController *healthVC = [[HealthDetailViewController alloc] init];
     HealthModel *model = self.allDataArray[indexPath.row];
     healthVC.model = model;
+    self.searchVC.active = NO;
     [self.navigationController pushViewController:healthVC animated:YES];
     
     
@@ -154,8 +217,8 @@ const CGFloat kTableFooterViewHeight = 65.f;
         UIColor *viewTextColoer = [UIColor colorWithRed:216.0/255.0 green:196.0/255.0 blue:172.0/255.0 alpha:0.7f];
         UIColor *viewBackgroundColor = [UIColor colorWithRed:251.0/255.0 green:243.0/255.0 blue:231.0/255.0 alpha:1.0f];
         _refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, -kTableHeaderViewHeight, self.healthTable.frame.size.width, kTableFooterViewHeight)
-                                                               arrowImageName:@"refresh_up_arrow"
-                                                             loadingImageNmae:@"refresh_loading"
+                                                               arrowImageName:@"grayArrow.png"
+                                                             loadingImageNmae:@"grayArrow.png"
                                                                     textColor:viewTextColoer];
         _refreshHeaderView.backgroundColor = viewBackgroundColor;
         _refreshHeaderView.delegate = self;

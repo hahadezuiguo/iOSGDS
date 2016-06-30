@@ -24,12 +24,15 @@
 #import "HealthDetailViewController.h"
 #import "CookDetailViewController.h"
 #import <MBProgressHUD.h>
+#import "ShareBabyViewController.h"
+#import "SheetView.h"
+#import "SheetModel.h"
 
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kSpace 8
 #define kItemSize ([UIScreen mainScreen].bounds.size.width - 40.1) / 3
 
-@interface SecretViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface SecretViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate,SheetViewDelegate>
 
 @property (nonatomic, strong) RootView *rootView;
 // 声明可变数组存放解析出的育儿课堂数据
@@ -42,10 +45,18 @@
 @property (nonatomic, strong) UIScrollView *mainScroll;
 
 @property (nonatomic, strong) UIScrollView *cookScroll;
+//sheetArray
+@property (nonatomic, strong) NSArray *sheetArray;
+
 
 @end
 
 @implementation SecretViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 //懒加载
 -(NSMutableArray *)allDataArray {
     
@@ -68,20 +79,29 @@
     }
     return _allCookData;
 }
+//懒加载
+- (NSArray *)sheetArray{
+    if (_sheetArray == nil) {
+        _sheetArray = [NSArray array];
+    }
+    return _sheetArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(sharePicture)];
     
     self.mainScroll = [[UIScrollView alloc] initWithFrame:self.view.frame];
     self.mainScroll.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 600);
+    self.mainScroll.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     [self.view addSubview:self.mainScroll];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self initcycle];
     
     self.rootView = [[RootView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.width*0.3, [UIScreen mainScreen].bounds.size.width, kItemSize * 2 + 100)];
     [self.mainScroll addSubview:self.rootView];
+    
   
     self.navigationController.navigationBar.translucent = NO;
     self.rootView.collectionView.delegate = self;
@@ -99,8 +119,76 @@
     //营养饮食网络请求
     [self netCookRequest];
     
+    //sheetarray
+    [self initSheet];
+    
         
 }
+
+- (void)initSheet{
+    
+    SheetModel *model1 = [[SheetModel alloc] init];
+    model1.title = @"美图欣赏";
+    
+    SheetModel *model2 = [[SheetModel alloc] init];
+    model2.title = @"宝宝健身";
+    
+    SheetModel *model3 = [[SheetModel alloc] init];
+    model3.title = @"宝宝爱喝粥";
+    
+    SheetModel *model4 = [[SheetModel alloc] init];
+    model4.title = @"宝宝吃西点";
+    
+    self.sheetArray = @[model1, model2, model3, model4];
+    
+}
+
+//晒baby
+- (void)sharePicture{
+//    __weak typeof(self)weakSelf = self;
+////    ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+////    [self.navigationController pushViewController:shareVC animated:YES];
+//  
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"测试" preferredStyle:UIAlertControllerStyleActionSheet];
+//    UIAlertAction *oneA = [UIAlertAction actionWithTitle:@"美图欣赏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+//        [weakSelf.navigationController pushViewController:shareVC animated:YES];
+//    }];
+//    [alert addAction:oneA];
+//    [self presentViewController:alert animated:YES completion:nil];
+  
+    SheetView *sheetView = [[SheetView alloc] initWithInforArray:self.sheetArray];
+    sheetView.delegate = self;
+    [sheetView showInView:nil];
+    
+}
+//sheetView的代理方法
+- (void)selectedRow:(NSInteger)index{
+    self.tabBarController.tabBar.hidden = YES;
+    switch (index) {
+        case 0:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 1:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 2:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+        case 3:{
+            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
+            [self.navigationController pushViewController:shareVC animated:YES];
+            break;}
+            
+        default:
+            break;
+    }
+    
+}
+
 
 //
 - (void)initCook{
@@ -125,7 +213,7 @@
     
     self.cookScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(titleLabel.frame) + 4, [UIScreen mainScreen].bounds.size.width, 200)];
     self.cookScroll.contentSize = CGSizeMake(kWidth * 3, 200);
-    
+    self.cookScroll.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     
     for (int i = 0; i < self.allCookData.count; i++) {
         
@@ -288,20 +376,21 @@
 //返回cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     switch (indexPath.section) {
         case 0:{
             ListModel *model = self.allDataArray[indexPath.row];
             cell.listTitle.text = model.title;
             
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
-            NSLog(@"11111111111111111");
+            
             return cell;
             break;}
         case 1:{
             HealthModel *model = self.allHealthData[indexPath.row];
             cell.listTitle.text = model.title;
             [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
-            NSLog(@"222222222222");
+           
             return cell;
             break;}
             
@@ -317,15 +406,19 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         
         HeadCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headView" forIndexPath:indexPath];
-
+        header.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     
     switch (indexPath.section) {
         case 0:{
             
                 header.titlesLabel.text = @"育儿课堂";
                 [header.moreButton setTitle:@"更多" forState:UIControlStateNormal];
+            [header.moreButton setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
+            [header.moreButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             [header.moreButton removeTarget:self action:@selector(classMore) forControlEvents:UIControlEventTouchUpInside];
                  [header.moreButton addTarget:self action:@selector(classMore) forControlEvents:UIControlEventTouchUpInside];
+            
+            
            
                 break;
             
@@ -353,14 +446,13 @@
     __weak typeof(self)weakSelf = self;
     ClassViewController *classVC = [[ClassViewController alloc] init];
     
-    [UIView animateWithDuration:1.0f animations:^{
-        //weakSelf.view.frame = CGRectMake(-500, 100, 0, 0);
-        weakSelf.view.center = CGPointMake(-500, 0);
+    [UIView animateWithDuration:0.7f animations:^{
+
+        weakSelf.view.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, -900);
             } completion:^(BOOL finished) {
-                weakSelf.hidesBottomBarWhenPushed = YES;
                 
     [weakSelf.navigationController pushViewController:classVC animated:NO];
-     weakSelf.hidesBottomBarWhenPushed = NO;
+    
     }];
     
 }
@@ -371,9 +463,8 @@
     __weak typeof(self)weakSelf = self;
  HealthViewController *healthVC = [[HealthViewController alloc] init];
     
-    [UIView animateWithDuration:0.5f animations:^{
-        //weakSelf.view.frame = CGRectMake(-500, 100, 0, 0);
-        weakSelf.view.center = CGPointMake(-500, 0);
+    [UIView animateWithDuration:0.7f animations:^{
+        weakSelf.view.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, -900);
     } completion:^(BOOL finished) {
         weakSelf.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:healthVC animated:NO];
