@@ -8,7 +8,16 @@
 
 #import "UserDetailViewController.h"
 
-@interface UserDetailViewController ()
+#import "ImageCell.h"
+#import "NormalCell.h"
+
+#define kImageCell @"ImageCell"
+#define kNormalCell @"NormalCell"
+@interface UserDetailViewController ()  <UITableViewDelegate,UITableViewDataSource>
+
+
+@property (weak, nonatomic) IBOutlet UITableView *infoTableView;
+
 
 @end
 
@@ -16,8 +25,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.infoTableView.delegate = self;
+    self.infoTableView.dataSource = self;
+    
+    //注册cell
+    [self.infoTableView registerNib:[UINib nibWithNibName:@"ImageCell" bundle:nil] forCellReuseIdentifier:kImageCell];
+    [self.infoTableView registerNib:[UINib nibWithNibName:@"NormalCell" bundle:nil] forCellReuseIdentifier:kNormalCell];
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma mark - 实现代理方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        ImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:kImageCell forIndexPath:indexPath];
+        return imageCell;
+    }
+    NormalCell *normalCell = [tableView dequeueReusableCellWithIdentifier:kNormalCell forIndexPath:indexPath];
+    return normalCell;
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 100;
+    }
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+
+- (IBAction)logoutACtion:(id)sender {
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

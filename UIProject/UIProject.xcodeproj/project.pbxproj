@@ -41,13 +41,14 @@
 		D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */; };
 		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
-
 		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
 		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
-
+		D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F30E1D23AA3E00C6AC26 /* ImageCell.m */; };
+		D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */; };
+		D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F3131D23AA4E00C6AC26 /* NormalCell.m */; };
+		D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D677F3141D23AA4E00C6AC26 /* NormalCell.xib */; };
 		D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */; };
 		D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */; };
-
 		D68AC7C01D1BB2CB00EBB00B /* SongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7BE1D1BB2CB00EBB00B /* SongViewController.m */; };
 		D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68AC7BF1D1BB2CB00EBB00B /* SongViewController.xib */; };
 		D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CB1D1BB35400EBB00B /* Song.m */; };
@@ -176,10 +177,15 @@
 		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
-
 		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		D677F30D1D23AA3E00C6AC26 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		D677F30E1D23AA3E00C6AC26 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		D677F3121D23AA4E00C6AC26 /* NormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalCell.h; sourceTree = "<group>"; };
+		D677F3131D23AA4E00C6AC26 /* NormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalCell.m; sourceTree = "<group>"; };
+		D677F3141D23AA4E00C6AC26 /* NormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCell.xib; sourceTree = "<group>"; };
 		D67F0C2E1D22223E004B10DC /* EGORefreshTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableFooterView.h; sourceTree = "<group>"; };
 		D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableFooterView.m; sourceTree = "<group>"; };
 		D67F0C301D22223E004B10DC /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
@@ -784,6 +790,12 @@
 				D6F8F1F01D1CE8B700D39982 /* CollectionCell.xib */,
 				D6F8F1F11D1CE8B700D39982 /* CollectionView.h */,
 				D6F8F1F21D1CE8B700D39982 /* CollectionView.m */,
+				D677F30D1D23AA3E00C6AC26 /* ImageCell.h */,
+				D677F30E1D23AA3E00C6AC26 /* ImageCell.m */,
+				D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */,
+				D677F3121D23AA4E00C6AC26 /* NormalCell.h */,
+				D677F3131D23AA4E00C6AC26 /* NormalCell.m */,
+				D677F3141D23AA4E00C6AC26 /* NormalCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -848,6 +860,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */,
 				D6F456AB1D1D846800C957B9 /* head4.jpg in Resources */,
 				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
 				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
@@ -871,6 +884,7 @@
 				D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */,
 				D6390A271D1E6171003F1964 /* HealthTableViewCell.xib in Resources */,
 				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
+				D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */,
 				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
@@ -980,6 +994,7 @@
 				D6F8F1FA1D1CE8B700D39982 /* CollectionCell.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
 				D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */,
+				D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */,
 				D6F456C31D1D84A100C957B9 /* SDCycleScrollView.m in Sources */,
 				D6F456EA1D1D878A00C957B9 /* HeadCollectionReusableView.m in Sources */,
 				D6F456C01D1D84A100C957B9 /* TADotView.m in Sources */,
@@ -988,6 +1003,7 @@
 				D6F456CB1D1D850900C957B9 /* SecretViewController.m in Sources */,
 				D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */,
 				D6390A261D1E6171003F1964 /* HealthTableViewCell.m in Sources */,
+				D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */,
 				D6390A2A1D1E7E01003F1964 /* ClassDetailViewController.m in Sources */,
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
 				D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */,

@@ -32,21 +32,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.translucent = NO;
     self.imagePicker = [[UIImagePickerController alloc] init];
     _imagePicker.delegate = self;
     
 }
-
+#pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    _userPhoto.image = image;
+    self.userPhoto.image = image;
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(saveImage), nil);
     }
-    //dismiis当前的选择页面
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+    //dismiss当前的选择页面
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)saveImage {
+    NSLog(@"存储图片");
 }
 
 
@@ -98,16 +101,18 @@
         user.username = self.userNameTextField.text;// 设置用户名
         user.password =  self.passwordTextField.text;// 设置密码
         user.email = self.emailAddressTextField.text; //设置邮箱
-//        NSData *data = UIImageJPEGRepresentation(self.userPhoto.image, 0.5);
-//        [user setObject:data forKey:@"userPhoto"];
-//        //        user.email = @"tom@leancloud.cn";// 设置邮箱
+        NSData *data = UIImageJPEGRepresentation(self.userPhoto.image, 0.5);
+        [user setObject:data forKey:@"userPhoto"];
+        [user setObject:@"" forKey:@"gender"];
+        [user setObject:@"" forKey:@"birthday"];
+
 //        
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 // 注册成功
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"注册成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"立即登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [self.navigationController popViewControllerAnimated:YES];
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }];
                 [alert addAction:action1];
                 [self presentViewController:alert animated:YES completion:nil
@@ -154,7 +159,7 @@
     [alert addAction:photoAction];
     [alert addAction:cameraAction];
     [self presentViewController:alert animated:YES completion:nil];
-
+    
     
 }
 

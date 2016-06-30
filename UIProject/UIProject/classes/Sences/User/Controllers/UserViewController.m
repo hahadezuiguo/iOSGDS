@@ -19,6 +19,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
 
+#import "UserDetailViewController.h"
 
 @interface UserViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -45,16 +46,28 @@
 
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    if ([UserFileHandle selectUserInfo].userName.length > 0) {
+        //显示用户
+        self.userNameLabel.text = [AVUser currentUser].username;
+        NSData *data = [[AVUser currentUser] objectForKey:@"userPhoto"];
+            self.userPhotoImage.image = [UIImage imageWithData:data];
+ 
+
+    }
+ }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   
+    self.navigationController.navigationBar.translucent = NO;
     
     self.rootView = [[CollectionView alloc] initWithFrame:self.colView.frame];
     [self.colView addSubview:self.rootView];
 //    [self.view addSubview:self.colView];
-    self.navigationController.navigationBar.translucent = YES;
+
+    
     //注册
     // 第一步 注册cell
     [self.rootView.collection registerNib:[UINib nibWithNibName:@"CollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
@@ -65,10 +78,12 @@
     [self.collectionSegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     self.index = 4;
     
-    
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cellphone.png"] style:UIBarButtonItemStylePlain target:self action:@selector(loginOrLogout:)];
-
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(loginOrLogout:)];
+    
+    [self.collectionSegment setTitle:@"育儿秘籍" forSegmentAtIndex:0];
+    [self.collectionSegment setTitle:@"宝贝爱听" forSegmentAtIndex:1];
+    [self.collectionSegment setTitle:@"宝贝去哪儿？" forSegmentAtIndex:2];
+    
 }
 
 //右按钮实现方法
@@ -169,6 +184,18 @@
     
     return cell;
 }
+
+
+
+#pragma mark - 点击进入用户信息详情界面
+
+- (IBAction)tapToUserDetailAction:(id)sender {
+    
+    UserDetailViewController *detailVC = [[UserDetailViewController alloc] init];
+//    detailVC.
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 
 
 /*
