@@ -81,7 +81,7 @@
                 newUser.isLogin = YES;
                 [UserFileHandle saveUserInfo:newUser];
                 UserViewController *userVC = [[UserViewController alloc] init];
-                [self dismissViewControllerAnimated:YES completion:nil];
+                [self presentViewController:userVC animated:YES completion:nil];
 //            [self.navigationController pushViewController:userVC
 //                                                 animated:YES];
 //            }];

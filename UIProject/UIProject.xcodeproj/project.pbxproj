@@ -113,7 +113,6 @@
 		D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611591D2692D400B173AF /* ChangeUserNameController.m */; };
 		D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696115A1D2692D400B173AF /* ChangeUserNameController.xib */; };
 		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
-<<<<<<< HEAD
 		D6A0F6CB1D211A050057CE15 /* SongDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */; };
 		D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */; };
 		D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6CE1D211BBC0057CE15 /* SongList.m */; };
@@ -124,8 +123,6 @@
 		D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F521D24C81400D4CF5E /* timg.jpg */; };
 		D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5A1D251D2900D4CF5E /* meng.jpg */; };
 		D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5C1D25484500D4CF5E /* meng2.jpeg */; };
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -313,7 +310,6 @@
 		D696115A1D2692D400B173AF /* ChangeUserNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeUserNameController.xib; sourceTree = "<group>"; };
 		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
 		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		D6A0F6C81D211A050057CE15 /* SongDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewCell.h; sourceTree = "<group>"; };
 		D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewCell.m; sourceTree = "<group>"; };
 		D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongDetailViewCell.xib; sourceTree = "<group>"; };
@@ -328,8 +324,6 @@
 		D6B63F521D24C81400D4CF5E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		D6B63F5A1D251D2900D4CF5E /* meng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meng.jpg; sourceTree = "<group>"; };
 		D6B63F5C1D25484500D4CF5E /* meng2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meng2.jpeg; path = ../Models/meng2.jpeg; sourceTree = "<group>"; };
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -972,12 +966,9 @@
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
 				D6B63F511D24C47500D4CF5E /* MobileViewController.xib in Resources */,
 				D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */,
-<<<<<<< HEAD
 				D69611551D2659AC00B173AF /* 7.jpg in Resources */,
 				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
 				D6E2DF061D20BDA100DCBF0D /* SongCollectionViewCell.xib in Resources */,
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
 				D6F456A71D1D846800C957B9 /* bigger.jpg in Resources */,
@@ -996,13 +987,10 @@
 				D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */,
 				D696114B1D264A9600B173AF /* 6.png in Resources */,
 				D6F456AA1D1D846800C957B9 /* head3.jpg in Resources */,
-<<<<<<< HEAD
 				D69611471D25FD2500B173AF /* bar5.jpg in Resources */,
 				D696114D1D264E7B00B173AF /* login.jpg in Resources */,
 				D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */,
 				D696114F1D264EE400B173AF /* password.png in Resources */,
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
 				D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */,
 				D67F0C431D2268D1004B10DC /* whiteArrow.png in Resources */,
@@ -1012,12 +1000,9 @@
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
 				D67F0C401D2268D1004B10DC /* blueArrow@2x.png in Resources */,
-<<<<<<< HEAD
 				D69611411D25FC5100B173AF /* bar2.jpg in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
 				D696113C1D25F64100B173AF /* bar.jpg in Resources */,
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 				D67F0C3F1D2268D1004B10DC /* blueArrow.png in Resources */,
 				D69611431D25FC8600B173AF /* bar3.jpg in Resources */,
 				D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */,
@@ -1141,11 +1126,8 @@
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
 				D64E58881D23F99600E96257 /* HealthModel.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
-<<<<<<< HEAD
 				D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */,
 				D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */,
-=======
->>>>>>> 3db276bcf18a826d433ec6507b1a5a022f2dacc3
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D64E58731D23F98A00E96257 /* ClassDetailViewController.m in Sources */,
 				D64E58891D23F99600E96257 /* ListModel.m in Sources */,
