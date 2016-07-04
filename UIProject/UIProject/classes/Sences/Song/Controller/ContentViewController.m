@@ -1,18 +1,18 @@
 //
-//  SongPlayViewController.m
+//  ContentViewController.m
 //  UIProject
 //
-//  Created by lanou3g on 16/6/27.
+//  Created by lanou3g on 16/6/30.
 //  Copyright © 2016年 王晓南. All rights reserved.
 //
 
-#import "SongPlayViewController.h"
+#import "ContentViewController.h"
 
-@interface SongPlayViewController ()
+@interface ContentViewController ()
 
 @end
 
-@implementation SongPlayViewController
+@implementation ContentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

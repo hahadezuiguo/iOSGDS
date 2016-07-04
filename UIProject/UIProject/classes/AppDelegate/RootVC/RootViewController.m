@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 
 #import "SecretViewController.h"
-#import "SongViewController.h"
+#import "ContentViewController.h"
 #import "TravelViewController.h"
 #import "UserViewController.h"
 
@@ -33,7 +33,7 @@
 - (void)createChildViewController {
     [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"" selectorImage:@""];
     
-    [self addOneChildViewController:[[SongViewController alloc] init] title:@"宝贝爱听" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[ContentViewController alloc] init] title:@"宝贝爱听" normalImage:@"" selectorImage:@""];
     
     [self addOneChildViewController:[[TravelViewController alloc] init] title:@"宝贝去哪儿？" normalImage:@"" selectorImage:@""];
     
