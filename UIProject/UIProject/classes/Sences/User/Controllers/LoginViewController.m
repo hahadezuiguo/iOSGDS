@@ -16,9 +16,10 @@
 #import "FindPasswordController.h"
 
 #import "UserFileHandle.h"
-#import "User.h"
 
+#import "MobileViewController.h"
 
+#import "UserViewController.h"
 @interface LoginViewController ()
 //用户名
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
@@ -33,14 +34,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.passwordField.secureTextEntry = YES;
     
     
 }
 
 #pragma mark - 登录
 
-- (IBAction)loginAction:(id)sender {
+
+                                        - (IBAction)loginAction:(id)sender {
     
     
     [AVUser logInWithUsernameInBackground:_userNameField.text password:_passwordField.text block:^(AVUser *user, NSError *error) {
@@ -59,21 +61,35 @@
         
         
         else if (user != nil) {
-            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction * action = [UIAlertAction actionWithTitle:@"登录成功" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                
+//            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//            UIAlertAction * action = [UIAlertAction actionWithTitle:@"登录成功" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            
+            
+            
+            
+            // objectWithClassName 参数对应控制台中的 Class Name
+//            AVObject *todoFirst = [AVObject objectWithClassName:@"Collection"];
+//            [todoFirst saveInBackground];
+//            
+//            AVObject *todoSecond = [AVObject objectWithClassName:@"CollectionSecond"];
+//            [todoSecond saveInBackground];
+//            AVObject *todoThird = [AVObject objectWithClassName:@"CollectionThird"];
+//            [todoThird saveInBackground];
                 User *newUser = [User new];
                 newUser.userName = _userNameField.text;
                 newUser.password = _passwordField.text;
                 newUser.isLogin = YES;
                 [UserFileHandle saveUserInfo:newUser];
-                [self.navigationController popViewControllerAnimated:YES];
-            }];
-            [alert addAction:action];
+                UserViewController *userVC = [[UserViewController alloc] init];
+                [self dismissViewControllerAnimated:YES completion:nil];
+//            [self.navigationController pushViewController:userVC
+//                                                 animated:YES];
+//            }];
+//            [alert addAction:action];
             
             
-            alert.message = @"登陆成功";
-            [self presentViewController:alert animated:YES completion:nil];
+//            alert.message = @"登陆成功";
+//            [self presentViewController:alert animated:YES completion:nil];
             
             
         } else {
@@ -118,6 +134,24 @@
     
 }
 
+
+- (IBAction)loginWithTelephone:(id)sender {
+    MobileViewController *mobileVC = [[MobileViewController alloc] init];
+    mobileVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    [self.navigationController pushViewController:mobileVC animated:YES];
+    
+}
+
+
+
+- (IBAction)hidenPassword:(id)sender {
+    if (self.passwordField.secureTextEntry == NO) {
+         self.passwordField.secureTextEntry = YES;
+    } else {
+        self.passwordField.secureTextEntry = NO;
+    }
+   
+}
 
 
 - (void)didReceiveMemoryWarning {

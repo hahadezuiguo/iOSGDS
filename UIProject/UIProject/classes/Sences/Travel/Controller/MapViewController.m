@@ -158,7 +158,7 @@ static BOOL isOpen = YES;
     
     //检索的中心点，经纬度
     option.location = userLocation.location.coordinate;
-    
+    NSLog(@"******************************%lf",userLocation.location.coordinate.latitude);
     //搜索的关键字
     option.keyword = self.searchString;
     

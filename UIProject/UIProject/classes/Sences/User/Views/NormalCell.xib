@@ -25,8 +25,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名其实就是" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vJ-ps-oCW">
-                        <rect key="frame" x="138" y="0.0" width="189" height="49"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="123" y="0.0" width="204" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -36,11 +36,15 @@
                     <constraint firstItem="4vJ-ps-oCW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="1Ye-rl-xYi"/>
                     <constraint firstAttribute="bottomMargin" secondItem="XQ6-LM-c6v" secondAttribute="bottom" constant="-8" id="NlR-qO-hZC"/>
                     <constraint firstItem="XQ6-LM-c6v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cbU-Ml-GxR"/>
-                    <constraint firstItem="4vJ-ps-oCW" firstAttribute="leading" secondItem="XQ6-LM-c6v" secondAttribute="trailing" constant="30" id="dLZ-5g-V6y"/>
+                    <constraint firstItem="4vJ-ps-oCW" firstAttribute="leading" secondItem="XQ6-LM-c6v" secondAttribute="trailing" constant="15" id="dLZ-5g-V6y"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4vJ-ps-oCW" secondAttribute="bottom" constant="-8" id="hsh-Gb-qcw"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4vJ-ps-oCW" secondAttribute="trailing" constant="-8" id="wPz-9N-k4L"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="normalLabel" destination="XQ6-LM-c6v" id="PRE-oR-ONo"/>
+                <outlet property="userName" destination="4vJ-ps-oCW" id="AeA-2s-d4U"/>
+            </connections>
             <point key="canvasLocation" x="314.5" y="348"/>
         </tableViewCell>
     </objects>

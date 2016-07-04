@@ -47,6 +47,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="kjq-nN-Mut" secondAttribute="bottom" constant="20" id="qDd-6S-rer"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="userPhoto" destination="A3e-fN-td9" id="2Rd-RO-4LT"/>
+            </connections>
             <point key="canvasLocation" x="320" y="352"/>
         </tableViewCell>
     </objects>

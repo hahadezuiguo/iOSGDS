@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ImageCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *userPhoto;
 
 @end

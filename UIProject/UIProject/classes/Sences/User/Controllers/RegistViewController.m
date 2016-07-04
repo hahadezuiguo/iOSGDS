@@ -10,7 +10,7 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
-
+ 
 @interface RegistViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 //用户名
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -105,7 +105,7 @@
         [user setObject:data forKey:@"userPhoto"];
         [user setObject:@"" forKey:@"gender"];
         [user setObject:@"" forKey:@"birthday"];
-
+        [user setObject:self.userNameTextField.text forKey:@"nikName"];
 //        
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
@@ -120,14 +120,25 @@
             } else {
                     // 失败的原因可能有多种，常见的是用户名已经存在。
                     //昵称存在
-                    
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"该用户已注册" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                if (error.code == 202) {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"用户名占用" message:nil preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                         
                     }];
                     [alert addAction:action];
                     [self presentViewController:alert animated:YES completion:nil];
-                    
+
+                }
+                if (error.code == 203) {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"邮箱已占用" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                        
+                    }];
+                    [alert addAction:action];
+                    [self presentViewController:alert animated:YES completion:nil];
+
+                }
+                
                     
                 }
         }];

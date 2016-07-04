@@ -1,6 +1,6 @@
 //
 //  NormalCell.m
-//  UIProject
+//  UIProject/Users/zhaoce/Desktop/项目/UIProject/UIProject.xcodeproj
 //
 //  Created by lanou3g on 16/6/29.
 //  Copyright © 2016年 王晓南. All rights reserved.

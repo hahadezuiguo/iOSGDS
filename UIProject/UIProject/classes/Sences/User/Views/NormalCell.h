@@ -10,4 +10,8 @@
 
 @interface NormalCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+
+@property (weak, nonatomic) IBOutlet UILabel *normalLabel;
+
 @end

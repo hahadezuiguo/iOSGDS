@@ -65,13 +65,10 @@
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
 		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
 		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
-
 		D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F30E1D23AA3E00C6AC26 /* ImageCell.m */; };
 		D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */; };
 		D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F3131D23AA4E00C6AC26 /* NormalCell.m */; };
 		D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D677F3141D23AA4E00C6AC26 /* NormalCell.xib */; };
-		D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */; };
-		D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */; };
 		D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C2F1D22223E004B10DC /* EGORefreshTableFooterView.m */; };
 		D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F0C311D22223E004B10DC /* EGORefreshTableHeaderView.m */; };
 		D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C351D2268D1004B10DC /* blackArrow.png */; };
@@ -102,12 +99,32 @@
 		D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */; };
 		D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6902C511D20BC2900395FB4 /* FindPasswordController.m */; };
 		D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6902C521D20BC2900395FB4 /* FindPasswordController.xib */; };
+		D696113C1D25F64100B173AF /* bar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D696113B1D25F64100B173AF /* bar.jpg */; };
+		D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D696113E1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m */; };
+		D69611411D25FC5100B173AF /* bar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611401D25FC5100B173AF /* bar2.jpg */; };
+		D69611431D25FC8600B173AF /* bar3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611421D25FC8600B173AF /* bar3.jpg */; };
+		D69611451D25FD1900B173AF /* bar4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611441D25FD1900B173AF /* bar4.jpg */; };
+		D69611471D25FD2500B173AF /* bar5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611461D25FD2500B173AF /* bar5.jpg */; };
+		D69611491D26097A00B173AF /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611481D26097A00B173AF /* 5.jpg */; };
+		D696114B1D264A9600B173AF /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D696114A1D264A9600B173AF /* 6.png */; };
+		D696114D1D264E7B00B173AF /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D696114C1D264E7B00B173AF /* login.jpg */; };
+		D696114F1D264EE400B173AF /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = D696114E1D264EE400B173AF /* password.png */; };
+		D69611531D2656D800B173AF /* userName2.png in Resources */ = {isa = PBXBuildFile; fileRef = D69611521D2656D800B173AF /* userName2.png */; };
+		D69611551D2659AC00B173AF /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69611541D2659AC00B173AF /* 7.jpg */; };
+		D69611571D26640000B173AF /* registBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D69611561D26640000B173AF /* registBackground.png */; };
+		D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611591D2692D400B173AF /* ChangeUserNameController.m */; };
+		D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696115A1D2692D400B173AF /* ChangeUserNameController.xib */; };
 		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
 		D6A0F6CB1D211A050057CE15 /* SongDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */; };
 		D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */; };
 		D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6CE1D211BBC0057CE15 /* SongList.m */; };
 		D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */; };
 		D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */; };
+		D6B63F501D24C47500D4CF5E /* MobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B63F4E1D24C47500D4CF5E /* MobileViewController.m */; };
+		D6B63F511D24C47500D4CF5E /* MobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F4F1D24C47500D4CF5E /* MobileViewController.xib */; };
+		D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F521D24C81400D4CF5E /* timg.jpg */; };
+		D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5A1D251D2900D4CF5E /* meng.jpg */; };
+		D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5C1D25484500D4CF5E /* meng2.jpeg */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -284,6 +301,23 @@
 		D6902C501D20BC2900395FB4 /* FindPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordController.h; sourceTree = "<group>"; };
 		D6902C511D20BC2900395FB4 /* FindPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordController.m; sourceTree = "<group>"; };
 		D6902C521D20BC2900395FB4 /* FindPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPasswordController.xib; sourceTree = "<group>"; };
+		D696113B1D25F64100B173AF /* bar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bar.jpg; sourceTree = "<group>"; };
+		D696113D1D25F89700B173AF /* UINavigationBar+NavigationBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavigationBarImage.h"; sourceTree = "<group>"; };
+		D696113E1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NavigationBarImage.m"; sourceTree = "<group>"; };
+		D69611401D25FC5100B173AF /* bar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bar2.jpg; path = ../Models/bar2.jpg; sourceTree = "<group>"; };
+		D69611421D25FC8600B173AF /* bar3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bar3.jpg; sourceTree = "<group>"; };
+		D69611441D25FD1900B173AF /* bar4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bar4.jpg; sourceTree = "<group>"; };
+		D69611461D25FD2500B173AF /* bar5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bar5.jpg; sourceTree = "<group>"; };
+		D69611481D26097A00B173AF /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		D696114A1D264A9600B173AF /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		D696114C1D264E7B00B173AF /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
+		D696114E1D264EE400B173AF /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		D69611521D2656D800B173AF /* userName2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userName2.png; sourceTree = "<group>"; };
+		D69611541D2659AC00B173AF /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		D69611561D26640000B173AF /* registBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registBackground.png; sourceTree = "<group>"; };
+		D69611581D2692D400B173AF /* ChangeUserNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeUserNameController.h; sourceTree = "<group>"; };
+		D69611591D2692D400B173AF /* ChangeUserNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeUserNameController.m; sourceTree = "<group>"; };
+		D696115A1D2692D400B173AF /* ChangeUserNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeUserNameController.xib; sourceTree = "<group>"; };
 		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
 		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
 		D6A0F6C81D211A050057CE15 /* SongDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewCell.h; sourceTree = "<group>"; };
@@ -294,6 +328,12 @@
 		D6A0F6D01D211DE10057CE15 /* SongPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPlayViewController.h; sourceTree = "<group>"; };
 		D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPlayViewController.m; sourceTree = "<group>"; };
 		D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongPlayViewController.xib; sourceTree = "<group>"; };
+		D6B63F4D1D24C47500D4CF5E /* MobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileViewController.h; sourceTree = "<group>"; };
+		D6B63F4E1D24C47500D4CF5E /* MobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileViewController.m; sourceTree = "<group>"; };
+		D6B63F4F1D24C47500D4CF5E /* MobileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileViewController.xib; sourceTree = "<group>"; };
+		D6B63F521D24C81400D4CF5E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
+		D6B63F5A1D251D2900D4CF5E /* meng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meng.jpg; sourceTree = "<group>"; };
+		D6B63F5C1D25484500D4CF5E /* meng2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meng2.jpeg; path = ../Models/meng2.jpeg; sourceTree = "<group>"; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -703,6 +743,8 @@
 				D6A0F6C61D21012D0057CE15 /* imageDownloader.m */,
 				D6902C4D1D20BB3500395FB4 /* UserFileHandle.h */,
 				D6902C4E1D20BB3500395FB4 /* UserFileHandle.m */,
+				D696113D1D25F89700B173AF /* UINavigationBar+NavigationBarImage.h */,
+				D696113E1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -728,6 +770,21 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D69611561D26640000B173AF /* registBackground.png */,
+				D69611541D2659AC00B173AF /* 7.jpg */,
+				D69611521D2656D800B173AF /* userName2.png */,
+				D696114E1D264EE400B173AF /* password.png */,
+				D696114C1D264E7B00B173AF /* login.jpg */,
+				D696114A1D264A9600B173AF /* 6.png */,
+				D69611481D26097A00B173AF /* 5.jpg */,
+				D69611401D25FC5100B173AF /* bar2.jpg */,
+				D69611421D25FC8600B173AF /* bar3.jpg */,
+				D69611441D25FD1900B173AF /* bar4.jpg */,
+				D69611461D25FD2500B173AF /* bar5.jpg */,
+				D696113B1D25F64100B173AF /* bar.jpg */,
+				D6B63F521D24C81400D4CF5E /* timg.jpg */,
+				D6B63F5A1D251D2900D4CF5E /* meng.jpg */,
+				D6B63F5C1D25484500D4CF5E /* meng2.jpeg */,
 				D67F0C351D2268D1004B10DC /* blackArrow.png */,
 				D67F0C361D2268D1004B10DC /* blackArrow@2x.png */,
 				D67F0C371D2268D1004B10DC /* blueArrow.png */,
@@ -834,6 +891,12 @@
 				D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */,
 				D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */,
 				D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */,
+				D6B63F4D1D24C47500D4CF5E /* MobileViewController.h */,
+				D6B63F4E1D24C47500D4CF5E /* MobileViewController.m */,
+				D6B63F4F1D24C47500D4CF5E /* MobileViewController.xib */,
+				D69611581D2692D400B173AF /* ChangeUserNameController.h */,
+				D69611591D2692D400B173AF /* ChangeUserNameController.m */,
+				D696115A1D2692D400B173AF /* ChangeUserNameController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -925,15 +988,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69611571D26640000B173AF /* registBackground.png in Resources */,
 				D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */,
 				D6F456AB1D1D846800C957B9 /* head4.jpg in Resources */,
 				D67F0C421D2268D1004B10DC /* grayArrow@2x.png in Resources */,
 				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
 				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
 				D658290F1D20D0960095A091 /* MapViewController.xib in Resources */,
+				D69611451D25FD1900B173AF /* bar4.jpg in Resources */,
 				D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */,
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
+				D6B63F511D24C47500D4CF5E /* MobileViewController.xib in Resources */,
 				D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */,
+				D69611551D2659AC00B173AF /* 7.jpg in Resources */,
+				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
 				D6E2DF061D20BDA100DCBF0D /* SongCollectionViewCell.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
@@ -943,6 +1011,7 @@
 				D6F8F1F61D1CE8B700D39982 /* RegistViewController.xib in Resources */,
 				D64E58A51D23F9A600E96257 /* ClassTableViewCell.xib in Resources */,
 				D6F456A91D1D846800C957B9 /* head2.jpg in Resources */,
+				D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */,
 				D6F456A81D1D846800C957B9 /* head1.jpg in Resources */,
 				D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */,
 				D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */,
@@ -950,17 +1019,27 @@
 				D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */,
 				D646F42E1D1E1531008D21EE /* where.gif in Resources */,
 				D64E58A71D23F9A600E96257 /* CollectionViewCell.xib in Resources */,
+				D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */,
+				D696114B1D264A9600B173AF /* 6.png in Resources */,
 				D6F456AA1D1D846800C957B9 /* head3.jpg in Resources */,
+				D69611471D25FD2500B173AF /* bar5.jpg in Resources */,
+				D696114D1D264E7B00B173AF /* login.jpg in Resources */,
 				D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */,
+				D696114F1D264EE400B173AF /* password.png in Resources */,
 				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
 				D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */,
 				D67F0C431D2268D1004B10DC /* whiteArrow.png in Resources */,
+				D69611531D2656D800B173AF /* userName2.png in Resources */,
+				D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */,
 				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
 				D67F0C401D2268D1004B10DC /* blueArrow@2x.png in Resources */,
+				D69611411D25FC5100B173AF /* bar2.jpg in Resources */,
 				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
+				D696113C1D25F64100B173AF /* bar.jpg in Resources */,
 				D67F0C3F1D2268D1004B10DC /* blueArrow.png in Resources */,
+				D69611431D25FC8600B173AF /* bar3.jpg in Resources */,
 				D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */,
 				D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
@@ -970,6 +1049,7 @@
 				D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */,
 				D6F456AD1D1D846800C957B9 /* placeHold.png in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
+				D69611491D26097A00B173AF /* 5.jpg in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
 				D6F8F1FB1D1CE8B700D39982 /* CollectionCell.xib in Resources */,
 				D67F0C3E1D2268D1004B10DC /* blackArrow@2x.png in Resources */,
@@ -1040,6 +1120,7 @@
 				D64E58741D23F98A00E96257 /* ClassViewController.m in Sources */,
 				D67F0C331D22223E004B10DC /* EGORefreshTableFooterView.m in Sources */,
 				D64E588C1D23F99600E96257 /* WaterfallModel.m in Sources */,
+				D6B63F501D24C47500D4CF5E /* MobileViewController.m in Sources */,
 				D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */,
 				D64E58A61D23F9A600E96257 /* CollectionViewCell.m in Sources */,
 				D68AC7CC1D1BB35400EBB00B /* Song.m in Sources */,
@@ -1072,6 +1153,7 @@
 				D6F8F1FA1D1CE8B700D39982 /* CollectionCell.m in Sources */,
 				D64E58AE1D23F9A600E96257 /* SheetView.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
+				D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */,
 				D64E587A1D23F98A00E96257 /* ShareBabyViewController.m in Sources */,
 				D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */,
 				D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */,
@@ -1080,13 +1162,12 @@
 				D6F456C01D1D84A100C957B9 /* TADotView.m in Sources */,
 				D6E2DF051D20BDA100DCBF0D /* SongCollectionViewCell.m in Sources */,
 				D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */,
-				D6390A261D1E6171003F1964 /* HealthTableViewCell.m in Sources */,
 				D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */,
-				D6390A2A1D1E7E01003F1964 /* ClassDetailViewController.m in Sources */,
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
 				D64E58881D23F99600E96257 /* HealthModel.m in Sources */,
 				D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
+				D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */,
 				D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
 				D64E58731D23F98A00E96257 /* ClassDetailViewController.m in Sources */,
