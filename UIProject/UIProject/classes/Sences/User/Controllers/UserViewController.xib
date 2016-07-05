@@ -32,8 +32,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvc-Fu-hf3">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="660"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meng2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-VF-7zY">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-VF-7zY">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="660"/>
+                                    <color key="backgroundColor" red="0.81432116529999998" green="0.91072126460000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="700" id="FIC-m0-He6"/>
                                     </constraints>
@@ -174,6 +175,5 @@
     </objects>
     <resources>
         <image name="5.jpg" width="700" height="662"/>
-        <image name="meng2.jpeg" width="700" height="1244"/>
     </resources>
 </document>

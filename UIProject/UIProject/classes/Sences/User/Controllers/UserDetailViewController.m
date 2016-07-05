@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBarController.tabBar.hidden = NO;
     self.imagePicker = [[UIImagePickerController alloc] init];
   
     self.imagePicker.delegate = self;
@@ -71,7 +72,7 @@
             break;
         case 2:
             normalCell.normalLabel.text = @"绑定手机号";
-            normalCell.userName.text = [[AVUser currentUser] objectForKey:@"telephone"];
+            normalCell.userName.text = [[AVUser currentUser] objectForKey:@"mobilePhoneNumber"];
         default:
             break;
     }
@@ -81,9 +82,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.row == 0) {
-//        return 100;
-//    }
+
     return 40;
 }
 
@@ -119,6 +118,7 @@
             [tableView reloadData];
             
         };
+        
         [self.navigationController pushViewController:changeVC animated:YES];
     }
     
@@ -141,7 +141,7 @@
         // 跳转到首页
     } else {
         //缓存用户对象为空时，可打开用户注册界面…
-        [self presentViewController:loginVC animated:YES completion:nil];
+        [self.navigationController pushViewController:loginVC animated:YES];
     }
 
 }

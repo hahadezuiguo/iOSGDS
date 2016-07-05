@@ -33,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    self.tabBarController.tabBar.hidden = YES;
     // Do any additional setup after loading the view from its nib.
     self.passwordField.secureTextEntry = YES;
     
@@ -80,8 +82,8 @@
                 newUser.password = _passwordField.text;
                 newUser.isLogin = YES;
                 [UserFileHandle saveUserInfo:newUser];
-                UserViewController *userVC = [[UserViewController alloc] init];
-                [self presentViewController:userVC animated:YES completion:nil];
+
+                [self.navigationController popToRootViewControllerAnimated:YES];
 //            [self.navigationController pushViewController:userVC
 //                                                 animated:YES];
 //            }];
