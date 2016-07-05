@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
 @interface MapViewController : UIViewController
 @property (nonatomic, strong) NSString *searchString;
+//当前位置
+@property (nonatomic, strong) BMKUserLocation *userLocation;
 @end

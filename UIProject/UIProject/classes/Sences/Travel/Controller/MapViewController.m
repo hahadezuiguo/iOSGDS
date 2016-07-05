@@ -7,15 +7,17 @@
 //
 
 #import "MapViewController.h"
-#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+
 #import <BaiduMapAPI_Location/BMKLocationService.h>
 #import <BaiduMapAPI_Search/BMKPoiSearch.h>
 #import <BaiduMapAPI_Search/BMKPoiSearch.h>
 #import <BaiduMapAPI_Map/BMKAnnotation.h>
 #import <BaiduMapAPI_Map/BMKPointAnnotation.h>
 #import <BaiduMapAPI_Map/BMKPinAnnotationView.h>
-@interface MapViewController ()<BMKLocationServiceDelegate,BMKMapViewDelegate,BMKPoiSearchDelegate>
+
+#import "NaviViewController.h"
+#import "NaviView.h"
+@interface MapViewController ()<BMKLocationServiceDelegate,BMKMapViewDelegate,BMKPoiSearchDelegate,UITextFieldDelegate,BMKGeoCodeSearchDelegate>
 //地图视图
 @property (weak, nonatomic) IBOutlet BMKMapView *mapView;
 
@@ -28,9 +30,14 @@
 @property (nonatomic,strong) BMKPoiSearch *poiSearch;//搜索服务
 
 @property (nonatomic,strong) NSMutableArray *dataArray;
-//当前位置
 
-@property (nonatomic, strong) BMKUserLocation *location;
+
+@property (nonatomic, strong) NaviView *naviView;
+
+//
+@property (nonatomic, strong) BMKGeoCodeSearch *searcher;
+
+@property (nonatomic, assign) CLLocationCoordinate2D location;
 
 @end
 
@@ -57,13 +64,100 @@
     
      _mapView.showsUserLocation = YES;//显示定位图层
     
-    [self addLocService];
+   
+     [self addLocService];
+   
     
     [self.mapSegment addTarget:self action:@selector(controlPressed:) forControlEvents: UIControlEventValueChanged];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"开始导航" style:(UIBarButtonItemStylePlain) target:self action:@selector(rightAction:)];
+    
+}
+
+
+-(void)rightAction:(UIBarButtonItem *)sender {
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:1.0f animations:^{
+        if (weakSelf.naviView == nil) {
+        weakSelf.naviView = [[NaviView alloc]initWithFrame:CGRectMake(weakSelf.view.frame.size.width, -50, 200, 300)];
+            weakSelf.view.backgroundColor = [UIColor clearColor];
+        weakSelf.naviView.addressTF.delegate = self;
+        weakSelf.naviView.backgroundColor = [UIColor clearColor];
+        weakSelf.naviView.center = weakSelf.view.center;
+        [weakSelf.view addSubview:weakSelf.naviView];
+    }
+    }];
+    [self.naviView.naviButton addTarget:self action:@selector(naviButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.naviView.cancelButton addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+//检索输入的地址
+-(void)naviButtonAction:(UIButton *)sender {
+    //关闭定位
+    [self.locService stopUserLocationService];
+    if (self.naviView.addressTF.text) {
+        //初始化检索对象
+        _searcher =[[BMKGeoCodeSearch alloc]init];
+        _searcher.delegate = self;
+        BMKGeoCodeSearchOption *geoCodeSearchOption = [[BMKGeoCodeSearchOption alloc]init];
+        //上个页面传过来的地址
+        geoCodeSearchOption.address = self.naviView.addressTF.text;
+        
+        BOOL flag = [_searcher geoCode:geoCodeSearchOption];
+        
+        
+        if(flag)
+        {
+            NSLog(@"geo检索发送成功");
+        }
+        else
+        {
+            NSLog(@"geo检索发送失败");
+        }
+
+    }
     
     
 }
 
+//检索地址
+- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error{
+    if (error == BMK_SEARCH_NO_ERROR) {
+        //在此处理正常结果
+        
+        //将上一次的大头针数据清空
+        NSArray *array = [NSArray arrayWithArray:_mapView.annotations];
+        [_mapView removeAnnotations:array];
+        
+        //将上一次添加的覆盖视图清空
+        
+        array = [NSArray arrayWithArray:_mapView.overlays];
+        [_mapView removeOverlays:array];
+        
+        //添加大头针
+        // 添加一个PointAnnotation
+        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+        
+        annotation.coordinate = result.location;
+    
+        self.location = result.location;
+        annotation.title = self.naviView.addressTF.text;
+        [_mapView addAnnotation:annotation];
+        //设置地图中心
+        _mapView.centerCoordinate = result.location;
+        [self cancelButtonAction:nil];
+ }
+    else {
+        NSLog(@"抱歉，未找到结果");
+    }
+}
+
+//导航视图消失
+-(void)cancelButtonAction:(UIButton *)sender {
+    if (self.naviView) {
+        [self.naviView removeFromSuperview];
+        self.naviView = nil;
+    }
+}
+//地图样式选择
 -(void)controlPressed:(id)sender {
      NSInteger selectedSegment = self.mapSegment.selectedSegmentIndex;
     switch (selectedSegment) {
@@ -79,9 +173,8 @@
         default:
             break;
     }
-    
 }
-
+//添加定位
 -(void)addLocService {
     //初始化BMKLocationService
     _locService = [[BMKLocationService alloc]init];
@@ -113,6 +206,7 @@ static BOOL isOpen = YES;
     _mapView.delegate = nil; // 不用时，置nil
     _locService.delegate = nil;
     _poiSearch.delegate = nil;
+     _searcher.delegate = nil;
     
 }
 
@@ -136,6 +230,9 @@ static BOOL isOpen = YES;
     
     self.mapView.zoomLevel =18;
     
+    if (self.searchString) {
+        
+    
     //初始化搜索
     self.poiSearch =[[BMKPoiSearch alloc] init];
     
@@ -154,10 +251,13 @@ static BOOL isOpen = YES;
     option.pageCapacity = 50;
     
     //搜索半径
-    option.radius = 200;
+    option.radius = 2000;
     
     //检索的中心点，经纬度
     option.location = userLocation.location.coordinate;
+    
+    self.userLocation = userLocation;
+    
     NSLog(@"******************************%lf",userLocation.location.coordinate.latitude);
     //搜索的关键字
     option.keyword = self.searchString;
@@ -174,6 +274,9 @@ static BOOL isOpen = YES;
     else {
         
         NSLog(@"搜索失败");
+    }
+    }else {
+        return;
     }
 
 }
@@ -272,17 +375,45 @@ static BOOL isOpen = YES;
     BOOL flag = [self.poiSearch poiDetailSearch:option];
     
     if (flag) {
-        NSLog(@"检索成功");
+        __weak typeof(self) weakSelf = self;
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"开启导航" message:@"是否确定去这里" preferredStyle:(UIAlertControllerStyleActionSheet)];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            NaviViewController *naviVC = [[NaviViewController alloc]init];
+            [weakSelf.navigationController pushViewController:naviVC animated:YES];
+            //展示定位
+            weakSelf.mapView.showsUserLocation = YES;
+            naviVC.startLocation = weakSelf.userLocation;
+            naviVC.endLocation = info.pt;
+        }];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil];
+        [alert addAction:action];
+        [alert addAction:action1];
+        [self presentViewController:alert animated:YES completion:nil];
         
         
-        
-    }
+}
     else {
         
-        NSLog(@"检索失败");
+        NSLog(@"检索失败--");
+        //启动LocationService
+        [_locService startUserLocationService];
+        //展示定位
+        self.mapView.showsUserLocation = YES;
+        NaviViewController *naviVC = [[NaviViewController alloc]init];
+        naviVC.startLocation = self.userLocation;
+        naviVC.endLocation = self.location;
+        NSLog(@"%lf====%lf",self.userLocation.location.coordinate.latitude,self.location.latitude);
+        
+        [self.navigationController pushViewController:naviVC animated:YES];
     }
 
     
+}
+
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.naviView.addressTF resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -12,7 +12,7 @@
 #import "ContentViewController.h"
 #import "TravelViewController.h"
 #import "UserViewController.h"
-
+#import "TravelMenuController.h"
 @interface RootViewController ()
 
 @end
@@ -35,7 +35,7 @@
     
     [self addOneChildViewController:[[ContentViewController alloc] init] title:@"宝贝爱听" normalImage:@"" selectorImage:@""];
     
-    [self addOneChildViewController:[[TravelViewController alloc] init] title:@"宝贝去哪儿？" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[TravelMenuController alloc] init] title:@"宝贝去哪儿？" normalImage:@"" selectorImage:@""];
     
     [self addOneChildViewController:[[UserViewController alloc] init] title:@"妈咪空间" normalImage:@"" selectorImage:@""];
     

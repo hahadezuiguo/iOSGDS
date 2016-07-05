@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-
 ///用户名
 @property (nonatomic, copy) NSString *userName;
 ///密码

@@ -22,6 +22,9 @@
 #import "iflyMSC/IFlySpeechUtility.h"
 
 
+//引入导航
+#import "BNCoreServices.h"
+
 @interface AppDelegate ()
 @property (nonatomic, strong) BMKMapManager *mapManager;
 @end
@@ -41,7 +44,7 @@
     
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"s8AIKKpdESCLzHYNdXekAMTlILgOmpPK"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"8FLG8Yv5Ap1hH0VWq8iIwZ54BnUzAT0P"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
@@ -57,6 +60,12 @@
     // applicationId 即 App Id，clientKey 是 App Key。
     [AVOSCloud setApplicationId:@"BjC7DlP0qrXJ33QGnfu5bBWa-gzGzoHsz"
                       clientKey:@"LFWCQxtyfi6s80V9SfsGbJG7"];
+    
+    
+    
+     //初始化导航SDK
+    [BNCoreServices_Instance initServices:@"8FLG8Yv5Ap1hH0VWq8iIwZ54BnUzAT0P"];
+    [BNCoreServices_Instance startServicesAsyn:nil fail:nil];
     
     return YES;
 }

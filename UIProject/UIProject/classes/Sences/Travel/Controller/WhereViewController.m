@@ -83,6 +83,9 @@
     [self.navigationController pushViewController:mapVC animated:YES];
     mapVC.searchString = self.textField.text;
     self.hidesBottomBarWhenPushed = NO;
+    mapVC.userLocation = self.userLocation;
+   
+    
 }
 
 

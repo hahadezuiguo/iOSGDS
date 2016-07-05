@@ -46,6 +46,31 @@
 		D64E58AE1D23F9A600E96257 /* SheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E589F1D23F9A600E96257 /* SheetView.m */; };
 		D64E58AF1D23F9A600E96257 /* WaterfallCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E58A11D23F9A600E96257 /* WaterfallCollectionViewCell.m */; };
 		D64E58B01D23F9A600E96257 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E58A31D23F9A600E96257 /* WaterFallLayout.m */; };
+		D651DC331D27BF5E007F50D7 /* weaherImageView.gif in Resources */ = {isa = PBXBuildFile; fileRef = D651DC321D27BF5E007F50D7 /* weaherImageView.gif */; };
+		D65694401D2BA463008865BC /* TravelAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = D656943A1D2BA463008865BC /* TravelAddressController.m */; };
+		D65694411D2BA463008865BC /* TravelCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D656943C1D2BA463008865BC /* TravelCategory.m */; };
+		D65694421D2BA463008865BC /* TravelCategoryDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D656943E1D2BA463008865BC /* TravelCategoryDetailController.m */; };
+		D65694431D2BA463008865BC /* TravelCategoryDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D656943F1D2BA463008865BC /* TravelCategoryDetailController.xib */; };
+		D65694481D2BA488008865BC /* TravelCategoryDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65694451D2BA488008865BC /* TravelCategoryDetailModel.m */; };
+		D65694491D2BA488008865BC /* TravelCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65694471D2BA488008865BC /* TravelCategoryModel.m */; };
+		D65694531D2BA4A8008865BC /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D656944B1D2BA4A8008865BC /* HeaderView.m */; };
+		D65694541D2BA4A8008865BC /* TravelAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D656944D1D2BA4A8008865BC /* TravelAddressCell.m */; };
+		D65694551D2BA4A8008865BC /* TravelAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D656944F1D2BA4A8008865BC /* TravelAddressView.m */; };
+		D65694561D2BA4A8008865BC /* TravelCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65694511D2BA4A8008865BC /* TravelCategoryCell.m */; };
+		D65694571D2BA4A8008865BC /* TravelCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65694521D2BA4A8008865BC /* TravelCategoryCell.xib */; };
+		D65694641D2BA531008865BC /* 景点.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694581D2BA531008865BC /* 景点.png */; };
+		D65694651D2BA531008865BC /* 亲子游.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694591D2BA531008865BC /* 亲子游.png */; };
+		D65694661D2BA531008865BC /* 手工制作.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945A1D2BA531008865BC /* 手工制作.png */; };
+		D65694671D2BA531008865BC /* 演出展览.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945B1D2BA531008865BC /* 演出展览.png */; };
+		D65694681D2BA531008865BC /* 游乐园.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945C1D2BA531008865BC /* 游乐园.png */; };
+		D65694691D2BA531008865BC /* 早教培训.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945D1D2BA531008865BC /* 早教培训.png */; };
+		D656946A1D2BA531008865BC /* travel1.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945E1D2BA531008865BC /* travel1.png */; };
+		D656946B1D2BA531008865BC /* travel2.png in Resources */ = {isa = PBXBuildFile; fileRef = D656945F1D2BA531008865BC /* travel2.png */; };
+		D656946C1D2BA531008865BC /* travel3.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694601D2BA531008865BC /* travel3.png */; };
+		D656946D1D2BA531008865BC /* travel4.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694611D2BA531008865BC /* travel4.png */; };
+		D656946E1D2BA531008865BC /* travel5.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694621D2BA531008865BC /* travel5.png */; };
+		D656946F1D2BA531008865BC /* travel6.png in Resources */ = {isa = PBXBuildFile; fileRef = D65694631D2BA531008865BC /* travel6.png */; };
+		D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */; };
 		D658290E1D20D0960095A091 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D658290C1D20D0960095A091 /* MapViewController.m */; };
 		D658290F1D20D0960095A091 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D658290D1D20D0960095A091 /* MapViewController.xib */; };
 		D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99E1D1D786D00D0CC3E /* where1.png */; };
@@ -57,7 +82,6 @@
 		D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9AB1D1D78CE00D0CC3E /* WhereViewController.m */; };
 		D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9AC1D1D78CE00D0CC3E /* WhereViewController.xib */; };
 		D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9B01D1D78E000D0CC3E /* TravelViewController.m */; };
-		D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */; };
 		D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B41D1D78ED00D0CC3E /* weather1.jpeg */; };
 		D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B51D1D78ED00D0CC3E /* where.png */; };
 		D65FA9BA1D1D78FF00D0CC3E /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9B91D1D78FF00D0CC3E /* Weather.m */; };
@@ -66,6 +90,22 @@
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
 		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
 		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
+		D670EFA51D264CB3001A4E83 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = D670EFA41D264CB3001A4E83 /* down.png */; };
+		D670EFA71D264CB9001A4E83 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = D670EFA61D264CB9001A4E83 /* up.png */; };
+		D670EFAA1D266EA1001A4E83 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFA91D266EA1001A4E83 /* WaterFlowLayout.m */; };
+		D670EFAD1D266EAC001A4E83 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFAC1D266EAC001A4E83 /* DataModel.m */; };
+		D670EFB01D266EBD001A4E83 /* RootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFAF1D266EBD001A4E83 /* RootCell.m */; };
+		D670EFB21D266FA7001A4E83 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = D670EFB11D266FA7001A4E83 /* Data.json */; };
+		D670EFBB1D268D2F001A4E83 /* travel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D670EFBA1D268D2F001A4E83 /* travel.jpg */; };
+		D670EFBF1D268DE6001A4E83 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D670EFBE1D268DE6001A4E83 /* map.png */; };
+		D670EFC11D2692B9001A4E83 /* weathermenu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D670EFC01D2692B9001A4E83 /* weathermenu.jpeg */; };
+		D670EFC41D26954C001A4E83 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFC31D26954C001A4E83 /* MenuCell.m */; };
+		D670EFC81D2698C6001A4E83 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFC61D2698C6001A4E83 /* MenuTableViewCell.m */; };
+		D670EFC91D2698C6001A4E83 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D670EFC71D2698C6001A4E83 /* MenuTableViewCell.xib */; };
+		D670EFCB1D26AD2F001A4E83 /* address.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D670EFCA1D26AD2F001A4E83 /* address.jpeg */; };
+		D670EFCE1D26BDD9001A4E83 /* NaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = D670EFCD1D26BDD9001A4E83 /* NaviView.m */; };
+		D67702871D2609D300A75F8F /* TravelMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67702851D2609D300A75F8F /* TravelMenuController.m */; };
+		D67702881D2609D300A75F8F /* TravelMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67702861D2609D300A75F8F /* TravelMenuController.xib */; };
 		D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F30E1D23AA3E00C6AC26 /* ImageCell.m */; };
 		D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */; };
 		D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D677F3131D23AA4E00C6AC26 /* NormalCell.m */; };
@@ -80,6 +120,7 @@
 		D67F0C421D2268D1004B10DC /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C3A1D2268D1004B10DC /* grayArrow@2x.png */; };
 		D67F0C431D2268D1004B10DC /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C3B1D2268D1004B10DC /* whiteArrow.png */; };
 		D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D67F0C3C1D2268D1004B10DC /* whiteArrow@2x.png */; };
+		D68AC7C11D1BB2CB00EBB00B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7CE1D1BB37C00EBB00B /* Travel.m */; };
 		D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68AC7DD1D1BB58300EBB00B /* RootViewController.m */; };
 		D68AEEB71D1FEF8100C7127D /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68AEEB61D1FEF8100C7127D /* iflyMSC.framework */; };
@@ -113,16 +154,22 @@
 		D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611591D2692D400B173AF /* ChangeUserNameController.m */; };
 		D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696115A1D2692D400B173AF /* ChangeUserNameController.xib */; };
 		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
-		D6A0F6CB1D211A050057CE15 /* SongDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */; };
-		D6A0F6CC1D211A050057CE15 /* SongDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */; };
-		D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6CE1D211BBC0057CE15 /* SongList.m */; };
-		D6A0F6D31D211DE10057CE15 /* SongPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */; };
-		D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */; };
 		D6B63F501D24C47500D4CF5E /* MobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B63F4E1D24C47500D4CF5E /* MobileViewController.m */; };
 		D6B63F511D24C47500D4CF5E /* MobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F4F1D24C47500D4CF5E /* MobileViewController.xib */; };
 		D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F521D24C81400D4CF5E /* timg.jpg */; };
 		D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5A1D251D2900D4CF5E /* meng.jpg */; };
 		D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5C1D25484500D4CF5E /* meng2.jpeg */; };
+		D6C2A5D11D24AAC40092BC3D /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */; };
+		D6C2A5E31D24AB860092BC3D /* baiduNaviSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6C2A5D31D24AB860092BC3D /* baiduNaviSDK.bundle */; };
+		D6C2A5E41D24AB860092BC3D /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5D61D24AB860092BC3D /* libBaiduMobStat.a */; };
+		D6C2A5E51D24AB860092BC3D /* libbaiduNaviSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E11D24AB860092BC3D /* libbaiduNaviSDK.a */; };
+		D6C2A5E61D24AB860092BC3D /* updatelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6C2A5E21D24AB860092BC3D /* updatelog.txt */; };
+		D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */; };
+		D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E91D24ABD50092BC3D /* CoreMotion.framework */; };
+		D6C2A5EC1D24ABF00092BC3D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5EB1D24ABF00092BC3D /* MediaPlayer.framework */; };
+		D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5ED1D24AC190092BC3D /* libstdc++.6.0.9.tbd */; };
+		D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5EF1D24AC200092BC3D /* Security.framework */; };
+		D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5F11D24AC370092BC3D /* JavaScriptCore.framework */; };
 		D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */; };
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
@@ -223,6 +270,39 @@
 		D64E58A11D23F9A600E96257 /* WaterfallCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewCell.m; sourceTree = "<group>"; };
 		D64E58A21D23F9A600E96257 /* WaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallLayout.h; sourceTree = "<group>"; };
 		D64E58A31D23F9A600E96257 /* WaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallLayout.m; sourceTree = "<group>"; };
+		D651DC321D27BF5E007F50D7 /* weaherImageView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weaherImageView.gif; sourceTree = "<group>"; };
+		D65694391D2BA463008865BC /* TravelAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelAddressController.h; sourceTree = "<group>"; };
+		D656943A1D2BA463008865BC /* TravelAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelAddressController.m; sourceTree = "<group>"; };
+		D656943B1D2BA463008865BC /* TravelCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCategory.h; sourceTree = "<group>"; };
+		D656943C1D2BA463008865BC /* TravelCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCategory.m; sourceTree = "<group>"; };
+		D656943D1D2BA463008865BC /* TravelCategoryDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCategoryDetailController.h; sourceTree = "<group>"; };
+		D656943E1D2BA463008865BC /* TravelCategoryDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCategoryDetailController.m; sourceTree = "<group>"; };
+		D656943F1D2BA463008865BC /* TravelCategoryDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelCategoryDetailController.xib; sourceTree = "<group>"; };
+		D65694441D2BA488008865BC /* TravelCategoryDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCategoryDetailModel.h; sourceTree = "<group>"; };
+		D65694451D2BA488008865BC /* TravelCategoryDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCategoryDetailModel.m; sourceTree = "<group>"; };
+		D65694461D2BA488008865BC /* TravelCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCategoryModel.h; sourceTree = "<group>"; };
+		D65694471D2BA488008865BC /* TravelCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCategoryModel.m; sourceTree = "<group>"; };
+		D656944A1D2BA4A8008865BC /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		D656944B1D2BA4A8008865BC /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		D656944C1D2BA4A8008865BC /* TravelAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelAddressCell.h; sourceTree = "<group>"; };
+		D656944D1D2BA4A8008865BC /* TravelAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelAddressCell.m; sourceTree = "<group>"; };
+		D656944E1D2BA4A8008865BC /* TravelAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelAddressView.h; sourceTree = "<group>"; };
+		D656944F1D2BA4A8008865BC /* TravelAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelAddressView.m; sourceTree = "<group>"; };
+		D65694501D2BA4A8008865BC /* TravelCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelCategoryCell.h; sourceTree = "<group>"; };
+		D65694511D2BA4A8008865BC /* TravelCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelCategoryCell.m; sourceTree = "<group>"; };
+		D65694521D2BA4A8008865BC /* TravelCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelCategoryCell.xib; sourceTree = "<group>"; };
+		D65694581D2BA531008865BC /* 景点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "景点.png"; sourceTree = "<group>"; };
+		D65694591D2BA531008865BC /* 亲子游.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "亲子游.png"; sourceTree = "<group>"; };
+		D656945A1D2BA531008865BC /* 手工制作.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手工制作.png"; sourceTree = "<group>"; };
+		D656945B1D2BA531008865BC /* 演出展览.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "演出展览.png"; sourceTree = "<group>"; };
+		D656945C1D2BA531008865BC /* 游乐园.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "游乐园.png"; sourceTree = "<group>"; };
+		D656945D1D2BA531008865BC /* 早教培训.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "早教培训.png"; sourceTree = "<group>"; };
+		D656945E1D2BA531008865BC /* travel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel1.png; sourceTree = "<group>"; };
+		D656945F1D2BA531008865BC /* travel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel2.png; sourceTree = "<group>"; };
+		D65694601D2BA531008865BC /* travel3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel3.png; sourceTree = "<group>"; };
+		D65694611D2BA531008865BC /* travel4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel4.png; sourceTree = "<group>"; };
+		D65694621D2BA531008865BC /* travel5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel5.png; sourceTree = "<group>"; };
+		D65694631D2BA531008865BC /* travel6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel6.png; sourceTree = "<group>"; };
 		D658290B1D20D0960095A091 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		D658290C1D20D0960095A091 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D658290D1D20D0960095A091 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +331,29 @@
 		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		D670EFA41D264CB3001A4E83 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		D670EFA61D264CB9001A4E83 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		D670EFA81D266EA1001A4E83 /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		D670EFA91D266EA1001A4E83 /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		D670EFAB1D266EAC001A4E83 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		D670EFAC1D266EAC001A4E83 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		D670EFAE1D266EBD001A4E83 /* RootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootCell.h; sourceTree = "<group>"; };
+		D670EFAF1D266EBD001A4E83 /* RootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootCell.m; sourceTree = "<group>"; };
+		D670EFB11D266FA7001A4E83 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		D670EFBA1D268D2F001A4E83 /* travel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel.jpg; sourceTree = "<group>"; };
+		D670EFBE1D268DE6001A4E83 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		D670EFC01D2692B9001A4E83 /* weathermenu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weathermenu.jpeg; sourceTree = "<group>"; };
+		D670EFC21D26954C001A4E83 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
+		D670EFC31D26954C001A4E83 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		D670EFC51D2698C6001A4E83 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		D670EFC61D2698C6001A4E83 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		D670EFC71D2698C6001A4E83 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		D670EFCA1D26AD2F001A4E83 /* address.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = address.jpeg; sourceTree = "<group>"; };
+		D670EFCC1D26BDD9001A4E83 /* NaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviView.h; sourceTree = "<group>"; };
+		D670EFCD1D26BDD9001A4E83 /* NaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviView.m; sourceTree = "<group>"; };
+		D67702841D2609D300A75F8F /* TravelMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelMenuController.h; sourceTree = "<group>"; };
+		D67702851D2609D300A75F8F /* TravelMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelMenuController.m; sourceTree = "<group>"; };
+		D67702861D2609D300A75F8F /* TravelMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TravelMenuController.xib; sourceTree = "<group>"; };
 		D677F30D1D23AA3E00C6AC26 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		D677F30E1D23AA3E00C6AC26 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		D677F30F1D23AA3E00C6AC26 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
@@ -310,20 +413,34 @@
 		D696115A1D2692D400B173AF /* ChangeUserNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeUserNameController.xib; sourceTree = "<group>"; };
 		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
 		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
-		D6A0F6C81D211A050057CE15 /* SongDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewCell.h; sourceTree = "<group>"; };
-		D6A0F6C91D211A050057CE15 /* SongDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewCell.m; sourceTree = "<group>"; };
-		D6A0F6CA1D211A050057CE15 /* SongDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongDetailViewCell.xib; sourceTree = "<group>"; };
-		D6A0F6CD1D211BBC0057CE15 /* SongList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongList.h; sourceTree = "<group>"; };
-		D6A0F6CE1D211BBC0057CE15 /* SongList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongList.m; sourceTree = "<group>"; };
-		D6A0F6D01D211DE10057CE15 /* SongPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPlayViewController.h; sourceTree = "<group>"; };
-		D6A0F6D11D211DE10057CE15 /* SongPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPlayViewController.m; sourceTree = "<group>"; };
-		D6A0F6D21D211DE10057CE15 /* SongPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongPlayViewController.xib; sourceTree = "<group>"; };
 		D6B63F4D1D24C47500D4CF5E /* MobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileViewController.h; sourceTree = "<group>"; };
 		D6B63F4E1D24C47500D4CF5E /* MobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileViewController.m; sourceTree = "<group>"; };
 		D6B63F4F1D24C47500D4CF5E /* MobileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileViewController.xib; sourceTree = "<group>"; };
 		D6B63F521D24C81400D4CF5E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		D6B63F5A1D251D2900D4CF5E /* meng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meng.jpg; sourceTree = "<group>"; };
 		D6B63F5C1D25484500D4CF5E /* meng2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meng2.jpeg; path = ../Models/meng2.jpeg; sourceTree = "<group>"; };
+		D6C2A5CF1D24AAC40092BC3D /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
+		D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
+		D6C2A5D31D24AB860092BC3D /* baiduNaviSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baiduNaviSDK.bundle; sourceTree = "<group>"; };
+		D6C2A5D51D24AB860092BC3D /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
+		D6C2A5D61D24AB860092BC3D /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
+		D6C2A5D81D24AB860092BC3D /* BNCommonDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCommonDef.h; sourceTree = "<group>"; };
+		D6C2A5D91D24AB860092BC3D /* BNCoreServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCoreServices.h; sourceTree = "<group>"; };
+		D6C2A5DA1D24AB860092BC3D /* BNLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLocation.h; sourceTree = "<group>"; };
+		D6C2A5DB1D24AB860092BC3D /* BNLocationManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLocationManagerProtocol.h; sourceTree = "<group>"; };
+		D6C2A5DC1D24AB860092BC3D /* BNRoutePlanManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRoutePlanManagerProtocol.h; sourceTree = "<group>"; };
+		D6C2A5DD1D24AB860092BC3D /* BNRoutePlanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRoutePlanModel.h; sourceTree = "<group>"; };
+		D6C2A5DE1D24AB860092BC3D /* BNSoundEventProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNSoundEventProtocol.h; sourceTree = "<group>"; };
+		D6C2A5DF1D24AB860092BC3D /* BNStrategyManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNStrategyManagerProtocol.h; sourceTree = "<group>"; };
+		D6C2A5E01D24AB860092BC3D /* BNUIManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUIManagerProtocol.h; sourceTree = "<group>"; };
+		D6C2A5E11D24AB860092BC3D /* libbaiduNaviSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaiduNaviSDK.a; sourceTree = "<group>"; };
+		D6C2A5E21D24AB860092BC3D /* updatelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updatelog.txt; sourceTree = "<group>"; };
+		D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D6C2A5E91D24ABD50092BC3D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D6C2A5EB1D24ABF00092BC3D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D6C2A5ED1D24AC190092BC3D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		D6C2A5EF1D24AC200092BC3D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D6C2A5F11D24AC370092BC3D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		D6D0119A1D1AAB7C0076477D /* NetWordRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWordRequestManager.h; sourceTree = "<group>"; };
 		D6D0119B1D1AAB7C0076477D /* NetWordRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWordRequestManager.m; sourceTree = "<group>"; };
 		D6D0119E1D1AABB70076477D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -378,17 +495,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
-				D68AEECB1D1FF42300C7127D /* CoreLocation.framework in Frameworks */,
-				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
-				D68AEEC71D1FF40600C7127D /* AVFoundation.framework in Frameworks */,
-				D68AEEC51D1FF3FE00C7127D /* AddressBook.framework in Frameworks */,
-				D68AEEC31D1FF3EB00C7127D /* AudioToolbox.framework in Frameworks */,
+				D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */,
+				D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */,
+				D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */,
 				D68AEEC11D1FF3DF00C7127D /* SystemConfiguration.framework in Frameworks */,
+				D68AEEC71D1FF40600C7127D /* AVFoundation.framework in Frameworks */,
+				D6C2A5EC1D24ABF00092BC3D /* MediaPlayer.framework in Frameworks */,
+				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
+				D68AEECB1D1FF42300C7127D /* CoreLocation.framework in Frameworks */,
+				D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */,
+				D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */,
+				D68AEEC31D1FF3EB00C7127D /* AudioToolbox.framework in Frameworks */,
+				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
+				D6C2A5E41D24AB860092BC3D /* libBaiduMobStat.a in Frameworks */,
+				D68AEEC51D1FF3FE00C7127D /* AddressBook.framework in Frameworks */,
 				D68AEEBF1D1FF3D400C7127D /* QuartzCore.framework in Frameworks */,
 				D68AEEBD1D1FF3CB00C7127D /* UIKit.framework in Frameworks */,
 				D68AEEBB1D1FF3C100C7127D /* Foundation.framework in Frameworks */,
 				D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */,
+				D6C2A5E51D24AB860092BC3D /* libbaiduNaviSDK.a in Frameworks */,
 				D68AEEB71D1FEF8100C7127D /* iflyMSC.framework in Frameworks */,
 				888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */,
 				D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */,
@@ -401,6 +526,12 @@
 		43C9EF205169BA820B42A223 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6C2A5F11D24AC370092BC3D /* JavaScriptCore.framework */,
+				D6C2A5EF1D24AC200092BC3D /* Security.framework */,
+				D6C2A5ED1D24AC190092BC3D /* libstdc++.6.0.9.tbd */,
+				D6C2A5EB1D24ABF00092BC3D /* MediaPlayer.framework */,
+				D6C2A5E91D24ABD50092BC3D /* CoreMotion.framework */,
+				D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */,
 				D68AEECC1D1FF42B00C7127D /* libz.tbd */,
 				D68AEECA1D1FF42300C7127D /* CoreLocation.framework */,
 				D68AEEC81D1FF41100C7127D /* CoreTelephony.framework */,
@@ -476,6 +607,16 @@
 				D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */,
 			);
 			path = APIStoreSDK;
+			sourceTree = "<group>";
+		};
+		D677027B1D2601EA00A75F8F /* TravelMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D67702841D2609D300A75F8F /* TravelMenuController.h */,
+				D67702851D2609D300A75F8F /* TravelMenuController.m */,
+				D67702861D2609D300A75F8F /* TravelMenuController.xib */,
+			);
+			path = TravelMenu;
 			sourceTree = "<group>";
 		};
 		D67F0C2D1D22223E004B10DC /* EGORefreshView */ = {
@@ -618,6 +759,7 @@
 		D68AC7B51D1BB28300EBB00B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D677027B1D2601EA00A75F8F /* TravelMenu */,
 				D658290B1D20D0960095A091 /* MapViewController.h */,
 				D658290C1D20D0960095A091 /* MapViewController.m */,
 				D658290D1D20D0960095A091 /* MapViewController.xib */,
@@ -627,6 +769,15 @@
 				D65FA9AA1D1D78CE00D0CC3E /* WhereViewController.h */,
 				D65FA9AB1D1D78CE00D0CC3E /* WhereViewController.m */,
 				D65FA9AC1D1D78CE00D0CC3E /* WhereViewController.xib */,
+				D6C2A5CF1D24AAC40092BC3D /* NaviViewController.h */,
+				D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */,
+				D65694391D2BA463008865BC /* TravelAddressController.h */,
+				D656943A1D2BA463008865BC /* TravelAddressController.m */,
+				D656943B1D2BA463008865BC /* TravelCategory.h */,
+				D656943C1D2BA463008865BC /* TravelCategory.m */,
+				D656943D1D2BA463008865BC /* TravelCategoryDetailController.h */,
+				D656943E1D2BA463008865BC /* TravelCategoryDetailController.m */,
+				D656943F1D2BA463008865BC /* TravelCategoryDetailController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -634,10 +785,18 @@
 		D68AC7B61D1BB28300EBB00B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D670EFA81D266EA1001A4E83 /* WaterFlowLayout.h */,
+				D670EFA91D266EA1001A4E83 /* WaterFlowLayout.m */,
 				D65FA9B81D1D78FF00D0CC3E /* Weather.h */,
 				D65FA9B91D1D78FF00D0CC3E /* Weather.m */,
 				D68AC7CD1D1BB37C00EBB00B /* Travel.h */,
 				D68AC7CE1D1BB37C00EBB00B /* Travel.m */,
+				D670EFAB1D266EAC001A4E83 /* DataModel.h */,
+				D670EFAC1D266EAC001A4E83 /* DataModel.m */,
+				D65694441D2BA488008865BC /* TravelCategoryDetailModel.h */,
+				D65694451D2BA488008865BC /* TravelCategoryDetailModel.m */,
+				D65694461D2BA488008865BC /* TravelCategoryModel.h */,
+				D65694471D2BA488008865BC /* TravelCategoryModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -645,8 +804,26 @@
 		D68AC7B71D1BB28300EBB00B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D670EFAE1D266EBD001A4E83 /* RootCell.h */,
+				D670EFAF1D266EBD001A4E83 /* RootCell.m */,
 				D65FA9C71D1D79CF00D0CC3E /* MessageView.h */,
 				D65FA9C81D1D79CF00D0CC3E /* MessageView.m */,
+				D670EFC21D26954C001A4E83 /* MenuCell.h */,
+				D670EFC31D26954C001A4E83 /* MenuCell.m */,
+				D670EFC51D2698C6001A4E83 /* MenuTableViewCell.h */,
+				D670EFC61D2698C6001A4E83 /* MenuTableViewCell.m */,
+				D670EFC71D2698C6001A4E83 /* MenuTableViewCell.xib */,
+				D670EFCC1D26BDD9001A4E83 /* NaviView.h */,
+				D670EFCD1D26BDD9001A4E83 /* NaviView.m */,
+				D656944A1D2BA4A8008865BC /* HeaderView.h */,
+				D656944B1D2BA4A8008865BC /* HeaderView.m */,
+				D656944C1D2BA4A8008865BC /* TravelAddressCell.h */,
+				D656944D1D2BA4A8008865BC /* TravelAddressCell.m */,
+				D656944E1D2BA4A8008865BC /* TravelAddressView.h */,
+				D656944F1D2BA4A8008865BC /* TravelAddressView.m */,
+				D65694501D2BA4A8008865BC /* TravelCategoryCell.h */,
+				D65694511D2BA4A8008865BC /* TravelCategoryCell.m */,
+				D65694521D2BA4A8008865BC /* TravelCategoryCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -660,9 +837,47 @@
 			path = RootVC;
 			sourceTree = "<group>";
 		};
+		D6C2A5D21D24AB860092BC3D /* BaiduNavi_iOSSDK_v2.0.7_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2A5D31D24AB860092BC3D /* baiduNaviSDK.bundle */,
+				D6C2A5D41D24AB860092BC3D /* BaiduStatistics */,
+				D6C2A5D71D24AB860092BC3D /* inc */,
+				D6C2A5E11D24AB860092BC3D /* libbaiduNaviSDK.a */,
+				D6C2A5E21D24AB860092BC3D /* updatelog.txt */,
+			);
+			path = BaiduNavi_iOSSDK_v2.0.7_Lib;
+			sourceTree = "<group>";
+		};
+		D6C2A5D41D24AB860092BC3D /* BaiduStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2A5D51D24AB860092BC3D /* BaiduMobStat.h */,
+				D6C2A5D61D24AB860092BC3D /* libBaiduMobStat.a */,
+			);
+			path = BaiduStatistics;
+			sourceTree = "<group>";
+		};
+		D6C2A5D71D24AB860092BC3D /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				D6C2A5D81D24AB860092BC3D /* BNCommonDef.h */,
+				D6C2A5D91D24AB860092BC3D /* BNCoreServices.h */,
+				D6C2A5DA1D24AB860092BC3D /* BNLocation.h */,
+				D6C2A5DB1D24AB860092BC3D /* BNLocationManagerProtocol.h */,
+				D6C2A5DC1D24AB860092BC3D /* BNRoutePlanManagerProtocol.h */,
+				D6C2A5DD1D24AB860092BC3D /* BNRoutePlanModel.h */,
+				D6C2A5DE1D24AB860092BC3D /* BNSoundEventProtocol.h */,
+				D6C2A5DF1D24AB860092BC3D /* BNStrategyManagerProtocol.h */,
+				D6C2A5E01D24AB860092BC3D /* BNUIManagerProtocol.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
 		D6D011911D1AAB3D0076477D /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				D6C2A5D21D24AB860092BC3D /* BaiduNavi_iOSSDK_v2.0.7_Lib */,
 				D65FA9CA1D1D7D2D00D0CC3E /* APIStoreSDK */,
 				D6D011921D1AAB3D0076477D /* AppDelegate */,
 				D6D011931D1AAB3D0076477D /* General */,
@@ -736,6 +951,7 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D670EFB11D266FA7001A4E83 /* Data.json */,
 				D69611561D26640000B173AF /* registBackground.png */,
 				D69611541D2659AC00B173AF /* 7.jpg */,
 				D69611521D2656D800B173AF /* userName2.png */,
@@ -759,6 +975,20 @@
 				D67F0C3A1D2268D1004B10DC /* grayArrow@2x.png */,
 				D67F0C3B1D2268D1004B10DC /* whiteArrow.png */,
 				D67F0C3C1D2268D1004B10DC /* whiteArrow@2x.png */,
+				D670EFA41D264CB3001A4E83 /* down.png */,
+				D670EFA61D264CB9001A4E83 /* up.png */,
+				D65694581D2BA531008865BC /* 景点.png */,
+				D65694591D2BA531008865BC /* 亲子游.png */,
+				D656945A1D2BA531008865BC /* 手工制作.png */,
+				D656945B1D2BA531008865BC /* 演出展览.png */,
+				D656945C1D2BA531008865BC /* 游乐园.png */,
+				D656945D1D2BA531008865BC /* 早教培训.png */,
+				D656945E1D2BA531008865BC /* travel1.png */,
+				D656945F1D2BA531008865BC /* travel2.png */,
+				D65694601D2BA531008865BC /* travel3.png */,
+				D65694611D2BA531008865BC /* travel4.png */,
+				D65694621D2BA531008865BC /* travel5.png */,
+				D65694631D2BA531008865BC /* travel6.png */,
 				D67F0C2D1D22223E004B10DC /* EGORefreshView */,
 				D6F456AE1D1D84A100C957B9 /* SDCycleScrollView */,
 				D6F456A01D1D846800C957B9 /* bigger.jpg */,
@@ -777,7 +1007,12 @@
 				D65FA9A21D1D786D00D0CC3E /* 11副本.png */,
 				D65FA9A31D1D786D00D0CC3E /* weather.jpeg */,
 				D65FA9B41D1D78ED00D0CC3E /* weather1.jpeg */,
+				D651DC321D27BF5E007F50D7 /* weaherImageView.gif */,
 				D65FA9B51D1D78ED00D0CC3E /* where.png */,
+				D670EFBA1D268D2F001A4E83 /* travel.jpg */,
+				D670EFBE1D268DE6001A4E83 /* map.png */,
+				D670EFC01D2692B9001A4E83 /* weathermenu.jpeg */,
+				D670EFCA1D26AD2F001A4E83 /* address.jpeg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -928,6 +1163,11 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -954,6 +1194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */,
+				D67702881D2609D300A75F8F /* TravelMenuController.xib in Resources */,
 				D69611571D26640000B173AF /* registBackground.png in Resources */,
 				D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */,
 				D6F456AB1D1D846800C957B9 /* head4.jpg in Resources */,
@@ -961,47 +1203,71 @@
 				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
 				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
 				D658290F1D20D0960095A091 /* MapViewController.xib in Resources */,
+				D670EFB21D266FA7001A4E83 /* Data.json in Resources */,
+				D656946E1D2BA531008865BC /* travel5.png in Resources */,
+				D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */,
+				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
+				D670EFA71D264CB9001A4E83 /* up.png in Resources */,
+				D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */,
+				D670EFBB1D268D2F001A4E83 /* travel.jpg in Resources */,
+				D656946B1D2BA531008865BC /* travel2.png in Resources */,
+				D651DC331D27BF5E007F50D7 /* weaherImageView.gif in Resources */,
 				D69611451D25FD1900B173AF /* bar4.jpg in Resources */,
 				D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */,
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
 				D6B63F511D24C47500D4CF5E /* MobileViewController.xib in Resources */,
+				D65694571D2BA4A8008865BC /* TravelCategoryCell.xib in Resources */,
 				D67F0C441D2268D1004B10DC /* whiteArrow@2x.png in Resources */,
 				D69611551D2659AC00B173AF /* 7.jpg in Resources */,
+				D65694671D2BA531008865BC /* 演出展览.png in Resources */,
 				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
-				D6E2DF061D20BDA100DCBF0D /* SongCollectionViewCell.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
+				D670EFA51D264CB3001A4E83 /* down.png in Resources */,
 				D632F4C41D1A961E00F51C6F /* LaunchScreen.storyboard in Resources */,
 				D6F456A71D1D846800C957B9 /* bigger.jpg in Resources */,
 				D67F0C411D2268D1004B10DC /* grayArrow.png in Resources */,
 				D6F8F1F61D1CE8B700D39982 /* RegistViewController.xib in Resources */,
+				D65694431D2BA463008865BC /* TravelCategoryDetailController.xib in Resources */,
 				D64E58A51D23F9A600E96257 /* ClassTableViewCell.xib in Resources */,
 				D6F456A91D1D846800C957B9 /* head2.jpg in Resources */,
+				D65694641D2BA531008865BC /* 景点.png in Resources */,
 				D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */,
 				D6F456A81D1D846800C957B9 /* head1.jpg in Resources */,
-				D65FA9B31D1D78E000D0CC3E /* TravelViewController.xib in Resources */,
+				D670EFC91D2698C6001A4E83 /* MenuTableViewCell.xib in Resources */,
 				D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */,
 				D64E58AB1D23F9A600E96257 /* HealthTableViewCell.xib in Resources */,
 				D6067FC81D24C4D900047022 /* ContentViewController.xib in Resources */,
+				D656946F1D2BA531008865BC /* travel6.png in Resources */,
 				D646F42E1D1E1531008D21EE /* where.gif in Resources */,
+				D65694691D2BA531008865BC /* 早教培训.png in Resources */,
 				D64E58A71D23F9A600E96257 /* CollectionViewCell.xib in Resources */,
 				D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */,
 				D696114B1D264A9600B173AF /* 6.png in Resources */,
 				D6F456AA1D1D846800C957B9 /* head3.jpg in Resources */,
 				D69611471D25FD2500B173AF /* bar5.jpg in Resources */,
 				D696114D1D264E7B00B173AF /* login.jpg in Resources */,
-				D6A0F6D41D211DE10057CE15 /* SongPlayViewController.xib in Resources */,
 				D696114F1D264EE400B173AF /* password.png in Resources */,
+				D65694661D2BA531008865BC /* 手工制作.png in Resources */,
 				D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */,
+				D670EFBF1D268DE6001A4E83 /* map.png in Resources */,
 				D677F3161D23AA4E00C6AC26 /* NormalCell.xib in Resources */,
+				D656946D1D2BA531008865BC /* travel4.png in Resources */,
 				D67F0C431D2268D1004B10DC /* whiteArrow.png in Resources */,
+				D656946A1D2BA531008865BC /* travel1.png in Resources */,
 				D69611531D2656D800B173AF /* userName2.png in Resources */,
 				D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */,
 				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
+				D656946C1D2BA531008865BC /* travel3.png in Resources */,
+				D65694681D2BA531008865BC /* 游乐园.png in Resources */,
+				D670EFCB1D26AD2F001A4E83 /* address.jpeg in Resources */,
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
+				D65694651D2BA531008865BC /* 亲子游.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
 				D67F0C401D2268D1004B10DC /* blueArrow@2x.png in Resources */,
+				D68AC7C11D1BB2CB00EBB00B /* (null) in Resources */,
+				D6C2A5E31D24AB860092BC3D /* baiduNaviSDK.bundle in Resources */,
 				D69611411D25FC5100B173AF /* bar2.jpg in Resources */,
-				D68AC7C11D1BB2CB00EBB00B /* SongViewController.xib in Resources */,
+				D68AC7C11D1BB2CB00EBB00B /* (null) in Resources */,
 				D696113C1D25F64100B173AF /* bar.jpg in Resources */,
 				D67F0C3F1D2268D1004B10DC /* blueArrow.png in Resources */,
 				D69611431D25FC8600B173AF /* bar3.jpg in Resources */,
@@ -1013,11 +1279,13 @@
 				D65FA9A71D1D786D00D0CC3E /* go.png in Resources */,
 				D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */,
 				D6F456AD1D1D846800C957B9 /* placeHold.png in Resources */,
+				D670EFC11D2692B9001A4E83 /* weathermenu.jpeg in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
 				D69611491D26097A00B173AF /* 5.jpg in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
 				D6F8F1FB1D1CE8B700D39982 /* CollectionCell.xib in Resources */,
 				D67F0C3E1D2268D1004B10DC /* blackArrow@2x.png in Resources */,
+				D6C2A5E61D24AB860092BC3D /* updatelog.txt in Resources */,
 				D64E58511D235C2900E96257 /* waterfall.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1080,6 +1348,7 @@
 				D64E58AC1D23F9A600E96257 /* RootView.m in Sources */,
 				D64E58AF1D23F9A600E96257 /* WaterfallCollectionViewCell.m in Sources */,
 				D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */,
+				D670EFC41D26954C001A4E83 /* MenuCell.m in Sources */,
 				D64E58A81D23F9A600E96257 /* FootCollectionReusableView.m in Sources */,
 				D64E58871D23F99600E96257 /* CookModel.m in Sources */,
 				D64E58741D23F98A00E96257 /* ClassViewController.m in Sources */,
@@ -1087,26 +1356,36 @@
 				D64E588C1D23F99600E96257 /* WaterfallModel.m in Sources */,
 				D6B63F501D24C47500D4CF5E /* MobileViewController.m in Sources */,
 				D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */,
+				D65694561D2BA4A8008865BC /* TravelCategoryCell.m in Sources */,
 				D64E58A61D23F9A600E96257 /* CollectionViewCell.m in Sources */,
+				D65694541D2BA4A8008865BC /* TravelAddressCell.m in Sources */,
 				D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */,
+				D670EFC81D2698C6001A4E83 /* MenuTableViewCell.m in Sources */,
 				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
 				D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */,
 				D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */,
 				D658290E1D20D0960095A091 /* MapViewController.m in Sources */,
 				D64E58771D23F98A00E96257 /* HealthViewController.m in Sources */,
 				D6F456BE1D1D84A100C957B9 /* TAAbstractDotView.m in Sources */,
+				D670EFAD1D266EAC001A4E83 /* DataModel.m in Sources */,
 				D6D0119C1D1AAB7C0076477D /* NetWordRequestManager.m in Sources */,
+				D65694481D2BA488008865BC /* TravelCategoryDetailModel.m in Sources */,
 				D646F42C1D1E1415008D21EE /* MBProgressHUD+GifHUD.m in Sources */,
+				D6C2A5D11D24AAC40092BC3D /* NaviViewController.m in Sources */,
 				D64E58761D23F98A00E96257 /* HealthDetailViewController.m in Sources */,
 				D64E58AA1D23F9A600E96257 /* HealthTableViewCell.m in Sources */,
 				D6F8F1F51D1CE8B700D39982 /* RegistViewController.m in Sources */,
 				D64E58B01D23F9A600E96257 /* WaterFallLayout.m in Sources */,
+				D65694491D2BA488008865BC /* TravelCategoryModel.m in Sources */,
+				D65694401D2BA463008865BC /* TravelAddressController.m in Sources */,
+				D67702871D2609D300A75F8F /* TravelMenuController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
 				D6F8F1F71D1CE8B700D39982 /* UserViewController.m in Sources */,
 				D64E58A91D23F9A600E96257 /* HeadCollectionReusableView.m in Sources */,
 				D64E58751D23F98A00E96257 /* CookDetailViewController.m in Sources */,
 				D64E58A41D23F9A600E96257 /* ClassTableViewCell.m in Sources */,
+				D65694421D2BA463008865BC /* TravelCategoryDetailController.m in Sources */,
 				D64E58781D23F98A00E96257 /* SecretViewController.m in Sources */,
 				D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */,
 				D65FA9BA1D1D78FF00D0CC3E /* Weather.m in Sources */,
@@ -1117,25 +1396,30 @@
 				D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */,
 				D64E587A1D23F98A00E96257 /* ShareBabyViewController.m in Sources */,
 				D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */,
+				D65694531D2BA4A8008865BC /* HeaderView.m in Sources */,
 				D677F3151D23AA4E00C6AC26 /* NormalCell.m in Sources */,
 				D64E58AD1D23F9A600E96257 /* SheetTableViewCell.m in Sources */,
 				D6F456C31D1D84A100C957B9 /* SDCycleScrollView.m in Sources */,
 				D6F456C01D1D84A100C957B9 /* TADotView.m in Sources */,
 				D65FA9B21D1D78E000D0CC3E /* TravelViewController.m in Sources */,
 				D677F3101D23AA3E00C6AC26 /* ImageCell.m in Sources */,
+				D670EFAA1D266EA1001A4E83 /* WaterFlowLayout.m in Sources */,
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
 				D64E58881D23F99600E96257 /* HealthModel.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */,
-				D6A0F6CF1D211BBC0057CE15 /* SongList.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,
+				D670EFCE1D26BDD9001A4E83 /* NaviView.m in Sources */,
 				D64E58731D23F98A00E96257 /* ClassDetailViewController.m in Sources */,
 				D64E58891D23F99600E96257 /* ListModel.m in Sources */,
 				D6F456BF1D1D84A100C957B9 /* TAAnimatedDotView.m in Sources */,
 				D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */,
+				D65694411D2BA463008865BC /* TravelCategory.m in Sources */,
 				D6902C531D20BC2900395FB4 /* FindPasswordController.m in Sources */,
+				D65694551D2BA4A8008865BC /* TravelAddressView.m in Sources */,
 				D6F456C21D1D84A100C957B9 /* SDCollectionViewCell.m in Sources */,
 				D6F8F1FC1D1CE8B700D39982 /* CollectionView.m in Sources */,
+				D670EFB01D266EBD001A4E83 /* RootCell.m in Sources */,
 				D64E588A1D23F99600E96257 /* Secret.m in Sources */,
 				D6067FC71D24C4D900047022 /* ContentViewController.m in Sources */,
 				D64E588B1D23F99600E96257 /* SheetModel.m in Sources */,
@@ -1264,6 +1548,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
+					"$(PROJECT_DIR)/UIProject/classes/BaiduNavi_iOSSDK_v2.0.7_Lib/BaiduStatistics",
+					"$(PROJECT_DIR)/UIProject/classes/BaiduNavi_iOSSDK_v2.0.7_Lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1289,6 +1575,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
+					"$(PROJECT_DIR)/UIProject/classes/BaiduNavi_iOSSDK_v2.0.7_Lib/BaiduStatistics",
+					"$(PROJECT_DIR)/UIProject/classes/BaiduNavi_iOSSDK_v2.0.7_Lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";

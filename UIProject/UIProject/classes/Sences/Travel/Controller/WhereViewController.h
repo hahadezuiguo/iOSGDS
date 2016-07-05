@@ -14,6 +14,6 @@
 @interface WhereViewController : UIViewController
 
 @property (nonatomic, strong) BMKReverseGeoCodeResult *result;
-
+@property (nonatomic, strong) BMKUserLocation *userLocation;
 
 @end
