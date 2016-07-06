@@ -10,7 +10,6 @@
 
 #define LAYER_ANIMATION_LAYER_NAME @"layerName"
 
-
 // 十六进制颜色值 使用：HEX_COLOR(0xf8f8f8)
 #define HEX_COLOR_ALPHA(_HEX_,a) [UIColor colorWithRed:((float)((_HEX_ & 0xFF0000) >> 16))/255.0 green:((float)((_HEX_ & 0xFF00) >> 8))/255.0 blue:((float)(_HEX_ & 0xFF))/255.0 alpha:a]
 
