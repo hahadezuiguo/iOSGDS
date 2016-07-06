@@ -168,7 +168,7 @@
             }
             continue;
         }
-        else [_animator removeBehavior:behavior];;
+        else [_animator removeBehavior:behavior];
     }
     self.animator = nil;
     [self.dropsArray removeAllObjects];
