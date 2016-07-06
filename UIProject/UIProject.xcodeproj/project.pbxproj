@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
+		D6067FC71D24C4D900047022 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6067FC51D24C4D900047022 /* ContentViewController.m */; };
+		D6067FC81D24C4D900047022 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6067FC61D24C4D900047022 /* ContentViewController.xib */; };
+		D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */; };
+		D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D70021D2C9B90006CE7B4 /* SongModel.m */; };
 		D632E78B1D2C97E80064977C /* UIView+Opens.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78A1D2C97E80064977C /* UIView+Opens.m */; };
 		D632E7901D2C983E0064977C /* AdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78D1D2C983E0064977C /* AdviceController.m */; };
 		D632E7911D2C983E0064977C /* ShareFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78F1D2C983E0064977C /* ShareFunction.m */; };
@@ -246,6 +250,13 @@
 		46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.release.xcconfig"; sourceTree = "<group>"; };
 		D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6067FC41D24C4D900047022 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		D6067FC51D24C4D900047022 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		D6067FC61D24C4D900047022 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		D60D6FFE1D2C9B81006CE7B4 /* SecretModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretModel.h; sourceTree = "<group>"; };
+		D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
+		D60D70011D2C9B90006CE7B4 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
+		D60D70021D2C9B90006CE7B4 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
 		D632E7891D2C97E80064977C /* UIView+Opens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Opens.h"; sourceTree = "<group>"; };
 		D632E78A1D2C97E80064977C /* UIView+Opens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Opens.m"; sourceTree = "<group>"; };
 		D632E78C1D2C983E0064977C /* AdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceController.h; sourceTree = "<group>"; };
@@ -1303,6 +1314,10 @@
 			children = (
 				D6F8F1EB1D1CE8B700D39982 /* User.h */,
 				D6F8F1EC1D1CE8B700D39982 /* User.m */,
+				D60D6FFE1D2C9B81006CE7B4 /* SecretModel.h */,
+				D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */,
+				D60D70011D2C9B90006CE7B4 /* SongModel.h */,
+				D60D70021D2C9B90006CE7B4 /* SongModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1624,6 +1639,7 @@
 				D64E58AE1D23F9A600E96257 /* SheetView.m in Sources */,
 				D632F4B61D1A961E00F51C6F /* main.m in Sources */,
 				D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */,
+				D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */,
 				D64E587A1D23F98A00E96257 /* ShareBabyViewController.m in Sources */,
 				D65FA9AD1D1D78CE00D0CC3E /* WhereViewController.m in Sources */,
 				D65694531D2BA4A8008865BC /* HeaderView.m in Sources */,
@@ -1639,6 +1655,7 @@
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
 				D6A3F4271D2CEBE40093718D /* ABCIntroViewController.m in Sources */,
 				D64E58881D23F99600E96257 /* HealthModel.m in Sources */,
+				D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */,
 				D6F8F1F91D1CE8B700D39982 /* User.m in Sources */,

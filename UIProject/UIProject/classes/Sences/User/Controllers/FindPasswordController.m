@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+      [self.navigationController setNavigationBarHidden:NO animated:YES];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -29,15 +30,16 @@
 
 - (IBAction)findPassword:(id)sender {
     
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction * action = [UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-    }];
-    [alert addAction:action];
+//    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction * action = [UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//    }];
+//    [alert addAction:action];
     
     [AVUser requestPasswordResetForEmailInBackground:_emailTextField.text block:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction * action = [UIAlertAction actionWithTitle:@"邮件发送成功，请注意查收" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//                [self.navigationController pushViewController:[] animated:<#(BOOL)#>]
             }];
             [alert addAction:action];
             [self presentViewController:alert animated:YES completion:nil];
