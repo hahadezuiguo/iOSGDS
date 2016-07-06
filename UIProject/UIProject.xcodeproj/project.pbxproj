@@ -10,10 +10,8 @@
 		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
 		D6067FC71D24C4D900047022 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6067FC51D24C4D900047022 /* ContentViewController.m */; };
 		D6067FC81D24C4D900047022 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6067FC61D24C4D900047022 /* ContentViewController.xib */; };
-<<<<<<< HEAD
 		D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */; };
 		D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D70021D2C9B90006CE7B4 /* SongModel.m */; };
-=======
 		D632E78B1D2C97E80064977C /* UIView+Opens.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78A1D2C97E80064977C /* UIView+Opens.m */; };
 		D632E7901D2C983E0064977C /* AdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78D1D2C983E0064977C /* AdviceController.m */; };
 		D632E7911D2C983E0064977C /* ShareFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78F1D2C983E0064977C /* ShareFunction.m */; };
@@ -29,7 +27,6 @@
 		D632E7A81D2C98DB0064977C /* sheet3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D632E79D1D2C98DB0064977C /* sheet3.jpg */; };
 		D632E7A91D2C98DB0064977C /* sheet4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D632E79E1D2C98DB0064977C /* sheet4.jpeg */; };
 		D632E7AA1D2C98DB0064977C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D632E79F1D2C98DB0064977C /* star.png */; };
->>>>>>> 4b71135963ed608996c2cc982601ae207d552709
 		D632F4B61D1A961E00F51C6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D632F4B51D1A961E00F51C6F /* main.m */; };
 		D632F4BC1D1A961E00F51C6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632F4BB1D1A961E00F51C6F /* ViewController.m */; };
 		D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D632F4BD1D1A961E00F51C6F /* Main.storyboard */; };
@@ -228,12 +225,10 @@
 		D6067FC41D24C4D900047022 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		D6067FC51D24C4D900047022 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		D6067FC61D24C4D900047022 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		D60D6FFE1D2C9B81006CE7B4 /* SecretModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretModel.h; sourceTree = "<group>"; };
 		D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
 		D60D70011D2C9B90006CE7B4 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
 		D60D70021D2C9B90006CE7B4 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
-=======
 		D632E7891D2C97E80064977C /* UIView+Opens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Opens.h"; sourceTree = "<group>"; };
 		D632E78A1D2C97E80064977C /* UIView+Opens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Opens.m"; sourceTree = "<group>"; };
 		D632E78C1D2C983E0064977C /* AdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceController.h; sourceTree = "<group>"; };
@@ -253,7 +248,6 @@
 		D632E79D1D2C98DB0064977C /* sheet3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sheet3.jpg; sourceTree = "<group>"; };
 		D632E79E1D2C98DB0064977C /* sheet4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sheet4.jpeg; sourceTree = "<group>"; };
 		D632E79F1D2C98DB0064977C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
->>>>>>> 4b71135963ed608996c2cc982601ae207d552709
 		D632F4B11D1A961E00F51C6F /* UIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D632F4B51D1A961E00F51C6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D632F4BA1D1A961E00F51C6F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
