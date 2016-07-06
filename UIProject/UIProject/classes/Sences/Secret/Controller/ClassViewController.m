@@ -222,8 +222,13 @@
     cell.mainImageV.layer.masksToBounds = YES;
     [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
     cell.titleLable.text = model.title;
+        [cell.shareAction addTarget:self action:@selector(shareActionEvent) forControlEvents:UIControlEventTouchUpInside];
         
         return cell;}
+}
+
+- (void)shareActionEvent{
+    NSLog(@"这是share的响应事件");
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

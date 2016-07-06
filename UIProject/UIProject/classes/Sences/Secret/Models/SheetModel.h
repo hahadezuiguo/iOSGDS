@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSString *title;
 
-@property (nonatomic, strong) UIImageView *myImage;
+@property (nonatomic, strong) UIImage *myImage;
 
 @end
