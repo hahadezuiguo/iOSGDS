@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
-<<<<<<< HEAD
 		D6067FC71D24C4D900047022 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6067FC51D24C4D900047022 /* ContentViewController.m */; };
 		D6067FC81D24C4D900047022 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6067FC61D24C4D900047022 /* ContentViewController.xib */; };
 		D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */; };
 		D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D70021D2C9B90006CE7B4 /* SongModel.m */; };
-=======
->>>>>>> 918bd1b3e0df845e95149cfbdeb92611c5b1fe05
 		D632E78B1D2C97E80064977C /* UIView+Opens.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78A1D2C97E80064977C /* UIView+Opens.m */; };
 		D632E7901D2C983E0064977C /* AdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78D1D2C983E0064977C /* AdviceController.m */; };
 		D632E7911D2C983E0064977C /* ShareFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78F1D2C983E0064977C /* ShareFunction.m */; };
@@ -249,7 +246,6 @@
 		46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.release.xcconfig"; sourceTree = "<group>"; };
 		D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
 		D6067FC41D24C4D900047022 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		D6067FC51D24C4D900047022 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		D6067FC61D24C4D900047022 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
@@ -257,8 +253,6 @@
 		D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
 		D60D70011D2C9B90006CE7B4 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
 		D60D70021D2C9B90006CE7B4 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
-=======
->>>>>>> 918bd1b3e0df845e95149cfbdeb92611c5b1fe05
 		D632E7891D2C97E80064977C /* UIView+Opens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Opens.h"; sourceTree = "<group>"; };
 		D632E78A1D2C97E80064977C /* UIView+Opens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Opens.m"; sourceTree = "<group>"; };
 		D632E78C1D2C983E0064977C /* AdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceController.h; sourceTree = "<group>"; };
