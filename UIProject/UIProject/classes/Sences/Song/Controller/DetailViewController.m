@@ -98,63 +98,62 @@
 #warning 收藏
 #pragma mark 点击事件方法
 - (void)collectionButtonAction:(UIButton *)sender{
-//
-//    AVUser *currentUser = [AVUser currentUser];
-//    if (currentUser != nil) {
-//        
-//        // 判断用户是否已经收藏过了
-//        
-//        AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
-//        // 查询 先查询是否有这个用户名,在查询这个用户是否收藏过这个,如果两个条件同时成立则不能收藏
-//        [query whereKey:@"userName" equalTo:currentUser.username];
-//        [query whereKey:@"title" containsString:self.passTitle];
-//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        
-//            // error是指在查询的过程中是否遇到了异常(如服务器关闭)
-//            if (!error) {
-//                // 返回的是数组,应该判断数组的个数,如果数组有值那么就说明查询成功!
-//                if (objects.count > 0) {
-//                    [self alertViewWithTitle:@"收藏失败" message:@"您已收藏过了"];
-//                }else{
-//                    
-//                    AVObject *collection = [AVObject objectWithClassName:@"Collection"];
-//                    
-//                    //        NSData *imageData = [currentUser objectForKey:@"userImage"];
-//                    //        NSData *imageDataTemp = UIImageJPEGRepresentation([UIImage imageWithData:imageData], 0.1);
-//                    //        [collection setObject:imageDataTemp forKey:@"collectionImage"];
-//                    
-//                    [collection setObject:currentUser.username forKey:@"userName"];
-//                    [collection setObject:self.passImageUrl forKey:@"imageUrl"];
-//                    [collection setObject:self.passTitle forKey:@"title"];
-//                    [collection setObject:self.passCategory forKey:@"category"];
-//                    [collection setObject:self.passTime forKey:@"time"];
-//                    [collection setObject:self.passPlayUrl forKey:@"playUrl"];
-//                    // 收藏时将详细信息收藏 再收藏页面并不展示,为的是由收藏页面转向详情页面时传值
-//                    [collection setObject:self.passDescription forKey:@"myDescription"];
-//                    // 存储
-//                    [collection save];
-//                    [self alertViewWithTitle:@"收藏成功" message:@"您可以到我的收藏中查看了"];
-//                }
-//                
-//            }else{
-//            
-//                // 说明在查询的过程中遇到了问题
-//                [self alertViewWithTitle:@"服务器不给力" message:@"请稍后再试"];
-//            
-//            }
-//            
-//            
-//        }];
-//
-//        
-//    }else{
-//    
-//        [self alertViewWithTitle:@"请登录" message:@"您尚未登录,无法收藏哦~"];
-//        
-//    }
-//    
-//    
-//    
+
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+        
+        // 判断用户是否已经收藏过了
+        
+        AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
+        // 查询 先查询是否有这个用户名,在查询这个用户是否收藏过这个,如果两个条件同时成立则不能收藏
+        [query whereKey:@"userName" equalTo:currentUser.username];
+        [query whereKey:@"title" containsString:self.passTitle];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+            // error是指在查询的过程中是否遇到了异常(如服务器关闭)
+            if (!error) {
+                // 返回的是数组,应该判断数组的个数,如果数组有值那么就说明查询成功!
+                if (objects.count > 0) {
+                    [self alertViewWithTitle:@"收藏失败" message:@"您已收藏过了"];
+                }else{
+                    
+                    AVObject *collection = [AVObject objectWithClassName:@"Collection"];
+                    
+                    //        NSData *imageData = [currentUser objectForKey:@"userImage"];
+                    //        NSData *imageDataTemp = UIImageJPEGRepresentation([UIImage imageWithData:imageData], 0.1);
+                    //        [collection setObject:imageDataTemp forKey:@"collectionImage"];
+                    
+                    [collection setObject:currentUser.username forKey:@"userName"];
+                    [collection setObject:self.passImageUrl forKey:@"imageUrl"];
+                    [collection setObject:self.passTitle forKey:@"title"];
+                    [collection setObject:self.passCategory forKey:@"category"];
+                    [collection setObject:self.passTime forKey:@"time"];
+                    [collection setObject:self.passPlayUrl forKey:@"playUrl"];
+                    // 收藏时将详细信息收藏 再收藏页面并不展示,为的是由收藏页面转向详情页面时传值
+                    [collection setObject:self.passDescription forKey:@"myDescription"];
+                    // 存储
+                    [collection save];
+                    [self alertViewWithTitle:@"收藏成功" message:@"您可以到我的收藏中查看了"];
+                }
+                
+            }else{
+            
+                // 说明在查询的过程中遇到了问题
+                [self alertViewWithTitle:@"服务器不给力" message:@"请稍后再试"];
+            
+            }
+            
+            
+        }];
+
+        
+    }else{
+    
+        [self alertViewWithTitle:@"请登录" message:@"您尚未登录,无法收藏哦~"];
+        
+    }
+    
+    
 }
 
 - (void)playButtonAction:(UIButton *)sender{
@@ -174,8 +173,7 @@
 }
 #warning 分享
 - (void)shareButtonAction:(UIButton *)sender{
-//
-//    
+    
 //    AVUser *currentUser = [AVUser currentUser];
 //    if (currentUser != nil) {
 //        [UMSocialSnsService presentSnsIconSheetView:self
@@ -189,8 +187,7 @@
 //    
 //        [self alertViewWithTitle:@"请登录" message:@"登录后才能分享哦~"];
 //    }
-//    
-//    
+    
 }
 
 

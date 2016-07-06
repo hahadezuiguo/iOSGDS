@@ -13,8 +13,10 @@
 #import "TravelViewController.h"
 #import "UserViewController.h"
 #import "TravelMenuController.h"
-@interface RootViewController ()
-
+#import "ABCIntroView.h"
+@interface RootViewController ()<ABCIntroViewDelegate>
+//
+@property (nonatomic,strong)ABCIntroView *introView;
 @end
 
 @implementation RootViewController
@@ -22,14 +24,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
+    
   
     
     //创建四个跟视图控制器
     [self createChildViewController];
+    // 加载引导试图方法
+    [self p_setupGuideView];
     
 }
+#pragma mark 判断是否为首次启动,如果首次启动那么出现引导图
+- (void)p_setupGuideView{
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        //self.navigationController.navigationBar.hidden = YES;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if (![defaults objectForKey:@"intro_screen_viewed"]) {
+            self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
+            self.introView.delegate = self;
+            self.introView.backgroundColor = [UIColor greenColor];
+            [self.view addSubview:self.introView];
+        }
+        
+    }
+}
 
+
+#pragma mark 引导图代理方法
+- (void)onDoneButtonPressed{
+    
+    [UIView animateWithDuration:1.0 delay:0 options:(UIViewAnimationOptionCurveEaseInOut) animations:^{
+        self.introView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        
+        [self.introView removeFromSuperview];
+        
+    }];
+}
 - (void)createChildViewController {
     [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"" selectorImage:@""];
     

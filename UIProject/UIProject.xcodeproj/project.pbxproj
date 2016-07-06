@@ -191,6 +191,10 @@
 		D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611591D2692D400B173AF /* ChangeUserNameController.m */; };
 		D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696115A1D2692D400B173AF /* ChangeUserNameController.xib */; };
 		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
+		D6A3F41E1D2CE1C30093718D /* leimu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6A3F41D1D2CE1C30093718D /* leimu.jpg */; };
+		D6A3F4201D2CE1C80093718D /* 334.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6A3F41F1D2CE1C80093718D /* 334.jpg */; };
+		D6A3F4261D2CEBE40093718D /* ABCIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F4231D2CEBE40093718D /* ABCIntroView.m */; };
+		D6A3F4271D2CEBE40093718D /* ABCIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F4251D2CEBE40093718D /* ABCIntroViewController.m */; };
 		D6ABD8071D2BB14E007B173D /* picture1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6ABD8061D2BB14E007B173D /* picture1.jpg */; };
 		D6ABDDE01D2BCF38007B173D /* baiduNaviSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6ABDDD01D2BCF38007B173D /* baiduNaviSDK.bundle */; };
 		D6ABDDE11D2BCF38007B173D /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ABDDD31D2BCF38007B173D /* libBaiduMobStat.a */; };
@@ -513,6 +517,12 @@
 		D696115A1D2692D400B173AF /* ChangeUserNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeUserNameController.xib; sourceTree = "<group>"; };
 		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
 		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
+		D6A3F41D1D2CE1C30093718D /* leimu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leimu.jpg; sourceTree = "<group>"; };
+		D6A3F41F1D2CE1C80093718D /* 334.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 334.jpg; sourceTree = "<group>"; };
+		D6A3F4221D2CEBE40093718D /* ABCIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCIntroView.h; sourceTree = "<group>"; };
+		D6A3F4231D2CEBE40093718D /* ABCIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCIntroView.m; sourceTree = "<group>"; };
+		D6A3F4241D2CEBE40093718D /* ABCIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCIntroViewController.h; sourceTree = "<group>"; };
+		D6A3F4251D2CEBE40093718D /* ABCIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCIntroViewController.m; sourceTree = "<group>"; };
 		D6ABD8061D2BB14E007B173D /* picture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = picture1.jpg; sourceTree = "<group>"; };
 		D6ABDDD01D2BCF38007B173D /* baiduNaviSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baiduNaviSDK.bundle; sourceTree = "<group>"; };
 		D6ABDDD21D2BCF38007B173D /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
@@ -990,6 +1000,17 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		D6A3F4211D2CEBD90093718D /* FirstAppear */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3F4221D2CEBE40093718D /* ABCIntroView.h */,
+				D6A3F4231D2CEBE40093718D /* ABCIntroView.m */,
+				D6A3F4241D2CEBE40093718D /* ABCIntroViewController.h */,
+				D6A3F4251D2CEBE40093718D /* ABCIntroViewController.m */,
+			);
+			path = FirstAppear;
+			sourceTree = "<group>";
+		};
 		D6ABDDCF1D2BCF38007B173D /* BaiduNavi_iOSSDK_v2.0.7_Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1071,7 @@
 			children = (
 				D6D011A61D1AD3090076477D /* AppDelegate.h */,
 				D6D011A71D1AD3090076477D /* AppDelegate.m */,
+				D6A3F4211D2CEBD90093718D /* FirstAppear */,
 				D68AC7D81D1BB50200EBB00B /* RootVC */,
 			);
 			path = AppDelegate;
@@ -1110,6 +1132,8 @@
 			isa = PBXGroup;
 			children = (
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
+				D6A3F41F1D2CE1C80093718D /* 334.jpg */,
+				D6A3F41D1D2CE1C30093718D /* leimu.jpg */,
 				D68E02341D2CB0D600A93775 /* batMan.jpg */,
 				D632E7951D2C98DB0064977C /* love@2x.png */,
 				D632E7961D2C98DB0064977C /* love@3x.png */,
@@ -1458,6 +1482,8 @@
 				D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */,
 				D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
+				D6A3F4201D2CE1C80093718D /* 334.jpg in Resources */,
+				D6A3F41E1D2CE1C30093718D /* leimu.jpg in Resources */,
 				D64E58791D23F98A00E96257 /* SecretViewController.xib in Resources */,
 				D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */,
 				D65FA9A71D1D786D00D0CC3E /* go.png in Resources */,
@@ -1586,6 +1612,7 @@
 				D68E01F61D2CABFE00A93775 /* SortDetailModel.m in Sources */,
 				D64E58751D23F98A00E96257 /* CookDetailViewController.m in Sources */,
 				D68E022F1D2CAD7400A93775 /* UIView+Extension.m in Sources */,
+				D6A3F4261D2CEBE40093718D /* ABCIntroView.m in Sources */,
 				D64E58A41D23F9A600E96257 /* ClassTableViewCell.m in Sources */,
 				D68E01D01D2CAA9400A93775 /* SortDetailViewCell.m in Sources */,
 				D65694421D2BA463008865BC /* TravelCategoryDetailController.m in Sources */,
@@ -1610,6 +1637,7 @@
 				D68E022B1D2CAD7400A93775 /* MJRefreshFooterView.m in Sources */,
 				D670EFAA1D266EA1001A4E83 /* WaterFlowLayout.m in Sources */,
 				D6F456C11D1D84A100C957B9 /* TAPageControl.m in Sources */,
+				D6A3F4271D2CEBE40093718D /* ABCIntroViewController.m in Sources */,
 				D64E58881D23F99600E96257 /* HealthModel.m in Sources */,
 				D68AC7CF1D1BB37C00EBB00B /* Travel.m in Sources */,
 				D696113F1D25F89700B173AF /* UINavigationBar+NavigationBarImage.m in Sources */,
