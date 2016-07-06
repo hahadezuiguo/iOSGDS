@@ -16,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *shareAction;
+
+
 @end

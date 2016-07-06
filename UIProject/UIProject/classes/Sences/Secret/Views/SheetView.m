@@ -66,7 +66,6 @@
     if([touch.view isKindOfClass:[self class]]){
         return YES;//返回YES优先响应tap事件，点击事件如did select  需要按时间长点，才能响应。
     }
-    NSLog(@"waimianwaimianwaimianwaimian");
     return NO;//返回NO,阻隔手势识别器，不响应tap事件
 }
 
@@ -88,6 +87,9 @@
     
     SheetModel *model = self.dataArray[indexPath.row];
     cell.InfoLabel.text = model.title;
+    cell.leftView.image = model.myImage;
+    cell.leftView.layer.cornerRadius = 12.5;
+    cell.leftView.layer.masksToBounds = YES;
     cell.backgroundColor = [UIColor whiteColor];
     
     return cell;

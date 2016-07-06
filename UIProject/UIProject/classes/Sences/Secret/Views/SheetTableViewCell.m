@@ -25,8 +25,8 @@
 - (void)layoutSubviews{
     
     [super layoutSubviews];
-    self.leftView.frame = CGRectMake(20, (self.frame.size.height-20)/2, 20, 20);
-    self.InfoLabel.frame = CGRectMake(self.leftView.frame.size.width+self.leftView.frame.origin.x+15, (self.frame.size.height-20)/2, 140, 20);
+    self.leftView.frame = CGRectMake(20, (self.frame.size.height-20)/2, 25, 25);
+    self.InfoLabel.frame = CGRectMake(self.leftView.frame.size.width+self.leftView.frame.origin.x+15, (self.frame.size.height-20)/2, 140, 25);
     
     
     

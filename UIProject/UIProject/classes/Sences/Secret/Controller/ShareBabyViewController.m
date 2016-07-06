@@ -12,6 +12,7 @@
 #import "WaterFallLayout.h"
 #import "WaterfallCollectionViewCell.h"
 #import <UIImageView+WebCache.h>
+#import "UIView+Opens.h"
 
 @interface ShareBabyViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, WaterfallDelegate>
 
@@ -19,6 +20,8 @@
 @property (nonatomic, strong) NSMutableArray *allDataArray;
 //定义collectionView；
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSArray *images;
 
 @end
 
@@ -48,7 +51,27 @@
     [self initLayout];
     
     [self.collectionView registerClass:[WaterfallCollectionViewCell class] forCellWithReuseIdentifier:@"waterCell"];
+    
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(bubbingLove) userInfo:nil repeats:YES];
+    
+    _images = @[@"ic_menu_bluepig",
+                @"ic_menu_bluepig2",
+                @"ic_menu_greenpig",
+                @"ic_menu_greenpig2",
+                @"ic_menu_pinkpig",
+                @"ic_menu_pinkpig2",
+                @"ic_menu_purplepig",
+                @"ic_menu_purplepig2",
+                @"ic_menu_yellowpig",
+                @"ic_menu_yellowpig2"];
 
+
+}
+
+-(void)bubbingLove{
+    [self.view bubbingImage:[UIImage imageNamed:@"love"]];
+    [self.view bubbingImages:_images];
 }
 
 //读取数据

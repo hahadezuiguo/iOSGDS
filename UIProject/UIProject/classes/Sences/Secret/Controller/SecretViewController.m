@@ -27,6 +27,7 @@
 #import "ShareBabyViewController.h"
 #import "SheetView.h"
 #import "SheetModel.h"
+#import "AdviceController.h"
 
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kSpace 8
@@ -89,7 +90,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(sharePicture)];
     
@@ -123,23 +123,26 @@
     //sheetarray
     [self initSheet];
     
-    
-  
+        
 }
 
 - (void)initSheet{
     
     SheetModel *model1 = [[SheetModel alloc] init];
     model1.title = @"美图欣赏";
+    model1.myImage = [UIImage imageNamed:@"sheet1.jpg"];
     
     SheetModel *model2 = [[SheetModel alloc] init];
     model2.title = @"宝宝健身";
+    model2.myImage = [UIImage imageNamed:@"sheet2.jpg"];
     
     SheetModel *model3 = [[SheetModel alloc] init];
     model3.title = @"宝宝爱喝粥";
+    model3.myImage = [UIImage imageNamed:@"sheet3.jpg"];
     
     SheetModel *model4 = [[SheetModel alloc] init];
-    model4.title = @"宝宝吃西点";
+    model4.title = @"建议箱";
+    model4.myImage = [UIImage imageNamed:@"sheet4.jpeg"];
     
     self.sheetArray = @[model1, model2, model3, model4];
     
@@ -181,8 +184,8 @@
             [self.navigationController pushViewController:shareVC animated:YES];
             break;}
         case 3:{
-            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
-            [self.navigationController pushViewController:shareVC animated:YES];
+            AdviceController *adviceVC = [[AdviceController alloc] init];
+            [self.navigationController pushViewController:adviceVC animated:YES];
             break;}
             
         default:
