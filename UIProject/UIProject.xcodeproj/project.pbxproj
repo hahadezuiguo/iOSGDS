@@ -179,6 +179,10 @@
 		D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F521D24C81400D4CF5E /* timg.jpg */; };
 		D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5A1D251D2900D4CF5E /* meng.jpg */; };
 		D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5C1D25484500D4CF5E /* meng2.jpeg */; };
+		D6B7F93E1D2CF71B0026E1F3 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */; };
+		D6B7F9421D2CF9940026E1F3 /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */; };
+		D6B7F9431D2CF9940026E1F3 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */; };
+		D6B7F9471D2D0C5B0026E1F3 /* weatherCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */; };
 		D6C2A5D11D24AAC40092BC3D /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */; };
 		D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */; };
 		D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E91D24ABD50092BC3D /* CoreMotion.framework */; };
@@ -469,6 +473,12 @@
 		D6B63F521D24C81400D4CF5E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		D6B63F5A1D251D2900D4CF5E /* meng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meng.jpg; sourceTree = "<group>"; };
 		D6B63F5C1D25484500D4CF5E /* meng2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meng2.jpeg; path = ../Models/meng2.jpeg; sourceTree = "<group>"; };
+		D6B7F93C1D2CF71B0026E1F3 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		D6B7F93F1D2CF9940026E1F3 /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
+		D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
+		D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weatherCell.png; sourceTree = "<group>"; };
 		D6C2A5CF1D24AAC40092BC3D /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
 		D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
 		D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -820,6 +830,8 @@
 				D656943D1D2BA463008865BC /* TravelCategoryDetailController.h */,
 				D656943E1D2BA463008865BC /* TravelCategoryDetailController.m */,
 				D656943F1D2BA463008865BC /* TravelCategoryDetailController.xib */,
+				D6B7F93C1D2CF71B0026E1F3 /* WeatherViewController.h */,
+				D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -866,6 +878,9 @@
 				D65694501D2BA4A8008865BC /* TravelCategoryCell.h */,
 				D65694511D2BA4A8008865BC /* TravelCategoryCell.m */,
 				D65694521D2BA4A8008865BC /* TravelCategoryCell.xib */,
+				D6B7F93F1D2CF9940026E1F3 /* WeatherCell.h */,
+				D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */,
+				D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1045,6 +1060,7 @@
 				D65694611D2BA531008865BC /* travel4.png */,
 				D65694621D2BA531008865BC /* travel5.png */,
 				D65694631D2BA531008865BC /* travel6.png */,
+				D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */,
 				D67F0C2D1D22223E004B10DC /* EGORefreshView */,
 				D6F456AE1D1D84A100C957B9 /* SDCycleScrollView */,
 				D6F456A01D1D846800C957B9 /* bigger.jpg */,
@@ -1280,6 +1296,7 @@
 				D69611551D2659AC00B173AF /* 7.jpg in Resources */,
 				D65694671D2BA531008865BC /* 演出展览.png in Resources */,
 				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
+				D6B7F9431D2CF9940026E1F3 /* WeatherCell.xib in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D670EFA51D264CB3001A4E83 /* down.png in Resources */,
 				D632E7A71D2C98DB0064977C /* sheet2.jpg in Resources */,
@@ -1323,6 +1340,7 @@
 				D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */,
 				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
 				D656946C1D2BA531008865BC /* travel3.png in Resources */,
+				D6B7F9471D2D0C5B0026E1F3 /* weatherCell.png in Resources */,
 				D65694681D2BA531008865BC /* 游乐园.png in Resources */,
 				D670EFCB1D26AD2F001A4E83 /* address.jpeg in Resources */,
 				D632E7A21D2C98DB0064977C /* oneLetter.png in Resources */,
@@ -1413,6 +1431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B7F9421D2CF9940026E1F3 /* WeatherCell.m in Sources */,
 				D64E58AC1D23F9A600E96257 /* RootView.m in Sources */,
 				D64E58AF1D23F9A600E96257 /* WaterfallCollectionViewCell.m in Sources */,
 				D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */,
@@ -1451,6 +1470,7 @@
 				D67702871D2609D300A75F8F /* TravelMenuController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
+				D6B7F93E1D2CF71B0026E1F3 /* WeatherViewController.m in Sources */,
 				D6F8F1F71D1CE8B700D39982 /* UserViewController.m in Sources */,
 				D64E58A91D23F9A600E96257 /* HeadCollectionReusableView.m in Sources */,
 				D64E58751D23F98A00E96257 /* CookDetailViewController.m in Sources */,
