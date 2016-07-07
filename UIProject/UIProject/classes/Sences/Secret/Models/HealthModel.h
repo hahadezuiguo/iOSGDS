@@ -10,11 +10,11 @@
 
 @interface HealthModel : NSObject
 
+@property (nonatomic, copy) NSString *wurl;
+
 @property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, copy) NSString *imageurl;
-
-@property (nonatomic, copy) NSString *timer;
-@property (nonatomic, copy) NSString *weburl;
+@property (nonatomic, copy) NSString *Description;
+@property (nonatomic, copy) NSArray *images;
 
 @end

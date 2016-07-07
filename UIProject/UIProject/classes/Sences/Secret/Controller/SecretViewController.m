@@ -29,6 +29,7 @@
 #import "SheetModel.h"
 #import "AdviceController.h"
 
+
 #define kWidth [UIScreen mainScreen].bounds.size.width
 #define kSpace 8
 #define kItemSize ([UIScreen mainScreen].bounds.size.width - 40.1) / 3
@@ -94,7 +95,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(sharePicture)];
     
     self.mainScroll = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    self.mainScroll.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 600);
+    self.mainScroll.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 620);
     self.mainScroll.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     [self.view addSubview:self.mainScroll];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -150,17 +151,6 @@
 
 //晒baby
 - (void)sharePicture{
-//    __weak typeof(self)weakSelf = self;
-////    ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
-////    [self.navigationController pushViewController:shareVC animated:YES];
-//  
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"测试" preferredStyle:UIAlertControllerStyleActionSheet];
-//    UIAlertAction *oneA = [UIAlertAction actionWithTitle:@"美图欣赏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
-//        [weakSelf.navigationController pushViewController:shareVC animated:YES];
-//    }];
-//    [alert addAction:oneA];
-//    [self presentViewController:alert animated:YES completion:nil];
   
     SheetView *sheetView = [[SheetView alloc] initWithInforArray:self.sheetArray];
     sheetView.delegate = self;
@@ -180,9 +170,9 @@
             [self.navigationController pushViewController:shareVC animated:YES];
             break;}
         case 2:{
-            ShareBabyViewController *shareVC = [[ShareBabyViewController alloc] init];
-            [self.navigationController pushViewController:shareVC animated:YES];
-            break;}
+//            MeunViewController *shareVC = [[MeunViewController alloc] init];
+//            [self.navigationController pushViewController:shareVC animated:YES];
+          break;}
         case 3:{
             AdviceController *adviceVC = [[AdviceController alloc] init];
             [self.navigationController pushViewController:adviceVC animated:YES];
@@ -207,30 +197,21 @@
     titleLabel.text = @"营养饮食";
     [self.mainScroll addSubview:titleLabel];
     
-//    //"更多"按钮
-//    
-//    UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [moreButton setTitle:@"更多" forState:UIControlStateNormal];
-//    [moreButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    moreButton.titleLabel.font = [UIFont systemFontOfSize:12];
-//    moreButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 60, CGRectGetMinY(titleLabel.frame), 60, 30);
-//    [self.mainScroll addSubview:moreButton];
     
-    self.cookScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(8, CGRectGetMaxY(titleLabel.frame) + 4, [UIScreen mainScreen].bounds.size.width, 200)];
+    self.cookScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLabel.frame) + 4, [UIScreen mainScreen].bounds.size.width, 200)];
     self.cookScroll.contentSize = CGSizeMake(kWidth * 3, 200);
     self.cookScroll.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:1];
     
     for (int i = 0; i < self.allCookData.count; i++) {
-        
+       CookModel *model = self.allCookData[i];
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
         tapGesture.delegate = self;
         
-        CookModel *model = self.allCookData[i];
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(10 + i * (kSpace + (kWidth * 3 - 20 - kSpace * (self.allCookData.count - 1)) / self.allCookData.count), 0, (kWidth * 3 - 20 - kSpace * (self.allCookData.count - 1)) / self.allCookData.count, (kWidth * 3 - 20 - kSpace * (self.allCookData.count - 1)) / self.allCookData.count)];
         imageV.tag = i;
         imageV.layer.cornerRadius = 20;
         imageV.layer.masksToBounds = YES;
-        [imageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+        [imageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold"]];
 
            imageV.userInteractionEnabled = YES;
         [imageV addGestureRecognizer:tapGesture];
@@ -294,9 +275,9 @@
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (weakSelf.allHealthData.count > 0) {
+                
                     [weakSelf.rootView.collectionView reloadData];
-                }
+                
                 
             });
         }
@@ -308,54 +289,65 @@
 //健康护理网络请求
 - (void)netHealthRequest{
     __weak typeof(self)weakSelf = self;
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
-    [manager GET:HEALTH_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray *array = responseObject[@"data"];
-       
-        if (array.count > 0) {
+    //1.创建url
+    NSURL *url = [NSURL URLWithString:HEALTH_URL];
+    //2.创建请求
+    NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+    //2.5核心设置body
+    NSString *bodyString = HEALTH_URL_BODY;
+    NSData *postData = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
+    [mutableRequest setHTTPMethod:@"POST"];
+    [mutableRequest setHTTPBody:postData];
+    //3.创建session对象
+    NSURLSession *session = [NSURLSession sharedSession];
+    //4.创建task对象
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:mutableRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        //5.解析
+        if (error == nil) {
+            NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             for (int i = 0; i < 3; i++) {
-                HealthModel *model = [[HealthModel alloc] init];
                 NSDictionary *dict = array[i];
+                HealthModel *model = [HealthModel new];
                 [model setValuesForKeysWithDictionary:dict];
                 [weakSelf.allHealthData addObject:model];
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (weakSelf.allDataArray.count > 0) {
-                    [weakSelf.rootView.collectionView reloadData];
-                }
                 
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.rootView.collectionView reloadData];
             });
+            
         }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"健康护理数据请求失败");
     }];
+    //6.启动任务
+    [task resume];
+
 }
 
 //营养饮食网络请求
 - (void)netCookRequest{
-    __weak typeof(self)weakSelf = self;
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
-    [manager GET:COOK_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray *array = responseObject[@"data"];
-        if (array.count > 0) {
-            for (NSDictionary *dict in array) {
+    
+    NSArray *array = @[@{@"title" : @"母乳", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_1.html", @"imageurl" : @"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1467882901&di=ea5e83790fdf3904e1c67317bdbfe92b&src=http://www.ys137.com/uploads/allimg/151106/3132-151106123938.jpg"},
+                       @{@"title" : @"奶粉", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_2.html", @"imageurl" : @"http://images.9518.com/pimg/1361280217195.jpg"},
+                       @{@"title" : @"母乳加奶粉", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_3.html", @"imageurl" : @"http://www.thmz.com/liv_loadfile/folder811/folder818/folder826/fold6/1263787404_03267300.jpg"},
+                       @{@"title" : @"辅食", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_4.html", @"imageurl" : @"http://www.shaowu.gov.cn/swbbs/data/attachment/forum/201212/03/112056b8yy8sodbb6s16ss.jpg"},
+                       @{@"title" : @"转奶", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_5.html", @"imageurl" : @"http://e.hiphotos.baidu.com/exp/w=500/sign=d9127c7b45166d223877159476220945/3b87e950352ac65c9cd19dc3fdf2b21192138aae.jpg"},
+                       @{@"title" : @"断奶", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index2_6.html", @"imageurl" : @"http://c.hiphotos.baidu.com/exp/w=480/sign=63d0eb2fb63533faf5b6922698d3fdca/1ad5ad6eddc451dafbc36ecab1fd5266d01632dd.jpg"},
+                       @{@"title" : @"营养基础", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index9_1.html", @"imageurl" : @"http://www.ishowx.com/uploads/allimg/150112/38-150112153602.jpg"},
+                       @{@"title" : @"饮食结构", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index9_2.html", @"imageurl" : @"http://www.ys137.com/uploads/allimg/140513/3094-140513094Q6105.jpg"},
+                       @{@"title" : @"断奶营养", @"weburl" : @"http://www.e-learningclass.com/appdata/ChildrensHospital/web/index9_3.html", @"imageurl" : @"http://img3.imgtn.bdimg.com/it/u=1709001126,2693481655&fm=21&gp=0.jpg"}
+                                 ];
+    
+              for (NSDictionary *dict in array) {
                 CookModel *model = [[CookModel alloc] init];
                 [model setValuesForKeysWithDictionary:dict];
-                [weakSelf.allCookData addObject:model];
+                [self.allCookData addObject:model];
             }
-        dispatch_async(dispatch_get_main_queue(), ^{
+    
+                [self initCook];
             
-                [weakSelf initCook];
-            
-        });
-        }
+    
+    
    
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"营养饮食请求失败");
-    }];
     
 }
 //分区
@@ -394,7 +386,7 @@
         case 1:{
             HealthModel *model = self.allHealthData[indexPath.row];
             cell.listTitle.text = model.title;
-            [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+            [cell.listImage sd_setImageWithURL:[NSURL URLWithString:model.images[0]] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
            
             return cell;
             break;}
