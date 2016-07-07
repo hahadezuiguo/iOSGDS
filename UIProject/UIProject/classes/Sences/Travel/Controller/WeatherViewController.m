@@ -8,6 +8,7 @@
 
 #import "WeatherViewController.h"
 #import "WeatherCell.h"
+#import "OtherWeatherCell.h"
 @interface WeatherViewController ()
 
 @end
@@ -21,6 +22,10 @@
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"WeatherCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    //注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"OtherWeatherCell" bundle:nil] forCellReuseIdentifier:@"otherCell"];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -47,21 +52,49 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+     Weather *weather = self.weather;
     if (indexPath.row == 0) {
         WeatherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+     
+        cell.addressAndWeather.text = [NSString stringWithFormat:@"%@  %@",weather.basic[@"city"], [weather.now[@"cond"] objectForKey:@"txt"]];
+        NSString *string = [NSString stringWithFormat:@"%@",[weather.now[@"cond"] objectForKey:@"txt"]];
+        NSString *imageStr = [NSString stringWithFormat:@"%@.jpg",string];
+        cell.weatherImageView.image = [UIImage imageNamed:imageStr];
+        
+        cell.dateLabel.text = [weather.daily_forecast[indexPath.row] objectForKey:@"date"];
+        
+        cell.tempLabel.text = [NSString stringWithFormat:@"%@°C", weather.now[@"tmp"]];
+        cell.hightTemp.text = [NSString stringWithFormat:@"最高温度：%@°C",[[weather.daily_forecast[indexPath.row]objectForKey:@"tmp"]objectForKey:@"max"]];
+        cell.lowTemp.text = [NSString stringWithFormat:@"最低温度：%@°C",[[weather.daily_forecast[indexPath.row]objectForKey:@"tmp"]objectForKey:@"min"]];
+        cell.windLabel.text = [NSString stringWithFormat:@"%@",[[weather.daily_forecast[indexPath.row]objectForKey:@"wind"]objectForKey:@"dir"]];
+        cell.windPowerLabel.text = [NSString stringWithFormat:@"风力：%@",[[weather.daily_forecast[indexPath.row]objectForKey:@"wind"]objectForKey:@"sc"]];
+        cell.sunLabel.text = [NSString stringWithFormat:@"日出时间：%@     日落时间：%@",[[weather.daily_forecast[indexPath.row]objectForKey:@"astro"]objectForKey:@"sr"],[[weather.daily_forecast[indexPath.row]objectForKey:@"astro"]objectForKey:@"ss"]];
+
         return cell;
     }else {
-        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"otherCell"];
-       cell.textLabel.text = @"星期一";
+        OtherWeatherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"otherCell" forIndexPath:indexPath];
+        
+//       OtherWeatherCell *cell = [[OtherWeatherCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"otherCell"];
+        
+        cell.dateLabel.text = [weather.daily_forecast[indexPath.row] objectForKey:@"date"];
+        
+        NSString *string_d = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"text_d"];
+        NSString *imageStr = [NSString stringWithFormat:@"%@.jpg",string_d];
+        cell.imageView.image = [UIImage imageNamed:imageStr];
+        NSString * maxTmp = [[weather.daily_forecast[indexPath.row] objectForKey:@"tmp"] objectForKey:@"max"];
+        NSString * minTmp = [[weather.daily_forecast[indexPath.row] objectForKey:@"tmp"] objectForKey:@"min"];
+        
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"最高温：%@  最低温：%@",maxTmp,minTmp];
+        
         return cell;
     }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return 180;
+        return self.view.frame.size.height * 5/ 12;
     }else {
-    return 40;
+    return self.view.frame.size.height * 7/ 72 ;
     }
 }
 

@@ -20,25 +20,25 @@
                         <rect key="frame" x="8" y="8" width="315" height="181"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京 晴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65k-x0-3qy">
-                        <rect key="frame" x="13" y="13" width="60" height="22"/>
+                        <rect key="frame" x="13" y="13" width="100" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="xyg-g2-Yci"/>
+                            <constraint firstAttribute="width" constant="100" id="xyg-g2-Yci"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="1" green="0.5958938438723187" blue="0.77546638300824422" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27°C " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upe-xd-zIH">
-                        <rect key="frame" x="18" y="50" width="60" height="26"/>
+                        <rect key="frame" x="18" y="50" width="80" height="26"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="TcJ-oS-Fq6"/>
+                            <constraint firstAttribute="width" constant="80" id="TcJ-oS-Fq6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <color key="textColor" red="1" green="0.37757845984277383" blue="0.35607060342191443" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高温： 33°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2y-sY-md6">
-                        <rect key="frame" x="13" y="106" width="150" height="21"/>
+                        <rect key="frame" x="13" y="98" width="150" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="adK-dE-aQ2"/>
                         </constraints>
@@ -47,7 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风向" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-H8-d85">
-                        <rect key="frame" x="13" y="132" width="150" height="21"/>
+                        <rect key="frame" x="13" y="124" width="150" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="6rv-Fl-bIz"/>
                         </constraints>
@@ -56,16 +56,20 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日出日落" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZw-tu-oHQ">
-                        <rect key="frame" x="13" y="158" width="305" height="21"/>
+                        <rect key="frame" x="13" y="150" width="305" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.61720816003616807" green="0.5559080462805801" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9W9-L2-NrO">
-                        <rect key="frame" x="98" y="13" width="100" height="88"/>
+                        <rect key="frame" x="118" y="13" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="9W9-L2-NrO" secondAttribute="height" multiplier="92:81" id="XaH-ve-Qkg"/>
+                            <constraint firstAttribute="width" secondItem="9W9-L2-NrO" secondAttribute="height" id="XaH-ve-Qkg"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-06-06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcR-8e-ZiC">
                         <rect key="frame" x="218" y="33" width="100" height="21"/>
@@ -77,7 +81,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最低温： 23°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-cW-xph">
-                        <rect key="frame" x="168" y="106" width="150" height="21"/>
+                        <rect key="frame" x="168" y="98" width="150" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="twc-oZ-b1C"/>
                         </constraints>
@@ -86,7 +90,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxh-zs-YvD">
-                        <rect key="frame" x="168" y="132" width="150" height="21"/>
+                        <rect key="frame" x="168" y="124" width="150" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="XqX-xR-SdJ"/>
                         </constraints>
@@ -137,6 +141,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="weatherCell" width="16" height="16"/>
+        <image name="weatherCell" width="689" height="828"/>
     </resources>
 </document>
