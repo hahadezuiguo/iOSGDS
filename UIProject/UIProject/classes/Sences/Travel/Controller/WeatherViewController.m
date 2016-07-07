@@ -9,6 +9,7 @@
 #import "WeatherViewController.h"
 #import "WeatherCell.h"
 #import "OtherWeatherCell.h"
+#import "TravelViewController.h"
 @interface WeatherViewController ()
 
 @end
@@ -74,12 +75,11 @@
     }else {
         OtherWeatherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"otherCell" forIndexPath:indexPath];
         
-//       OtherWeatherCell *cell = [[OtherWeatherCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"otherCell"];
         
         cell.dateLabel.text = [weather.daily_forecast[indexPath.row] objectForKey:@"date"];
         
         NSString *string_d = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"txt_d"];
-        NSLog(@"%@",string_d);
+       
         NSString *string_n = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"txt_n"];
         NSString *imageStr_d = [NSString stringWithFormat:@"%@.jpg",string_d];
          NSString *imageStr_n = [NSString stringWithFormat:@"%@.jpg",string_n];
@@ -92,11 +92,10 @@
         NSString * minTmp = [[weather.daily_forecast[indexPath.row] objectForKey:@"tmp"] objectForKey:@"min"];
         
         cell.tmpLabel.text = [NSString stringWithFormat:@"最高温: %@°C  最低温: %@°C",maxTmp,minTmp];
-        
+        cell.backgroundColor = [UIColor lightGrayColor];
         return cell;
     }
 }
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return self.view.frame.size.height * 5/ 12;
@@ -105,6 +104,11 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TravelViewController *whereVC = [[TravelViewController alloc]init];
+    whereVC.isSpeeching = YES;
+    [self.navigationController pushViewController:whereVC animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

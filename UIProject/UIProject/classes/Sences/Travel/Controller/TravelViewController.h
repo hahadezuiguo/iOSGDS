@@ -14,5 +14,6 @@
 @interface TravelViewController : UIViewController
 
 @property (nonatomic, strong) BMKUserLocation *userLocation;
+@property (nonatomic, assign) BOOL isSpeeching;
 
 @end
