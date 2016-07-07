@@ -78,13 +78,20 @@
         
         cell.dateLabel.text = [weather.daily_forecast[indexPath.row] objectForKey:@"date"];
         
-        NSString *string_d = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"text_d"];
-        NSString *imageStr = [NSString stringWithFormat:@"%@.jpg",string_d];
-        cell.imageView.image = [UIImage imageNamed:imageStr];
+        NSString *string_d = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"txt_d"];
+        NSLog(@"%@",string_d);
+        NSString *string_n = [[weather.daily_forecast[indexPath.row] objectForKey:@"cond"] objectForKey:@"txt_n"];
+        NSString *imageStr_d = [NSString stringWithFormat:@"%@.jpg",string_d];
+         NSString *imageStr_n = [NSString stringWithFormat:@"%@.jpg",string_n];
+        cell.dImageView.image = [UIImage imageNamed:imageStr_d];
+        cell.nImageView.image = [UIImage imageNamed:imageStr_n];
+        
+        
+        
         NSString * maxTmp = [[weather.daily_forecast[indexPath.row] objectForKey:@"tmp"] objectForKey:@"max"];
         NSString * minTmp = [[weather.daily_forecast[indexPath.row] objectForKey:@"tmp"] objectForKey:@"min"];
         
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"最高温：%@  最低温：%@",maxTmp,minTmp];
+        cell.tmpLabel.text = [NSString stringWithFormat:@"最高温: %@°C  最低温: %@°C",maxTmp,minTmp];
         
         return cell;
     }

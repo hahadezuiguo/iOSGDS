@@ -1411,6 +1411,7 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y8M8DT4EYR;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1848,7 +1849,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1881,7 +1882,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
