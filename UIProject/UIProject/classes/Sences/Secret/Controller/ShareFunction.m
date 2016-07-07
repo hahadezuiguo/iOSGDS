@@ -10,4 +10,21 @@
 
 @implementation ShareFunction
 
++ (void)sharetitle:(NSString *)title image:(NSString *)image viewController:(UIViewController<UMSocialUIDelegate> *)controller content:(NSString *)content{
+    
+    
+    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:image];
+    
+    [UMSocialData defaultData].extConfig.title = title;
+    [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
+    [UMSocialSnsService presentSnsIconSheetView:controller
+                                         appKey:@"577ca1e4e0f55a085f0002b5"
+                                      shareText:content
+                                     shareImage:[UIImage imageNamed:@"oneLetter"]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                       delegate:controller];
+    
+    
+}
+
 @end

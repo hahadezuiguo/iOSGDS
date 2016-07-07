@@ -11,6 +11,8 @@
 #import "DB_URL.h"
 #import <MBProgressHUD.h>
 
+#import "ShareFunction.h"
+
 @interface CookDetailViewController ()
 @property (nonatomic, strong) UIWebView *showView;
 
@@ -29,6 +31,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initLayout];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shares)];
 }
 
 - (void)initLayout{
@@ -40,6 +43,11 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.model.weburl]];
     [self.showView loadRequest:request];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
+    
+}
+- (void)shares{
+   
+    [ShareFunction sharetitle:self.model.title image:self.model.weburl viewController:self content:nil];
     
 }
 

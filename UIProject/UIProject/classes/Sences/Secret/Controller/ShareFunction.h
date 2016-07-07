@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaSSOHandler.h"
 
 @interface ShareFunction : NSObject
+
++ (void)sharetitle:(NSString *)title image:(NSString *)image viewController:(UIViewController *)controller content:(NSString *)content;
 
 @end
