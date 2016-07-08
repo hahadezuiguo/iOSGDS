@@ -306,15 +306,15 @@
         //旋转动画
         CABasicAnimation *basicAnimation3 = [CABasicAnimation animation];
         basicAnimation3.keyPath = @"transform.rotation";
-        basicAnimation3.toValue = @(100 * M_PI);
+        basicAnimation3.toValue = @(1 * M_PI);
         //需要创建管理各个动画的动画组
         CAAnimationGroup *group = [CAAnimationGroup animation];
         group.animations = @[basicAnimation1,basicAnimation2,basicAnimation3];
         
-        group.duration = 1.0f;
+        group.duration = 0.4f;
         [self.menuTableView.layer addAnimation:group forKey:@"groupAnimatiom"];
         __weak typeof (self) weakSelf = self;
-        [UIView animateWithDuration:1.0f delay:0.1f usingSpringWithDamping:0.1 initialSpringVelocity:10 options:(UIViewAnimationOptionTransitionFlipFromLeft) animations:^{
+        [UIView animateWithDuration:0.4f delay:0.1f usingSpringWithDamping:0.1 initialSpringVelocity:10 options:(UIViewAnimationOptionTransitionFlipFromLeft) animations:^{
             
             weakSelf.menuTableView.alpha = 1.0f;
             weakSelf.menuViewWidth.constant = weakSelf.view.frame.size.width / 3;
