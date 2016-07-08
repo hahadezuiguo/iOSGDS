@@ -63,20 +63,7 @@
         
         
         else if (user != nil) {
-//            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
-//            UIAlertAction * action = [UIAlertAction actionWithTitle:@"登录成功" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            
-            
-            
-            
-            // objectWithClassName 参数对应控制台中的 Class Name
-//            AVObject *todoFirst = [AVObject objectWithClassName:@"Collection"];
-//            [todoFirst saveInBackground];
-//            
-//            AVObject *todoSecond = [AVObject objectWithClassName:@"CollectionSecond"];
-//            [todoSecond saveInBackground];
-//            AVObject *todoThird = [AVObject objectWithClassName:@"CollectionThird"];
-//            [todoThird saveInBackground];
+
                 User *newUser = [User new];
                 newUser.userName = _userNameField.text;
                 newUser.password = _passwordField.text;
@@ -84,14 +71,7 @@
                 [UserFileHandle saveUserInfo:newUser];
 
                 [self.navigationController popToRootViewControllerAnimated:YES];
-//            [self.navigationController pushViewController:userVC
-//                                                 animated:YES];
-//            }];
-//            [alert addAction:action];
-            
-            
-//            alert.message = @"登陆成功";
-//            [self presentViewController:alert animated:YES completion:nil];
+
             
             
         } else {
@@ -135,6 +115,14 @@
 
     
 }
+#pragma mark - 取消
+- (IBAction)cancelAction:(id)sender {
+    UserViewController *userVC = [[UserViewController alloc] init];
+    [self.navigationController pushViewController:userVC animated:YES];
+//s     [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self presentViewController:userVC animated:YES completion:nil];
+}
+
 
 
 - (IBAction)loginWithTelephone:(id)sender {
