@@ -92,6 +92,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleIconFile</key>
+	<string></string>
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>mqqOpensdkSSoLogin</string>

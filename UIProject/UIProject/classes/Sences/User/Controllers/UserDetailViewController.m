@@ -20,6 +20,7 @@
 
 #define kImageCell @"ImageCell"
 #define kNormalCell @"NormalCell"
+#import "ConnectMobileViewController.h"
 @interface UserDetailViewController ()  <UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 
@@ -75,7 +76,7 @@
 //          normalCell.userName.text = [[AVUser currentUser] objectForKey:@"mobilePhoneNumber"];
             NSString *string = [[AVUser currentUser] objectForKey:@"mobilePhoneNumber"];
             if (string.length == 0) {
-                normalCell.userName.text = @"未设置密码";
+                normalCell.userName.text = @"未绑定手机号";
             } else {
                 normalCell.userName.text = string;
             }
@@ -128,7 +129,17 @@
         };
         
         [self.navigationController pushViewController:changeVC animated:YES];
+    } else if (indexPath.row == 2) {
+        
+        ConnectMobileViewController *connectVC = [[ConnectMobileViewController alloc] init];
+        
+        connectVC.myBlock = ^(NSString *str) {
+            [tableView reloadData];
+        };
+        [self.navigationController pushViewController:connectVC animated:YES];
+        
     }
+    
     
     
 }

@@ -29,11 +29,7 @@
 #pragma mark - 根据邮箱找回密码
 
 - (IBAction)findPassword:(id)sender {
-    
-//    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction * action = [UIAlertAction actionWithTitle:@"" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-//    }];
-//    [alert addAction:action];
+
     
     [AVUser requestPasswordResetForEmailInBackground:_emailTextField.text block:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
