@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface TravelCategoryDetailController : UIViewController
 @property (nonatomic, strong) NSString *act_id;
 @end

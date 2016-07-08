@@ -11,6 +11,8 @@
 #import "DB_URL.h"
 #import <MBProgressHUD.h>
 
+#import "ShareFunction.h"
+
 @interface HealthDetailViewController ()
 @property (nonatomic, strong) UIWebView *showView;
 @end
@@ -28,9 +30,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initLayout];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shares)];
 }
 
-
+- (void)shares{
+    
+    [ShareFunction sharetitle:self.model.title image:self.model.wurl viewController:self content:nil];
+    
+}
 
 - (void)initLayout{
     
@@ -38,7 +45,7 @@
     [self.view addSubview:self.showView];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"努力加载中，稍等片刻...";
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.model.weburl]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.model.wurl]];
     [self.showView loadRequest:request];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     

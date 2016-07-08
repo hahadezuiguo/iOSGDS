@@ -211,6 +211,18 @@
 		D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F521D24C81400D4CF5E /* timg.jpg */; };
 		D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5A1D251D2900D4CF5E /* meng.jpg */; };
 		D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6B63F5C1D25484500D4CF5E /* meng2.jpeg */; };
+		D6B7F93E1D2CF71B0026E1F3 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */; };
+		D6B7F9421D2CF9940026E1F3 /* WeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */; };
+		D6B7F9431D2CF9940026E1F3 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */; };
+		D6B7F9471D2D0C5B0026E1F3 /* weatherCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */; };
+		D6B7F9491D2D4B3B0026E1F3 /* 晴.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9481D2D4B3B0026E1F3 /* 晴.jpg */; };
+		D6B7F94E1D2D4B4B0026E1F3 /* 多云.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F94A1D2D4B4B0026E1F3 /* 多云.jpg */; };
+		D6B7F94F1D2D4B4B0026E1F3 /* 雷阵雨.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F94B1D2D4B4B0026E1F3 /* 雷阵雨.jpg */; };
+		D6B7F9501D2D4B4B0026E1F3 /* 雪.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F94C1D2D4B4B0026E1F3 /* 雪.jpg */; };
+		D6B7F9511D2D4B4B0026E1F3 /* 阴.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F94D1D2D4B4B0026E1F3 /* 阴.jpg */; };
+		D6B7F9551D2D52C50026E1F3 /* 霾.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9541D2D52C50026E1F3 /* 霾.jpg */; };
+		D6B7F9591D2D58DD0026E1F3 /* OtherWeatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B7F9571D2D58DD0026E1F3 /* OtherWeatherCell.m */; };
+		D6B7F95A1D2D58DD0026E1F3 /* OtherWeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B7F9581D2D58DD0026E1F3 /* OtherWeatherCell.xib */; };
 		D6C2A5D11D24AAC40092BC3D /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */; };
 		D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */; };
 		D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C2A5E91D24ABD50092BC3D /* CoreMotion.framework */; };
@@ -222,6 +234,11 @@
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
 		D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A71D1AD3090076477D /* AppDelegate.m */; };
+		D6D8DC9C1D2E5AE2006FED52 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */; };
+		D6D8DC9E1D2E5B02006FED52 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */; };
+		D6D8DCA01D2E5B11006FED52 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */; };
+		D6E22C711D2F38BF004B71BD /* tabbarWere.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E22C701D2F38BF004B71BD /* tabbarWere.png */; };
+		D6E22C731D2F39FB004B71BD /* tabbarWhere.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E22C721D2F39FB004B71BD /* tabbarWhere.png */; };
 		D6F456A71D1D846800C957B9 /* bigger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A01D1D846800C957B9 /* bigger.jpg */; };
 		D6F456A81D1D846800C957B9 /* head1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A11D1D846800C957B9 /* head1.jpg */; };
 		D6F456A91D1D846800C957B9 /* head2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A21D1D846800C957B9 /* head2.jpg */; };
@@ -559,6 +576,21 @@
 		D6B63F521D24C81400D4CF5E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		D6B63F5A1D251D2900D4CF5E /* meng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meng.jpg; sourceTree = "<group>"; };
 		D6B63F5C1D25484500D4CF5E /* meng2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meng2.jpeg; path = ../Models/meng2.jpeg; sourceTree = "<group>"; };
+		D6B7F93C1D2CF71B0026E1F3 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		D6B7F93F1D2CF9940026E1F3 /* WeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCell.h; sourceTree = "<group>"; };
+		D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCell.m; sourceTree = "<group>"; };
+		D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weatherCell.png; sourceTree = "<group>"; };
+		D6B7F9481D2D4B3B0026E1F3 /* 晴.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "晴.jpg"; sourceTree = "<group>"; };
+		D6B7F94A1D2D4B4B0026E1F3 /* 多云.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "多云.jpg"; sourceTree = "<group>"; };
+		D6B7F94B1D2D4B4B0026E1F3 /* 雷阵雨.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "雷阵雨.jpg"; sourceTree = "<group>"; };
+		D6B7F94C1D2D4B4B0026E1F3 /* 雪.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "雪.jpg"; sourceTree = "<group>"; };
+		D6B7F94D1D2D4B4B0026E1F3 /* 阴.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "阴.jpg"; sourceTree = "<group>"; };
+		D6B7F9541D2D52C50026E1F3 /* 霾.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "霾.jpg"; sourceTree = "<group>"; };
+		D6B7F9561D2D58DD0026E1F3 /* OtherWeatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherWeatherCell.h; sourceTree = "<group>"; };
+		D6B7F9571D2D58DD0026E1F3 /* OtherWeatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherWeatherCell.m; sourceTree = "<group>"; };
+		D6B7F9581D2D58DD0026E1F3 /* OtherWeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherWeatherCell.xib; sourceTree = "<group>"; };
 		D6C2A5CF1D24AAC40092BC3D /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
 		D6C2A5D01D24AAC40092BC3D /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
 		D6C2A5E71D24ABCC0092BC3D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -577,6 +609,11 @@
 		D6D011A41D1AAF570076477D /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		D6D011A61D1AD3090076477D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6D011A71D1AD3090076477D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		D6E22C701D2F38BF004B71BD /* tabbarWere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarWere.png; sourceTree = "<group>"; };
+		D6E22C721D2F39FB004B71BD /* tabbarWhere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarWhere.png; sourceTree = "<group>"; };
 		D6F456A01D1D846800C957B9 /* bigger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigger.jpg; sourceTree = "<group>"; };
 		D6F456A11D1D846800C957B9 /* head1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head1.jpg; sourceTree = "<group>"; };
 		D6F456A21D1D846800C957B9 /* head2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head2.jpg; sourceTree = "<group>"; };
@@ -621,25 +658,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */,
-				D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */,
-				D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */,
+				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
+				D6D8DCA01D2E5B11006FED52 /* libstdc++.tbd in Frameworks */,
+				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
+				D6D8DC9E1D2E5B02006FED52 /* libsqlite3.tbd in Frameworks */,
+				D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */,
 				D68AEEC11D1FF3DF00C7127D /* SystemConfiguration.framework in Frameworks */,
+				D6D8DC9C1D2E5AE2006FED52 /* libiconv.tbd in Frameworks */,
+				D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */,
+				D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */,
+				D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */,
 				D68AEEC71D1FF40600C7127D /* AVFoundation.framework in Frameworks */,
 				D6C2A5EC1D24ABF00092BC3D /* MediaPlayer.framework in Frameworks */,
 				D6ABDDE21D2BCF38007B173D /* libbaiduNaviSDK.a in Frameworks */,
-				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
 				D68AEECB1D1FF42300C7127D /* CoreLocation.framework in Frameworks */,
 				D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */,
 				D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */,
 				D68AEEC31D1FF3EB00C7127D /* AudioToolbox.framework in Frameworks */,
-				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
 				D68AEEC51D1FF3FE00C7127D /* AddressBook.framework in Frameworks */,
 				D6ABDDE11D2BCF38007B173D /* libBaiduMobStat.a in Frameworks */,
 				D68AEEBF1D1FF3D400C7127D /* QuartzCore.framework in Frameworks */,
 				D68AEEBD1D1FF3CB00C7127D /* UIKit.framework in Frameworks */,
 				D68AEEBB1D1FF3C100C7127D /* Foundation.framework in Frameworks */,
-				D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */,
 				D68AEEB71D1FEF8100C7127D /* iflyMSC.framework in Frameworks */,
 				888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */,
 				D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */,
@@ -652,6 +692,9 @@
 		43C9EF205169BA820B42A223 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */,
+				D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */,
+				D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */,
 				D6C2A5F11D24AC370092BC3D /* JavaScriptCore.framework */,
 				D6C2A5EF1D24AC200092BC3D /* Security.framework */,
 				D6C2A5ED1D24AC190092BC3D /* libstdc++.6.0.9.tbd */,
@@ -920,6 +963,8 @@
 				D656943D1D2BA463008865BC /* TravelCategoryDetailController.h */,
 				D656943E1D2BA463008865BC /* TravelCategoryDetailController.m */,
 				D656943F1D2BA463008865BC /* TravelCategoryDetailController.xib */,
+				D6B7F93C1D2CF71B0026E1F3 /* WeatherViewController.h */,
+				D6B7F93D1D2CF71B0026E1F3 /* WeatherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -966,6 +1011,12 @@
 				D65694501D2BA4A8008865BC /* TravelCategoryCell.h */,
 				D65694511D2BA4A8008865BC /* TravelCategoryCell.m */,
 				D65694521D2BA4A8008865BC /* TravelCategoryCell.xib */,
+				D6B7F93F1D2CF9940026E1F3 /* WeatherCell.h */,
+				D6B7F9401D2CF9940026E1F3 /* WeatherCell.m */,
+				D6B7F9411D2CF9940026E1F3 /* WeatherCell.xib */,
+				D6B7F9561D2D58DD0026E1F3 /* OtherWeatherCell.h */,
+				D6B7F9571D2D58DD0026E1F3 /* OtherWeatherCell.m */,
+				D6B7F9581D2D58DD0026E1F3 /* OtherWeatherCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1147,8 +1198,13 @@
 			isa = PBXGroup;
 			children = (
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
+<<<<<<< HEAD
 				D69783321D2DE57B00616872 /* bottomBack.jpg */,
 				D69783301D2DE51900616872 /* newBack.jpg */,
+=======
+				D6E22C701D2F38BF004B71BD /* tabbarWere.png */,
+				D6E22C721D2F39FB004B71BD /* tabbarWhere.png */,
+>>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				D6A3F41F1D2CE1C80093718D /* 334.jpg */,
 				D6A3F41D1D2CE1C30093718D /* leimu.jpg */,
 				D68E02341D2CB0D600A93775 /* batMan.jpg */,
@@ -1202,6 +1258,13 @@
 				D65694611D2BA531008865BC /* travel4.png */,
 				D65694621D2BA531008865BC /* travel5.png */,
 				D65694631D2BA531008865BC /* travel6.png */,
+				D6B7F9461D2D0C5B0026E1F3 /* weatherCell.png */,
+				D6B7F9481D2D4B3B0026E1F3 /* 晴.jpg */,
+				D6B7F94A1D2D4B4B0026E1F3 /* 多云.jpg */,
+				D6B7F94B1D2D4B4B0026E1F3 /* 雷阵雨.jpg */,
+				D6B7F94C1D2D4B4B0026E1F3 /* 雪.jpg */,
+				D6B7F94D1D2D4B4B0026E1F3 /* 阴.jpg */,
+				D6B7F9541D2D52C50026E1F3 /* 霾.jpg */,
 				D67F0C2D1D22223E004B10DC /* EGORefreshView */,
 				D6F456AE1D1D84A100C957B9 /* SDCycleScrollView */,
 				D6F456A01D1D846800C957B9 /* bigger.jpg */,
@@ -1383,7 +1446,11 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
+<<<<<<< HEAD
 						DevelopmentTeam = EY7N86J2FE;
+=======
+						DevelopmentTeam = Y8M8DT4EYR;
+>>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1415,6 +1482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B7F94F1D2D4B4B0026E1F3 /* 雷阵雨.jpg in Resources */,
 				D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */,
 				D65DC89D1D2F32BC003D9BBA /* ConnectMobileViewController.xib in Resources */,
 				D67702881D2609D300A75F8F /* TravelMenuController.xib in Resources */,
@@ -1426,11 +1494,13 @@
 				D65FA9A81D1D786D00D0CC3E /* 11副本.png in Resources */,
 				D632E7A81D2C98DB0064977C /* sheet3.jpg in Resources */,
 				D65FA9A91D1D786D00D0CC3E /* weather.jpeg in Resources */,
+				D6B7F95A1D2D58DD0026E1F3 /* OtherWeatherCell.xib in Resources */,
 				D658290F1D20D0960095A091 /* MapViewController.xib in Resources */,
 				D632E7AA1D2C98DB0064977C /* star.png in Resources */,
 				D670EFB21D266FA7001A4E83 /* Data.json in Resources */,
 				D656946E1D2BA531008865BC /* travel5.png in Resources */,
 				D6902C541D20BC2900395FB4 /* FindPasswordController.xib in Resources */,
+				D6B7F9511D2D4B4B0026E1F3 /* 阴.jpg in Resources */,
 				D65FA9AE1D1D78CE00D0CC3E /* WhereViewController.xib in Resources */,
 				D670EFA71D264CB9001A4E83 /* up.png in Resources */,
 				D68E02351D2CB0D600A93775 /* batMan.jpg in Resources */,
@@ -1449,6 +1519,8 @@
 				D69611551D2659AC00B173AF /* 7.jpg in Resources */,
 				D65694671D2BA531008865BC /* 演出展览.png in Resources */,
 				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
+				D6B7F9431D2CF9940026E1F3 /* WeatherCell.xib in Resources */,
+				D6B7F9551D2D52C50026E1F3 /* 霾.jpg in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D670EFA51D264CB3001A4E83 /* down.png in Resources */,
 				D632E7A71D2C98DB0064977C /* sheet2.jpg in Resources */,
@@ -1472,10 +1544,12 @@
 				D656946F1D2BA531008865BC /* travel6.png in Resources */,
 				D646F42E1D1E1531008D21EE /* where.gif in Resources */,
 				D65694691D2BA531008865BC /* 早教培训.png in Resources */,
+				D6B7F9491D2D4B3B0026E1F3 /* 晴.jpg in Resources */,
 				D64E58A71D23F9A600E96257 /* CollectionViewCell.xib in Resources */,
 				D6ABDDE31D2BCF38007B173D /* updatelog.txt in Resources */,
 				D6B63F5B1D251D2900D4CF5E /* meng.jpg in Resources */,
 				D696114B1D264A9600B173AF /* 6.png in Resources */,
+				D6B7F9501D2D4B4B0026E1F3 /* 雪.jpg in Resources */,
 				D6F456AA1D1D846800C957B9 /* head3.jpg in Resources */,
 				D69611471D25FD2500B173AF /* bar5.jpg in Resources */,
 				D696114D1D264E7B00B173AF /* login.jpg in Resources */,
@@ -1491,11 +1565,14 @@
 				D69611531D2656D800B173AF /* userName2.png in Resources */,
 				D6B63F5D1D25484500D4CF5E /* meng2.jpeg in Resources */,
 				D646F4301D1E1BFA008D21EE /* weather.gif in Resources */,
+				D6E22C731D2F39FB004B71BD /* tabbarWhere.png in Resources */,
 				D656946C1D2BA531008865BC /* travel3.png in Resources */,
+				D6B7F9471D2D0C5B0026E1F3 /* weatherCell.png in Resources */,
 				D65694681D2BA531008865BC /* 游乐园.png in Resources */,
 				D670EFCB1D26AD2F001A4E83 /* address.jpeg in Resources */,
 				D632E7A21D2C98DB0064977C /* oneLetter.png in Resources */,
 				D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */,
+				D6B7F94E1D2D4B4B0026E1F3 /* 多云.jpg in Resources */,
 				D632E7A91D2C98DB0064977C /* sheet4.jpeg in Resources */,
 				D65694651D2BA531008865BC /* 亲子游.png in Resources */,
 				D6F456AC1D1D846800C957B9 /* head5.jpg in Resources */,
@@ -1509,6 +1586,7 @@
 				D67F0C3D1D2268D1004B10DC /* blackArrow.png in Resources */,
 				D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */,
 				D6F8F1F41D1CE8B700D39982 /* LoginViewController.xib in Resources */,
+				D6E22C711D2F38BF004B71BD /* tabbarWere.png in Resources */,
 				D6A3F4201D2CE1C80093718D /* 334.jpg in Resources */,
 				D6A3F41E1D2CE1C30093718D /* leimu.jpg in Resources */,
 				D64E58791D23F98A00E96257 /* SecretViewController.xib in Resources */,
@@ -1585,6 +1663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B7F9421D2CF9940026E1F3 /* WeatherCell.m in Sources */,
 				D64E58AC1D23F9A600E96257 /* RootView.m in Sources */,
 				D64E58AF1D23F9A600E96257 /* WaterfallCollectionViewCell.m in Sources */,
 				D6902C4F1D20BB3500395FB4 /* UserFileHandle.m in Sources */,
@@ -1636,11 +1715,13 @@
 				D67702871D2609D300A75F8F /* TravelMenuController.m in Sources */,
 				D6D011A51D1AAF570076477D /* Model.m in Sources */,
 				D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */,
+				D6B7F93E1D2CF71B0026E1F3 /* WeatherViewController.m in Sources */,
 				D6F8F1F71D1CE8B700D39982 /* UserViewController.m in Sources */,
 				D64E58A91D23F9A600E96257 /* HeadCollectionReusableView.m in Sources */,
 				D68E01F61D2CABFE00A93775 /* SortDetailModel.m in Sources */,
 				D64E58751D23F98A00E96257 /* CookDetailViewController.m in Sources */,
 				D68E022F1D2CAD7400A93775 /* UIView+Extension.m in Sources */,
+				D6B7F9591D2D58DD0026E1F3 /* OtherWeatherCell.m in Sources */,
 				D6A3F4261D2CEBE40093718D /* ABCIntroView.m in Sources */,
 				D64E58A41D23F9A600E96257 /* ClassTableViewCell.m in Sources */,
 				D68E01D01D2CAA9400A93775 /* SortDetailViewCell.m in Sources */,
@@ -1813,7 +1894,11 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
+<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+>>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1846,7 +1931,11 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
+<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+>>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

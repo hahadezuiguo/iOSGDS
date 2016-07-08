@@ -125,34 +125,45 @@ const CGFloat kTableFooterViewHeight = 65.f;
     
 }
 
-
-
 //网络请求健康护理
 //健康护理网络请求
 - (void)netHealthRequest{
     
     __weak typeof(self)weakSelf = self;
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
-    [manager GET:HEALTH_URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray *array = responseObject[@"data"];
-        if (array.count > 0) {
+    //1.创建url
+    NSURL *url = [NSURL URLWithString:HEALTH_URL];
+    //2.创建请求
+    NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+    //2.5核心设置body
+    NSString *bodyString = HEALTH_URL_BODY;
+    NSData *postData = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
+    [mutableRequest setHTTPMethod:@"POST"];
+    [mutableRequest setHTTPBody:postData];
+    //3.创建session对象
+    NSURLSession *session = [NSURLSession sharedSession];
+    //4.创建task对象
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:mutableRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        //5.解析
+        if (error == nil) {
+            NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            
             for (NSDictionary *dict in array) {
-                HealthModel *model = [[HealthModel alloc] init];
+                HealthModel *model = [HealthModel new];
                 [model setValuesForKeysWithDictionary:dict];
                 [weakSelf.allDataArray addObject:model];
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                
                 [weakSelf.healthTable reloadData];
-                [weakSelf hiden];
+                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                
             });
+            
         }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"健康护理数据请求失败");
     }];
-    
-    
+    //6.启动任务
+    [task resume];
+   
 }
 
 - (void)hiden{
@@ -177,19 +188,18 @@ const CGFloat kTableFooterViewHeight = 65.f;
     if (self.searchVC.active) {
         HealthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         HealthModel *model = self.resultArray[indexPath.row];
-        [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+        [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.images[0]] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+        cell.mainImageV.layer.cornerRadius = 20;
+        cell.mainImageV.layer.masksToBounds = YES;
         cell.titleLabel.text = model.title;
-        cell.timeLabel.text = model.timer;
-        cell.timeLabel.tintColor = [UIColor lightGrayColor];
-
         return cell;
     }else{
     HealthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
      HealthModel *model = self.allDataArray[indexPath.row];
-    [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.imageurl] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+    [cell.mainImageV sd_setImageWithURL:[NSURL URLWithString:model.images[0]] placeholderImage:[UIImage imageNamed:@"placeHold.png"]];
+        cell.mainImageV.layer.cornerRadius = 20;
+        cell.mainImageV.layer.masksToBounds = YES;
     cell.titleLabel.text = model.title;
-    cell.timeLabel.text = model.timer;
-    cell.timeLabel.tintColor = [UIColor lightGrayColor];
         return cell;}
 }
 
@@ -198,7 +208,7 @@ const CGFloat kTableFooterViewHeight = 65.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HealthDetailViewController *healthVC = [[HealthDetailViewController alloc] init];
     HealthModel *model = self.allDataArray[indexPath.row];
     healthVC.model = model;

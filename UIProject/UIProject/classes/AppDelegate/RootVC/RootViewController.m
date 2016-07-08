@@ -66,7 +66,7 @@
     
     [self addOneChildViewController:[[SortViewController alloc] init] title:@"family一起看" normalImage:@"" selectorImage:@""];
     
-    [self addOneChildViewController:[[TravelMenuController alloc] init] title:@"宝贝去哪儿？" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[TravelMenuController alloc] init] title:@"宝贝去哪儿？" normalImage:@"tabbarWere" selectorImage:@"tabbarWhere"];
     
     [self addOneChildViewController:[[UserViewController alloc] init] title:@"妈咪空间" normalImage:@"" selectorImage:@""];
     

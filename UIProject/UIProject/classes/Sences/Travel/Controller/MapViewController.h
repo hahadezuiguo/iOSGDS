@@ -13,4 +13,8 @@
 @property (nonatomic, strong) NSString *searchString;
 //当前位置
 @property (nonatomic, strong) BMKUserLocation *userLocation;
+
+//详情页跳转传的参数
+@property (nonatomic, strong) NSString *searchAddress;
+@property (nonatomic, assign) BOOL haveAddress;
 @end

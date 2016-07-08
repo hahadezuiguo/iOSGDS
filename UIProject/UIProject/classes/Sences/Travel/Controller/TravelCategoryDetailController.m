@@ -10,6 +10,8 @@
 #import "NetWordRequestManager.h"
 #import "imageDownloader.h"
 #import "TravelCategoryDetailModel.h"
+#import "MapViewController.h"
+#import "Travel.h"
 @interface TravelCategoryDetailController ()<imageDownloaderDelegate>
 
 
@@ -28,7 +30,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
      [self requestData];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"去这里" style:(UIBarButtonItemStylePlain) target:self action:@selector(rightAction:)];
+    
    
+}
+
+-(void)rightAction:(UIBarButtonItem *)sender {
+    MapViewController *mapVC = [[MapViewController alloc]init];
+    mapVC.haveAddress = YES;
+    mapVC.searchAddress = self.addressLabel.text;
+    mapVC.userLocation = [Travel shareTravel].userLocation;
+    [self.navigationController pushViewController:mapVC animated:YES];
 }
 
 -(void)requestData {

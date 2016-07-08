@@ -113,7 +113,6 @@
 - (void)fullScreen
 {
     
-    
     [(AppDelegate *)[UIApplication sharedApplication].delegate setIsShow:YES];
 }
 
@@ -121,6 +120,7 @@
 - (void)notFullScreen
 {
     [(AppDelegate *)[UIApplication sharedApplication].delegate setIsShow:NO];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"headView"]]];
 }
 
 // 播放完成之后方法

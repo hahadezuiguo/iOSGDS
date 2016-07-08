@@ -26,7 +26,13 @@
 
 #import "MenuTableViewCell.h"
 #import "TravelAddressController.h"
+#import "WeatherViewController.h"
 
+#import "Travel.h"
+//请求天气
+#import "Weather.h"
+#import "APIStoreSDK.h"
+#import "NSString+JSON.h"
 @interface TravelMenuController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,UICollectionViewDataSource, UICollectionViewDelegate, WaterFlowLayoutDelegate>
 {
     NSMutableArray *list;  //  菜单列表数据源
@@ -58,6 +64,8 @@
 //定义collectionView
 @property (nonatomic, strong) UICollectionView *collectionView;
 
+
+@property (nonatomic, strong) Weather *weather;
 @end
 
 @implementation TravelMenuController
@@ -223,8 +231,8 @@
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
     
-    NSLog(@"%@", userLocation);
     self.userLocation = userLocation;
+    [Travel shareTravel].userLocation = userLocation;
     [self getGeoCode];
 }
 
@@ -263,7 +271,7 @@
         NSString *str = [string substringToIndex:string.length - 1];
         self.city = str;
         self.result = result;
-        NSLog(@"%@",self.city);
+        [self requestWeather];
         
     }
     else {
@@ -298,15 +306,15 @@
         //旋转动画
         CABasicAnimation *basicAnimation3 = [CABasicAnimation animation];
         basicAnimation3.keyPath = @"transform.rotation";
-        basicAnimation3.toValue = @(300 * M_PI);
+        basicAnimation3.toValue = @(1 * M_PI);
         //需要创建管理各个动画的动画组
         CAAnimationGroup *group = [CAAnimationGroup animation];
         group.animations = @[basicAnimation1,basicAnimation2,basicAnimation3];
         
-        group.duration = 1.0f;
+        group.duration = 0.4f;
         [self.menuTableView.layer addAnimation:group forKey:@"groupAnimatiom"];
         __weak typeof (self) weakSelf = self;
-        [UIView animateWithDuration:1.0f delay:0.1f usingSpringWithDamping:0.1 initialSpringVelocity:10 options:(UIViewAnimationOptionTransitionFlipFromLeft) animations:^{
+        [UIView animateWithDuration:0.4f delay:0.1f usingSpringWithDamping:0.1 initialSpringVelocity:10 options:(UIViewAnimationOptionTransitionFlipFromLeft) animations:^{
             
             weakSelf.menuTableView.alpha = 1.0f;
             weakSelf.menuViewWidth.constant = weakSelf.view.frame.size.width / 3;
@@ -374,7 +382,8 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if(indexPath.row == 1){
         
-        WhereViewController *controller = [[WhereViewController alloc] init];
+        WeatherViewController  *controller = [[WeatherViewController alloc] init];
+        controller.weather = self.weather;
         [self.navigationController pushViewController:controller animated:YES];
         
     } else if(indexPath.row == 2){
@@ -389,6 +398,48 @@
 }
 
 
+-(void)requestWeather {
+    //实例化一个回调，处理请求的返回值
+    APISCallBack* callBack = [APISCallBack alloc];
+    //部分请求参数
+    NSString *url = @"http://apis.baidu.com/heweather/weather/free";
+    NSString *method = @"post";
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
+    
+    if (self.city) {
+        [parameter setObject:self.city forKey:@"city"];
+    }else {
+        [parameter setObject:@"承德" forKey:@"city"];
+    }
+    
+    //请求API
+    [ApiStoreSDK executeWithURL:url method:method apikey:@"c2c6467774885923b4629db0ab700dc0" parameter:parameter callBack:callBack];
+    
+    self.weather = [[Weather alloc]init];
+    callBack.onSuccess = ^(long status, NSString* responseString) {
+        if(responseString != nil) {
+            
+            NSDictionary *dic = [NSString parseJSONStringToNSDictionary:responseString];
+            
+            NSArray *array = dic[@"HeWeather data service 3.0"];
+            NSDictionary *dict = array[0];
+            
+            [_weather setValuesForKeysWithDictionary:dict];
+            
+        }
+        
+    };
+    
+    callBack.onError = ^(long status, NSString* responseString) {
+        NSLog(@"onError");
+    };
+    
+    callBack.onComplete = ^() {
+        NSLog(@"onComplete");
+    };
+    
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

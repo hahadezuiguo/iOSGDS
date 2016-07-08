@@ -19,7 +19,10 @@
 
 #define SECRET_LIST_URL @"http://wp.asopeixun.com:5000/get_post_from_category_id?category_id=191"
 
-#define HEALTH_URL @"http://api.bbwansha.com:8080/bbwssubclass2/index.php/Home/Doctor/doctorlist?type=2&page=1"
+#define HEALTH_URL @"http://api.addinghome.com/adco/v3/getContentList"
+
+#define HEALTH_URL_BODY @"birthdate=1425657600.0&categoryId=0&channelId=1&ci=%E5%8C%97%E4%BA%AC%E5%B8%82&deviceToken=d2670e402293d4a2956b64e75803e029a8c775834c0a3e7d40af1abd48ba201b&oauth_token=&pr=%E5%8C%97%E4%BA%AC%E5%B8%82&size=15&start=0&userStatus=2"
+
 
 #define COOK_URL @"http://api.bbwansha.com:8080/bbwssubclass2/index.php/Home/Healthy/healthylist?type=2&page=1"
 
