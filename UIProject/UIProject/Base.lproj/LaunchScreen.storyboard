@@ -18,14 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leimu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="INk-Gm-Knf">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6j-3b-GzV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="80"/>
+                                <fontDescription key="fontDescription" name="HannotateSC-W5" family="Hannotate SC" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="M6j-3b-GzV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="3WG-Iz-cJg"/>
                             <constraint firstItem="INk-Gm-Knf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8b9-kV-Xnr"/>
+                            <constraint firstItem="INk-Gm-Knf" firstAttribute="top" secondItem="M6j-3b-GzV" secondAttribute="bottom" id="8e7-HY-eFk"/>
+                            <constraint firstItem="M6j-3b-GzV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Izh-nv-AW9"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="INk-Gm-Knf" secondAttribute="bottom" id="NiO-dt-aQW"/>
-                            <constraint firstItem="INk-Gm-Knf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="U2m-gM-Aax"/>
+                            <constraint firstItem="INk-Gm-Knf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="U2m-gM-Aax"/>
+                            <constraint firstAttribute="trailing" secondItem="M6j-3b-GzV" secondAttribute="trailing" id="a8G-TC-Ke7"/>
                             <constraint firstAttribute="trailing" secondItem="INk-Gm-Knf" secondAttribute="trailing" id="tSp-Au-G4X"/>
                         </constraints>
                     </view>

@@ -36,8 +36,8 @@
 #pragma mark 判断是否为首次启动,如果首次启动那么出现引导图
 - (void)p_setupGuideView{
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
-        //self.navigationController.navigationBar.hidden = YES;
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        self.navigationController.navigationBar.hidden = YES;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if (![defaults objectForKey:@"intro_screen_viewed"]) {
             self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
@@ -46,7 +46,7 @@
             [self.view addSubview:self.introView];
         }
         
-    }
+    //}
 }
 
 

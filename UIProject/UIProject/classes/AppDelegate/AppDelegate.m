@@ -67,16 +67,16 @@
     [BNCoreServices_Instance initServices:@"8FLG8Yv5Ap1hH0VWq8iIwZ54BnUzAT0P"];
     [BNCoreServices_Instance startServicesAsyn:nil fail:nil];
 #pragma mark - 第一次出现
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
-    }
-    else{
-        
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
-    }
+//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
+//        
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+//        
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+//    }
+//    else{
+//        
+//        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+//    }
 
     
     return YES;
