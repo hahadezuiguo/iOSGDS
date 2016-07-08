@@ -12,7 +12,7 @@
 
 #import "ShareFunction.h"
 
-@interface ClassDetailViewController ()
+@interface ClassDetailViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *showView;
 
@@ -38,6 +38,7 @@
 - (void)initLayout{
     
     self.showView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.showView.delegate = self;
     [self.view addSubview:self.showView];
      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"努力加载中，稍等片刻...";
@@ -45,7 +46,6 @@
     NSString *str = [CLASS_BASE_URL stringByAppendingString:ID];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:str]];
     [self.showView loadRequest:request];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 }
 
@@ -56,6 +56,10 @@
     
     [ShareFunction sharetitle:self.model.title image:self.model.thumb viewController:self content:str];
   
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

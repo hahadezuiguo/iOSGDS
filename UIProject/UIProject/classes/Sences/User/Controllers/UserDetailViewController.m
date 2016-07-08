@@ -154,14 +154,14 @@
     
     
     [AVUser logOut];
-    AVUser *currentUser = [AVUser currentUser];
-    //如果不调用 登出 方法，当前用户的缓存将永久保存在客户端。
-    if (currentUser != nil) {
-        // 跳转到首页
-    } else {
-        //缓存用户对象为空时，可打开用户注册界面…
+//    AVUser *currentUser = [AVUser currentUser];
+//    //如果不调用 登出 方法，当前用户的缓存将永久保存在客户端。
+//    if (currentUser != nil) {
+//        // 跳转到首页
+//    } else {
+//        //缓存用户对象为空时，可打开用户注册界面…
         [self.navigationController pushViewController:loginVC animated:YES];
-    }
+//    }
 
 }
 
