@@ -1200,14 +1200,11 @@
 			isa = PBXGroup;
 			children = (
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
-<<<<<<< HEAD
 				D626E3B41D2E61BF007901D9 /* Default-568h@2x.png */,
-=======
 				D69783321D2DE57B00616872 /* bottomBack.jpg */,
 				D69783301D2DE51900616872 /* newBack.jpg */,
 				D6E22C701D2F38BF004B71BD /* tabbarWere.png */,
 				D6E22C721D2F39FB004B71BD /* tabbarWhere.png */,
->>>>>>> 6122a0b1243c989940acc6816111fe9f5b530e7e
 				D6A3F41F1D2CE1C80093718D /* 334.jpg */,
 				D6A3F41D1D2CE1C30093718D /* leimu.jpg */,
 				D68E02341D2CB0D600A93775 /* batMan.jpg */,
@@ -1449,12 +1446,8 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
-<<<<<<< HEAD
-						DevelopmentTeam = NVY98T645T;
-=======
 						DevelopmentTeam = EY7N86J2FE;
 						DevelopmentTeam = Y8M8DT4EYR;
->>>>>>> 6122a0b1243c989940acc6816111fe9f5b530e7e
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
