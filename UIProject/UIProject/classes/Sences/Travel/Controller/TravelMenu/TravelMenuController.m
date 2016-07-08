@@ -144,6 +144,8 @@
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.rootView addSubview:self.collectionView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(collectionViewAction)];
+    [self.collectionView addGestureRecognizer:tap];
 }
 
 //读取数据
@@ -295,21 +297,17 @@
         
         //平移动画
         CABasicAnimation *basicAnimation1 = [CABasicAnimation animation];
-        basicAnimation1.keyPath = @"transform.translation";
+        basicAnimation1.keyPath = @"transform.translation.x";
         basicAnimation1.fromValue = @(10);
-        basicAnimation1.toValue = @(200);
+        basicAnimation1.toValue = @(20);
         //设置成缩放动画
         CABasicAnimation *basicAnimation2 = [CABasicAnimation animation];
         basicAnimation2.keyPath = @"transform.scale";
         basicAnimation2.fromValue = @(0.1);
         basicAnimation2.toValue = @(0.8);
-        //旋转动画
-        CABasicAnimation *basicAnimation3 = [CABasicAnimation animation];
-        basicAnimation3.keyPath = @"transform.rotation";
-        basicAnimation3.toValue = @(1 * M_PI);
         //需要创建管理各个动画的动画组
         CAAnimationGroup *group = [CAAnimationGroup animation];
-        group.animations = @[basicAnimation1,basicAnimation2,basicAnimation3];
+        group.animations = @[basicAnimation1,basicAnimation2];
         
         group.duration = 0.4f;
         [self.menuTableView.layer addAnimation:group forKey:@"groupAnimatiom"];
@@ -328,7 +326,13 @@
         
         
         [self.navigationItem.leftBarButtonItem setImage:[[UIImage imageNamed:@"down"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        
+        //平移动画
+        CABasicAnimation *basicAnimation1 = [CABasicAnimation animation];
+        basicAnimation1.keyPath = @"transform.translation.x";
+        basicAnimation1.fromValue = @(100);
+        basicAnimation1.toValue = @(20);
+        basicAnimation1.duration = 0.2f;
+        [self.view.layer addAnimation:basicAnimation1 forKey:@"transform.translation"];
         menuViewOn = NO;
         self.rootViewWidth.constant = self.view.frame.size.width;
         self.viewWidth.constant = self.view.frame.size.width;
@@ -439,6 +443,10 @@
     };
     
 
+}
+
+-(void)collectionViewAction {
+    [self leftBarButtonItemAction:nil];
 }
 
 - (void)didReceiveMemoryWarning {
