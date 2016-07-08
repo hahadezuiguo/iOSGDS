@@ -122,14 +122,14 @@
     AVUser *currentUser = [AVUser currentUser];
     //    NSLog(@"***%@",currentUser.username);
     
-    if ([currentUser.username isEqualToString:@""]) {
+    if ([UserFileHandle selectUserInfo].isLogin == NO) {
         NSLog(@"用户未登录");
     }
     else {
         // 查询当前用户的所有收藏
         AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
         [query whereKey:@"userName" equalTo:currentUser.username];
-        [query whereKey:@"category" equalTo:@"创意"];
+//        [query whereKey:@"category" equalTo:@"创意"];
         //currentUser.username
         
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
