@@ -62,7 +62,7 @@
     }];
 }
 - (void)createChildViewController {
-    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"esoterica2.png" selectorImage:@"esoterica.png"];
     
     [self addOneChildViewController:[[SortViewController alloc] init] title:@"family一起看" normalImage:@"" selectorImage:@""];
     
