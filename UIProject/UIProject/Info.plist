@@ -90,10 +90,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-<<<<<<< HEAD
 	<key>CFBundleIconFile</key>
 	<string></string>
-=======
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>mqqOpensdkSSoLogin</string>
@@ -113,6 +111,5 @@
         <string>weixin</string>
         <string>wechat</string>
     </array>
->>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 </dict>
 </plist>
