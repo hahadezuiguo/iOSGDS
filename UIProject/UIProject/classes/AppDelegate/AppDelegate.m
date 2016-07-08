@@ -72,6 +72,7 @@
     [BNCoreServices_Instance initServices:@"8FLG8Yv5Ap1hH0VWq8iIwZ54BnUzAT0P"];
     [BNCoreServices_Instance startServicesAsyn:nil fail:nil];
 #pragma mark - 第一次出现
+
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
@@ -82,6 +83,7 @@
         
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     }
+
     
     //设置友盟社会化组件appkey
     [UMSocialData setAppKey:@"577ca1e4e0f55a085f0002b5"];
@@ -93,6 +95,7 @@
     [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3525723822"
                                               secret:@"9cc0eefd77b17e9e258d6898ac28c6a9"
                                          RedirectURL:@"http://www.baidu.com"];
+
 
     
     return YES;

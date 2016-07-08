@@ -84,7 +84,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height*.05, self.frame.size.width*.8, 60)];
     titleLabel.center = CGPointMake(self.center.x, self.frame.size.height*.1);
-    titleLabel.text = [NSString stringWithFormat:@"一则广告"];
+    titleLabel.text = [NSString stringWithFormat:@"亲子同乐"];
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:30.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment =  NSTextAlignmentCenter;
@@ -97,7 +97,7 @@
     [view addSubview:imageview];
     
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*.1, self.frame.size.height*.7, self.frame.size.width*.8, 60)];
-    descriptionLabel.text = [NSString stringWithFormat:@"能让你感到创意惊人"];
+    descriptionLabel.text = [NSString stringWithFormat:@"难忘的家庭旅游"];
     descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
     descriptionLabel.textColor = [UIColor whiteColor];
     descriptionLabel.textAlignment =  NSTextAlignmentCenter;
@@ -123,7 +123,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height*.05, self.frame.size.width*.8, 60)];
     titleLabel.center = CGPointMake(self.center.x, self.frame.size.height*.1);
-    titleLabel.text = [NSString stringWithFormat:@"一道景色"];
+    titleLabel.text = [NSString stringWithFormat:@"快乐宝贝"];
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:30.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment =  NSTextAlignmentCenter;
@@ -136,7 +136,7 @@
     [view addSubview:imageview];
     
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*.1, self.frame.size.height*.7, self.frame.size.width*.8, 60)];
-    descriptionLabel.text = [NSString stringWithFormat:@"会让你心生向往"];
+    descriptionLabel.text = [NSString stringWithFormat:@"健康成长每一天"];
     descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
     descriptionLabel.textColor = [UIColor whiteColor];
     descriptionLabel.textAlignment =  NSTextAlignmentCenter;
@@ -204,7 +204,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height*.05, self.frame.size.width*.8, 60)];
     titleLabel.center = CGPointMake(self.center.x, self.frame.size.height*.1);
-    titleLabel.text = [NSString stringWithFormat:@"一切精彩"];
+    titleLabel.text = [NSString stringWithFormat:@"一切信息"];
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:30.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment =  NSTextAlignmentCenter;
@@ -220,7 +220,7 @@
     [view addSubview:imageview];
     
     UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*.1, self.frame.size.height*.7, self.frame.size.width*.8, 60)];
-    descriptionLabel.text = [NSString stringWithFormat:@"尽在世觉之中..."];
+    descriptionLabel.text = [NSString stringWithFormat:@"尽在宝宝宝中..."];
     descriptionLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
     descriptionLabel.textColor = [UIColor whiteColor];
     descriptionLabel.textAlignment =  NSTextAlignmentCenter;

@@ -20,7 +20,8 @@
 #import <AVOSCloudIM/AVOSCloudIM.h>
 
 #import "UserDetailViewController.h"
-
+#import "SongModel.h"
+#import "UIImageView+WebCache.h"
 @interface UserViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 
 ///收藏栏
@@ -52,6 +53,9 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *backgroundScrollView;
 @property (nonatomic,assign) BOOL hiden;
 
+//建立大数组
+@property (nonatomic,strong) NSMutableArray *allSongArray;
+
 @end
 
 @implementation UserViewController
@@ -59,6 +63,10 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.tabBarController.tabBar.hidden = NO;
+
+    [self loadData];
     if ([UserFileHandle selectUserInfo].userName.length > 0) {
         //显示用户
         self.userNameLabel.text = [AVUser currentUser].username;
@@ -71,9 +79,7 @@
 
 
 - (void)viewDidLoad {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.tabBarController.tabBar.hidden = NO;
-     self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+        self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
     self.replaceScrollView = self.scrollView;
     self.hiden = NO;
     
@@ -95,13 +101,13 @@
     
     NSLog(@"%lf",self.colView.bounds.origin.y);
     [self.collectionSegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    self.index = 5;
+    self.index = self.allSongArray.count;
     
    self.ViewHeight.constant = (190 + (self.index - 1) / 3 * 170);
 
 
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(loginOrLogout:)];
+
     
     [self.collectionSegment setTitle:@"育儿秘籍" forSegmentAtIndex:0];
     [self.collectionSegment setTitle:@"宝贝爱听" forSegmentAtIndex:1];
@@ -109,51 +115,54 @@
     
 }
 
-////右按钮实现方法
-//
-//- (void)loginOrLogout:(UIBarButtonItem *)sender {
-//    
-//    if ([UserFileHandle selectUserInfo].isLogin == YES) {
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"是否退出登录" preferredStyle:UIAlertControllerStyleAlert];
-//        UIAlertAction *action1  =[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            
-//            
-//            LoginViewController *loginVC = [[LoginViewController alloc] init];
-//            
-//            [UserFileHandle selectUserInfo].isLogin = NO;
-//            [UserFileHandle deleteUserInfo];
-//            
-//            
-//            [AVUser logOut];
-//            AVUser *currentUser = [AVUser currentUser];
-//            //如果不调用 登出 方法，当前用户的缓存将永久保存在客户端。
-//            if (currentUser != nil) {
-//                // 跳转到首页
-//            } else {
-//                //缓存用户对象为空时，可打开用户注册界面…
-//          
-//                [self presentViewController:loginVC animated:YES completion:nil];
-//            }
-//            
-//            
-//            
-//        }];
-//        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//            
-//        }];
-//        [alert addAction:action1];
-//        [alert addAction:action2];
-//        [self presentViewController:alert animated:YES completion:nil];
-//    } else {
-//        LoginViewController *loginVC = [[LoginViewController alloc] init];
-//        
-//        [self presentViewController:loginVC animated:YES completion:nil];
-//    }
-//    
-//
-//    
-//    
-//}
+- (void)loadData {
+    
+    
+    
+    AVUser *currentUser = [AVUser currentUser];
+    //    NSLog(@"***%@",currentUser.username);
+    
+    if ([UserFileHandle selectUserInfo].isLogin == NO) {
+        NSLog(@"用户未登录");
+    }
+    else {
+        // 查询当前用户的所有收藏
+        AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
+        [query whereKey:@"userName" equalTo:currentUser.username];
+//        [query whereKey:@"category" equalTo:@"创意"];
+        //currentUser.username
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            if (!error) {
+                self.allSongArray = [NSMutableArray array];
+                for (AVObject *oneObject in objects) {
+                    
+                    SongModel *model = [[SongModel alloc] init];
+                    model.userName = [oneObject objectForKey:@"userName"];
+                    model.title = [oneObject objectForKey:@"title"];
+                    NSLog(@"*****%@",model.title);
+                    model.imageUrl = [oneObject objectForKey:@"imageUrl"];
+                    model.playUrl = [oneObject objectForKey:@"playUrl"];
+                    model.category = [oneObject objectForKey:@"category"];
+                    model.time = [oneObject objectForKey:@"time"];
+                    model.myDescription = [oneObject objectForKey:@"myDescription"];
+                    
+                    [self.allSongArray addObject:model];
+                }
+                
+                [self.rootView.collection reloadData];
+                
+            }
+            else{
+                
+                NSLog(@"error = %@",error);
+            }
+        }];
+    }
+    
+    
+}
 
 
 
@@ -163,15 +172,15 @@
     switch (index) {
         case 0:
          
-             self.index = 5;
+              self.index = self.allSongArray.count;
             break;
         case 1:
    
-             self.index = 3;
+              self.index = self.allSongArray.count;
             break;
         case 2:
     
-            self.index = 4;
+             self.index = self.allSongArray.count;
             break;
         default:
            
@@ -198,14 +207,18 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
    
-    return self.index;
+    return self.allSongArray.count;
 }
 
 
 //返回每一个分区里面Item
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor or    5ngeColor];
+
+    SongModel *model = self.allSongArray[indexPath.row];
+    cell.CollectionTitle.text = model.title;
+
+    [cell.collectionImage sd_setImageWithURL:[NSURL URLWithString:model.imageUrl]];
     
     return cell;
 }
@@ -233,15 +246,7 @@
                         LoginViewController *loginVC = [[LoginViewController alloc] init];
                         [self.navigationController pushViewController:loginVC animated:YES];
                     }
-        
-        
-        
-       
-    
-
-
-    
-}
+        }
 
 
 #pragma mark - 实现scrollView的代理
