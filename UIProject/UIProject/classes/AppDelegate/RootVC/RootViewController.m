@@ -24,9 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  
-  
-    
+
     //创建四个跟视图控制器
     [self createChildViewController];
     // 加载引导试图方法
