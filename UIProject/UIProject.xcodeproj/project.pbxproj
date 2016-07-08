@@ -10,6 +10,7 @@
 		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
 		D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */; };
 		D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D70021D2C9B90006CE7B4 /* SongModel.m */; };
+		D626E3B51D2E61BF007901D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D626E3B41D2E61BF007901D9 /* Default-568h@2x.png */; };
 		D632E78B1D2C97E80064977C /* UIView+Opens.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78A1D2C97E80064977C /* UIView+Opens.m */; };
 		D632E7901D2C983E0064977C /* AdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78D1D2C983E0064977C /* AdviceController.m */; };
 		D632E7911D2C983E0064977C /* ShareFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78F1D2C983E0064977C /* ShareFunction.m */; };
@@ -105,6 +106,8 @@
 		D65FA9BD1D1D793900D0CC3E /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9BC1D1D793900D0CC3E /* NSString+JSON.m */; };
 		D65FA9C91D1D79CF00D0CC3E /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D65FA9C81D1D79CF00D0CC3E /* MessageView.m */; };
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
+		D6645DF01D2F718300327520 /* esoterica.png in Resources */ = {isa = PBXBuildFile; fileRef = D6645DEE1D2F718300327520 /* esoterica.png */; };
+		D6645DF11D2F718300327520 /* esoterica2.png in Resources */ = {isa = PBXBuildFile; fileRef = D6645DEF1D2F718300327520 /* esoterica2.png */; };
 		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
 		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
 		D670EFA51D264CB3001A4E83 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = D670EFA41D264CB3001A4E83 /* down.png */; };
@@ -273,6 +276,7 @@
 		D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
 		D60D70011D2C9B90006CE7B4 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
 		D60D70021D2C9B90006CE7B4 /* SongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongModel.m; sourceTree = "<group>"; };
+		D626E3B41D2E61BF007901D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D632E7891D2C97E80064977C /* UIView+Opens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Opens.h"; sourceTree = "<group>"; };
 		D632E78A1D2C97E80064977C /* UIView+Opens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Opens.m"; sourceTree = "<group>"; };
 		D632E78C1D2C983E0064977C /* AdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceController.h; sourceTree = "<group>"; };
@@ -416,6 +420,8 @@
 		D65FA9C81D1D79CF00D0CC3E /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
 		D65FA9CB1D1D7D2D00D0CC3E /* APIStoreSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStoreSDK.h; sourceTree = "<group>"; };
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
+		D6645DEE1D2F718300327520 /* esoterica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esoterica.png; sourceTree = "<group>"; };
+		D6645DEF1D2F718300327520 /* esoterica2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esoterica2.png; sourceTree = "<group>"; };
 		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
@@ -1197,7 +1203,10 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6645DEE1D2F718300327520 /* esoterica.png */,
+				D6645DEF1D2F718300327520 /* esoterica2.png */,
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
+				D626E3B41D2E61BF007901D9 /* Default-568h@2x.png */,
 				D69783321D2DE57B00616872 /* bottomBack.jpg */,
 				D69783301D2DE51900616872 /* newBack.jpg */,
 				D6E22C701D2F38BF004B71BD /* tabbarWere.png */,
@@ -1478,6 +1487,7 @@
 			files = (
 				D6B7F94F1D2D4B4B0026E1F3 /* 雷阵雨.jpg in Resources */,
 				D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */,
+				D6645DF11D2F718300327520 /* esoterica2.png in Resources */,
 				D65DC89D1D2F32BC003D9BBA /* ConnectMobileViewController.xib in Resources */,
 				D67702881D2609D300A75F8F /* TravelMenuController.xib in Resources */,
 				D69611571D26640000B173AF /* registBackground.png in Resources */,
@@ -1591,11 +1601,13 @@
 				D6F456AD1D1D846800C957B9 /* placeHold.png in Resources */,
 				D670EFC11D2692B9001A4E83 /* weathermenu.jpeg in Resources */,
 				D632F4C11D1A961E00F51C6F /* Assets.xcassets in Resources */,
+				D626E3B51D2E61BF007901D9 /* Default-568h@2x.png in Resources */,
 				D632E7A41D2C98DB0064977C /* shareRed.png in Resources */,
 				D69611491D26097A00B173AF /* 5.jpg in Resources */,
 				D632F4BF1D1A961E00F51C6F /* Main.storyboard in Resources */,
 				D6F8F1FB1D1CE8B700D39982 /* CollectionCell.xib in Resources */,
 				D632E7A61D2C98DB0064977C /* sheet1.jpg in Resources */,
+				D6645DF01D2F718300327520 /* esoterica.png in Resources */,
 				D67F0C3E1D2268D1004B10DC /* blackArrow@2x.png in Resources */,
 				D632E7A31D2C98DB0064977C /* shareGray.png in Resources */,
 				D64E58511D235C2900E96257 /* waterfall.plist in Resources */,
@@ -1879,6 +1891,7 @@
 			baseConfigurationReference = 46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1912,6 +1925,7 @@
 			baseConfigurationReference = CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;

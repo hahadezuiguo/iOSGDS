@@ -47,7 +47,7 @@
 }
 - (void)shares{
    
-    [ShareFunction sharetitle:self.model.title image:self.model.weburl viewController:self content:nil];
+    [ShareFunction sharetitle:self.model.title image:nil viewController:self content:self.model.weburl];
     
 }
 

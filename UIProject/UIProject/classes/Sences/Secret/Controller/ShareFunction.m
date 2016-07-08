@@ -20,7 +20,7 @@
     [UMSocialSnsService presentSnsIconSheetView:controller
                                          appKey:@"577ca1e4e0f55a085f0002b5"
                                       shareText:content
-                                     shareImage:[UIImage imageNamed:@"oneLetter"]
+                                     shareImage:[UIImage imageNamed:@"AppIcon"]
                                 shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
                                        delegate:controller];
     

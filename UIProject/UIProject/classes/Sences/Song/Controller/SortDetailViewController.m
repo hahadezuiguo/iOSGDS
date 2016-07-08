@@ -244,11 +244,12 @@
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     // 创建Model类实现跳转
     SortDetailModel *model = self.dataArr[indexPath.row];
-    detailVC.passImageUrl = model.coverForDetail;
-    detailVC.passTitle = model.title;
-    detailVC.passDescription = model.videoInformation;
-    detailVC.passPlayUrl = model.playUrl;
-    detailVC.passCategory = model.category;
+    detailVC.sortdetailemodel = model;
+//    detailVC.passImageUrl = model.coverForDetail;
+//    detailVC.passTitle = model.title;
+//    detailVC.passDescription = model.videoInformation;
+//    detailVC.passPlayUrl = model.playUrl;
+//    detailVC.passCategory = model.category;
     detailVC.passTime = self.timeStr;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

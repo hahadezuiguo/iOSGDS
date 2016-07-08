@@ -11,9 +11,10 @@
 #import "UIImageView+WebCache.h"
 #import "DetailViewModel.h"
 #import "PlayerViewController.h"
-//#import "UMSocial.h"
+#import "UMSocial.h"
+#import "ShareFunction.h"
 #import <AVOSCloud/AVOSCloud.h>
-@interface DetailViewController ()
+@interface DetailViewController ()<UMSocialUIDelegate>
 @property (nonatomic,strong)DetailView *detailView;
 @end
 
@@ -62,10 +63,10 @@
 
 - (void)initLayout{
 
-    NSURL *urlStr = [NSURL URLWithString:self.passImageUrl];
+    NSURL *urlStr = [NSURL URLWithString:self.sortdetailemodel.coverForDetail];
     [self.detailView.myImageView sd_setImageWithURL:urlStr];//
-    self.detailView.titleLabel.text = self.passTitle;
-    self.detailView.informationLabel.text = self.passDescription;
+    self.detailView.titleLabel.text = self.sortdetailemodel.title;
+    self.detailView.informationLabel.text = self.sortdetailemodel.videoInformation;
     
 //    // 模糊处理
 //    CIContext *context = [CIContext contextWithOptions:nil];
@@ -95,8 +96,7 @@
 //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
 //    [alertView show];
 }
-#warning 收藏
-#pragma mark 点击事件方法
+#pragma mark - 收藏
 - (void)collectionButtonAction:(UIButton *)sender{
 
     AVUser *currentUser = [AVUser currentUser];
@@ -107,7 +107,7 @@
         AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
         // 查询 先查询是否有这个用户名,在查询这个用户是否收藏过这个,如果两个条件同时成立则不能收藏
         [query whereKey:@"userName" equalTo:currentUser.username];
-        [query whereKey:@"title" containsString:self.passTitle];
+        [query whereKey:@"title" containsString:self.sortdetailemodel.title];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
             // error是指在查询的过程中是否遇到了异常(如服务器关闭)
@@ -124,13 +124,13 @@
                     //        [collection setObject:imageDataTemp forKey:@"collectionImage"];
                     
                     [collection setObject:currentUser.username forKey:@"userName"];
-                    [collection setObject:self.passImageUrl forKey:@"imageUrl"];
-                    [collection setObject:self.passTitle forKey:@"title"];
-                    [collection setObject:self.passCategory forKey:@"category"];
+                    [collection setObject:self.sortdetailemodel.coverForDetail forKey:@"imageUrl"];
+                    [collection setObject:self.sortdetailemodel.title forKey:@"title"];
+                    [collection setObject:self.sortdetailemodel.category forKey:@"category"];
                     [collection setObject:self.passTime forKey:@"time"];
-                    [collection setObject:self.passPlayUrl forKey:@"playUrl"];
+                    [collection setObject:self.sortdetailemodel.playUrl forKey:@"playUrl"];
                     // 收藏时将详细信息收藏 再收藏页面并不展示,为的是由收藏页面转向详情页面时传值
-                    [collection setObject:self.passDescription forKey:@"myDescription"];
+                    [collection setObject:self.sortdetailemodel.videoInformation forKey:@"myDescription"];
                     // 存储
                     [collection save];
                     [self alertViewWithTitle:@"收藏成功" message:@"您可以到我的收藏中查看了"];
@@ -166,27 +166,24 @@
 //    [self.navigationController pushViewController:videoPlayer animated:YES];
     
     PlayerViewController *playerVC = [[PlayerViewController alloc] init];
-    playerVC.movieUrlString = self.passPlayUrl;
+    playerVC.movieUrlString = self.sortdetailemodel.playUrl;
     [self.navigationController pushViewController:playerVC animated:YES];
     
     
 }
-#warning 分享
+#pragma mark - 分享
 - (void)shareButtonAction:(UIButton *)sender{
     
-//    AVUser *currentUser = [AVUser currentUser];
-//    if (currentUser != nil) {
-//        [UMSocialSnsService presentSnsIconSheetView:self
-//                                             appKey:@"55c0ab5a67e58e23970014a3"
-//                                          shareText:@"世觉,带给你不一样的视听享受...快来App Store下载吧~"
-//                                         shareImage:[UIImage imageNamed:@"appIcon"]
-//                                    shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,nil]
-//                                           delegate:nil];
-//    }else{
-//    
-//    
-//        [self alertViewWithTitle:@"请登录" message:@"登录后才能分享哦~"];
-//    }
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+        [ShareFunction sharetitle:nil image:self.sortdetailemodel.coverForDetail viewController:self content:self.sortdetailemodel.playUrl];
+        [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"headView"]]];
+
+    }else{
+    
+    
+        [self alertViewWithTitle:@"请登录" message:@"登录后才能分享哦~"];
+    }
     
 }
 

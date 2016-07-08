@@ -30,14 +30,14 @@
     //创建四个跟视图控制器
     [self createChildViewController];
     // 加载引导试图方法
-    [self p_setupGuideView];
+    [self setupGuideView];
     
 }
 #pragma mark 判断是否为首次启动,如果首次启动那么出现引导图
-- (void)p_setupGuideView{
+- (void)setupGuideView{
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
-        //self.navigationController.navigationBar.hidden = YES;
+        self.navigationController.navigationBar.hidden = YES;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if (![defaults objectForKey:@"intro_screen_viewed"]) {
             self.introView = [[ABCIntroView alloc] initWithFrame:self.view.frame];
@@ -62,7 +62,7 @@
     }];
 }
 - (void)createChildViewController {
-    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"esoterica2.png" selectorImage:@"esoterica.png"];
     
     [self addOneChildViewController:[[SortViewController alloc] init] title:@"family一起看" normalImage:@"" selectorImage:@""];
     
