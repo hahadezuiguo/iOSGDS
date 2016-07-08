@@ -10,6 +10,7 @@
 #import "WeatherCell.h"
 #import "OtherWeatherCell.h"
 #import "TravelViewController.h"
+#import "WhereViewController.h"
 @interface WeatherViewController ()
 
 @end
@@ -105,8 +106,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TravelViewController *whereVC = [[TravelViewController alloc]init];
-    whereVC.isSpeeching = YES;
+//    TravelViewController *whereVC = [[TravelViewController alloc]init];
+    WhereViewController *whereVC = [[WhereViewController alloc]init];
+//    whereVC.isSpeeching = YES;
     [self.navigationController pushViewController:whereVC animated:YES];
 }
 /*

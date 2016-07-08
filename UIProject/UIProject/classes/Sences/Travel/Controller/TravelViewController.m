@@ -30,9 +30,6 @@
 //科大讯飞语音框架定义的常量
 #import <iflyMSC/IFlySpeechConstant.h>
 
-////地图定位
-//#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
-//#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
 
 @interface TravelViewController ()<IFlySpeechSynthesizerDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -46,16 +43,6 @@
 //文字识别对象
 @property (strong, nonatomic) IFlySpeechSynthesizer *synthesizer;
 
-@property (strong, nonatomic) Weather *weather;
-
-@property (nonatomic, strong) BMKLocationService *locService;
-
-
-@property (nonatomic, strong) BMKGeoCodeSearch *searcher;
-//当前的城市
-@property (nonatomic, strong) NSString *city;
-
-@property (nonatomic, strong) BMKReverseGeoCodeResult *result;
 
 @property (weak, nonatomic) IBOutlet UIImageView *weatherImageView;
 
@@ -80,11 +67,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self addWeatherImageView];
-    
-    [self getGeoCode];
-    
-    
-    //创建文字识别对象
+       //创建文字识别对象
     [self createSynthesizer];
 
     
@@ -140,60 +123,9 @@
 }
 
 
-//编码
--(void)getGeoCode {
-    //初始化检索对象
-    _searcher =[[BMKGeoCodeSearch alloc]init];
-    _searcher.delegate = self;
-    
-    //发起反向地理编码检索
-    CLLocationCoordinate2D pt = (CLLocationCoordinate2D){_userLocation.location.coordinate.latitude, _userLocation.location.coordinate.longitude};
-    BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[
-    BMKReverseGeoCodeOption alloc]init];
-    reverseGeoCodeSearchOption.reverseGeoPoint = pt;
-    BOOL flag = [_searcher reverseGeoCode:reverseGeoCodeSearchOption];
- 
-    if(flag)
-    {
-      NSLog(@"反geo检索发送成功111111");
-    }
-    else
-    {
-      NSLog(@"反geo检索发送失败");
-    }
-}
-
 -(void)requestWeather {
-    //实例化一个回调，处理请求的返回值
-    APISCallBack* callBack = [APISCallBack alloc];
-    //部分请求参数
-    NSString *url = @"http://apis.baidu.com/heweather/weather/free";
-    NSString *method = @"post";
-    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
-    
-    if (self.city) {
-        [parameter setObject:self.city forKey:@"city"];
-    }else {
-        [parameter setObject:@"承德" forKey:@"city"];
-    }
-    
-    //请求API
-    [ApiStoreSDK executeWithURL:url method:method apikey:@"c2c6467774885923b4629db0ab700dc0" parameter:parameter callBack:callBack];
-    
-    self.weather = [[Weather alloc]init];
-    __weak typeof(self) weakSelf = self;
-    callBack.onSuccess = ^(long status, NSString* responseString) {
-    
-        if(responseString != nil) {
-         
-            NSDictionary *dic = [NSString parseJSONStringToNSDictionary:responseString];
-            
-            NSArray *array = dic[@"HeWeather data service 3.0"];
-            NSDictionary *dict = array[0];
-           
-            [_weather setValuesForKeysWithDictionary:dict];
             NSString *string = [_weather.basic[@"update"] objectForKey:@"loc"];
-            weakSelf.dateLabel.text = [NSString stringWithFormat:@"今天：%@",[string substringToIndex:10]];
+            self.dateLabel.text = [NSString stringWithFormat:@"今天：%@",[string substringToIndex:10]];
             NSString *string1 = [[_weather.daily_forecast[0] objectForKey:@"cond"]objectForKey:@"txt_d"];
             NSString *string2 = [[_weather.daily_forecast[0] objectForKey:@"cond"]objectForKey:@"txt_n"];
 
@@ -202,27 +134,14 @@
             NSString *string5 = [[_weather.daily_forecast[0] objectForKey:@"wind"]objectForKey:@"dir"];
             NSString *string6 = [[_weather.daily_forecast[0] objectForKey:@"wind"]objectForKey:@"sc"];
             
-            weakSelf.messageArray = [NSArray arrayWithObjects:@"温馨提示",
+            self.messageArray = [NSArray arrayWithObjects:@"温馨提示",
                                      [NSString stringWithFormat:@"今天天气白天%@,晚上%@",string1,string2],
                                      [NSString stringWithFormat:@"最高气温%@度",string3],
                                      [NSString stringWithFormat:@"最低气温%@度",string4],
-                                     [NSString stringWithFormat:@"有%@ 是%@",string5, string6],
+                                     [NSString stringWithFormat:@" %@ 风力%@",string5, string6],
                                      @"出行请注意天气变化",
                                      nil];
-            weakSelf.weatherCount = 0;
-            
-        }
-        
-    };
-    
-    callBack.onError = ^(long status, NSString* responseString) {
-        NSLog(@"onError");
-    };
-    
-    callBack.onComplete = ^() {
-        NSLog(@"onComplete");
-    };
-    
+            self.weatherCount = 0;
 }
 -(void)createSynthesizer {
     //创建文字识别对象
@@ -302,11 +221,8 @@
     self.messageView = nil;
     self.hidesBottomBarWhenPushed = YES;
     WhereViewController *whereVC = [[WhereViewController alloc]init];
-    whereVC.result = self.result;
     [self.navigationController pushViewController:whereVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
-    
-    
 }
 
 #pragma mark - 语音代理方法
@@ -320,49 +236,6 @@
 }
 
 
-
-
-//实现Deleage处理回调结果
-
-//接收反向地理编码结果
--(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:
-(BMKReverseGeoCodeResult *)result
-errorCode:(BMKSearchErrorCode)error{
-  if (error == BMK_SEARCH_NO_ERROR) {
-      //在此处理正常结果
-      NSString *string = [NSString stringWithFormat:@"%@",result.addressDetail.city];
-      if ([string isEqualToString:@""]) {
-          NSLog(@"*******没有数据");
-          
-          //请求天气数据
-          [self requestWeather];
-
-      }else {
-          
-          NSString *str = [string substringToIndex:string.length - 1];
-          self.city = str;
-          self.result = result;
-          
-          //请求天气数据
-          [self requestWeather];
-    }
-      
-      
-      
- 
-}
-  else {
-      NSLog(@"抱歉，未找到结果");
-  }
-}
-
-//不使用时将delegate设置为 nil
--(void)viewWillDisappear:(BOOL)animated
-{
-    _searcher.delegate = nil;
-    
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

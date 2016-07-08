@@ -378,12 +378,12 @@
     if(indexPath.row == 0) {
         
         TravelViewController *viewController = [[TravelViewController alloc]init];
-        viewController.userLocation = self.userLocation;
         
         [self.navigationController pushViewController:viewController animated:YES];
     } else if(indexPath.row == 1){
         
-        WeatherViewController  *controller = [[WeatherViewController alloc] init];
+        TravelViewController  *controller = [[TravelViewController alloc] init];
+        controller.isSpeeching = YES;
         controller.weather = self.weather;
         [self.navigationController pushViewController:controller animated:YES];
         

@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-//地图定位
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
-
+#import "Weather.h"
 @interface TravelViewController : UIViewController
-
-@property (nonatomic, strong) BMKUserLocation *userLocation;
 @property (nonatomic, assign) BOOL isSpeeching;
+@property (nonatomic, strong) Weather *weather;
 
 @end
