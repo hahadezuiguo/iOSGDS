@@ -85,6 +85,8 @@
             newUser.password = @"";
             newUser.isLogin = YES;
             [UserFileHandle saveUserInfo:newUser];
+
+            [user setObject:@"123456" forKey:@"password"]   ;
             UserViewController *userVC = [[UserViewController alloc] init];
             [self.navigationController pushViewController:userVC animated:YES];
         }

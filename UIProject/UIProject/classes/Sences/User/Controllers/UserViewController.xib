@@ -32,7 +32,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvc-Fu-hf3">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="660"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-VF-7zY">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newBack.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-VF-7zY">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="660"/>
                                     <color key="backgroundColor" red="0.81432116529999998" green="0.91072126460000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -85,10 +85,13 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd4-rf-Vx4">
-                                    <rect key="frame" x="0.0" y="200" width="320" height="400"/>
+                                    <rect key="frame" x="0.0" y="198" width="320" height="400"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-UA-nA0">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomBack.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-CB-lhC">
+                                            <rect key="frame" x="0.0" y="30" width="320" height="430"/>
+                                        </imageView>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-UA-nA0">
+                                            <rect key="frame" x="0.0" y="1" width="320" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="N5M-wK-kg1"/>
                                             </constraints>
@@ -119,15 +122,19 @@
                                             </constraints>
                                         </scrollView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.4512821273" green="0.93614802559999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="VVR-CB-lhC" firstAttribute="top" secondItem="1w3-UA-nA0" secondAttribute="bottom" id="11a-9f-uyP"/>
                                         <constraint firstItem="NFs-BE-8kR" firstAttribute="top" secondItem="1w3-UA-nA0" secondAttribute="bottom" id="18W-AE-kHl"/>
                                         <constraint firstAttribute="bottom" secondItem="NFs-BE-8kR" secondAttribute="bottom" id="CGk-A8-fWD"/>
                                         <constraint firstItem="1w3-UA-nA0" firstAttribute="leading" secondItem="bd4-rf-Vx4" secondAttribute="leading" id="FiK-WB-7e9"/>
                                         <constraint firstItem="1w3-UA-nA0" firstAttribute="top" secondItem="bd4-rf-Vx4" secondAttribute="top" id="JPU-tk-BcS"/>
+                                        <constraint firstAttribute="trailing" secondItem="VVR-CB-lhC" secondAttribute="trailing" id="V2x-QY-RiV"/>
+                                        <constraint firstAttribute="bottom" secondItem="VVR-CB-lhC" secondAttribute="bottom" id="fYg-TY-Cmp"/>
                                         <constraint firstAttribute="trailing" secondItem="NFs-BE-8kR" secondAttribute="trailing" id="ibb-6H-wSV"/>
                                         <constraint firstItem="NFs-BE-8kR" firstAttribute="leading" secondItem="bd4-rf-Vx4" secondAttribute="leading" id="qsk-0k-PaA"/>
                                         <constraint firstAttribute="trailing" secondItem="1w3-UA-nA0" secondAttribute="trailing" id="rYi-JS-e5a"/>
+                                        <constraint firstItem="VVR-CB-lhC" firstAttribute="leading" secondItem="bd4-rf-Vx4" secondAttribute="leading" id="uvT-N1-LVt"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -175,5 +182,7 @@
     </objects>
     <resources>
         <image name="5.jpg" width="700" height="662"/>
+        <image name="bottomBack.jpg" width="233" height="220"/>
+        <image name="newBack.jpg" width="714" height="1024"/>
     </resources>
 </document>

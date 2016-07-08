@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CollectionCell : UICollectionViewCell
+//收藏视图
+@property (weak, nonatomic) IBOutlet UIImageView *collectionImage;
+//标题
+@property (weak, nonatomic) IBOutlet UILabel *CollectionTitle;
 
 @end

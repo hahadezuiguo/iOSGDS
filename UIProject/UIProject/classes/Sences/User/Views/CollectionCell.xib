@@ -13,7 +13,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N5I-wU-lVN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N5I-wU-lVN">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="125"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -23,7 +23,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCD-ja-QyD">
                         <rect key="frame" x="0.0" y="125" width="130" height="25"/>
                         <color key="backgroundColor" red="0.81432116529999998" green="0.91072126460000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" red="0.45128212725880257" green="0.93614802555388099" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
@@ -41,6 +41,10 @@
                 <constraint firstAttribute="trailing" secondItem="dCD-ja-QyD" secondAttribute="trailing" id="whl-vw-xeO"/>
             </constraints>
             <size key="customSize" width="130" height="150"/>
+            <connections>
+                <outlet property="CollectionTitle" destination="dCD-ja-QyD" id="wzj-3J-zt2"/>
+                <outlet property="collectionImage" destination="N5I-wU-lVN" id="bJx-8h-ijp"/>
+            </connections>
             <point key="canvasLocation" x="377" y="329"/>
         </collectionViewCell>
     </objects>
