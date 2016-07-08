@@ -16,32 +16,32 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D9-70-sZE">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-FG-Uit">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="828"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="828"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11副本.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yee-TK-W9l">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="828"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="828"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-2o-Nmn">
-                                    <rect key="frame" x="0.0" y="414" width="320" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="414" width="600" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <color key="textColor" red="0.92520558834075928" green="0.41072303056716919" blue="0.20117402076721191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdo-q6-BhH">
-                                    <rect key="frame" x="0.0" y="414" width="320" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="414" width="600" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="66"/>
                                     <color key="textColor" red="0.13846424363314239" green="0.2484705386556553" blue="0.93314445018768311" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PY-kq-92g">
-                                    <rect key="frame" x="165" y="732" width="55" height="56"/>
+                                    <rect key="frame" x="445" y="732" width="55" height="56"/>
                                     <color key="backgroundColor" red="0.92742162942886353" green="0.80405300855636597" blue="0.95232158899307251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="55" id="1zq-gY-lEt"/>
@@ -59,10 +59,10 @@
                                     </connections>
                                 </button>
                                 <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-jh-jx5">
-                                    <rect key="frame" x="0.0" y="240" width="320" height="169"/>
+                                    <rect key="frame" x="0.0" y="183" width="600" height="226"/>
                                     <gestureRecognizers/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="gqf-jh-jx5" secondAttribute="height" multiplier="53:28" id="lZu-16-bwQ"/>
+                                        <constraint firstAttribute="width" secondItem="gqf-jh-jx5" secondAttribute="height" multiplier="53:20" id="lZu-16-bwQ"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="28"/>
@@ -105,7 +105,6 @@
                 <constraint firstItem="1D9-70-sZE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TG6-W1-A5G"/>
                 <constraint firstItem="1D9-70-sZE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zOw-m5-Qjt"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="616" y="-4"/>
         </view>
     </objects>
