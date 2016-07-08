@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */; };
-		D6067FC71D24C4D900047022 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6067FC51D24C4D900047022 /* ContentViewController.m */; };
-		D6067FC81D24C4D900047022 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6067FC61D24C4D900047022 /* ContentViewController.xib */; };
 		D60D70001D2C9B81006CE7B4 /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */; };
 		D60D70031D2C9B90006CE7B4 /* SongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D70021D2C9B90006CE7B4 /* SongModel.m */; };
 		D632E78B1D2C97E80064977C /* UIView+Opens.m in Sources */ = {isa = PBXBuildFile; fileRef = D632E78A1D2C97E80064977C /* UIView+Opens.m */; };
@@ -90,6 +88,8 @@
 		D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9B11D1D78E000D0CC3E /* TravelViewController.xib */; };
 		D658290E1D20D0960095A091 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D658290C1D20D0960095A091 /* MapViewController.m */; };
 		D658290F1D20D0960095A091 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D658290D1D20D0960095A091 /* MapViewController.xib */; };
+		D65DC89C1D2F32BC003D9BBA /* ConnectMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65DC89A1D2F32BC003D9BBA /* ConnectMobileViewController.m */; };
+		D65DC89D1D2F32BC003D9BBA /* ConnectMobileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65DC89B1D2F32BC003D9BBA /* ConnectMobileViewController.xib */; };
 		D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99E1D1D786D00D0CC3E /* where1.png */; };
 		D65FA9A51D1D786D00D0CC3E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA99F1D1D786D00D0CC3E /* 1.png */; };
 		D65FA9A61D1D786D00D0CC3E /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = D65FA9A01D1D786D00D0CC3E /* 11.png */; };
@@ -194,6 +194,8 @@
 		D69611571D26640000B173AF /* registBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D69611561D26640000B173AF /* registBackground.png */; };
 		D696115B1D2692D400B173AF /* ChangeUserNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611591D2692D400B173AF /* ChangeUserNameController.m */; };
 		D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696115A1D2692D400B173AF /* ChangeUserNameController.xib */; };
+		D69783311D2DE51900616872 /* newBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69783301D2DE51900616872 /* newBack.jpg */; };
+		D69783331D2DE57B00616872 /* bottomBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69783321D2DE57B00616872 /* bottomBack.jpg */; };
 		D6A0F6C71D21012D0057CE15 /* imageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A0F6C61D21012D0057CE15 /* imageDownloader.m */; };
 		D6A3F41E1D2CE1C30093718D /* leimu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6A3F41D1D2CE1C30093718D /* leimu.jpg */; };
 		D6A3F4201D2CE1C80093718D /* 334.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6A3F41F1D2CE1C80093718D /* 334.jpg */; };
@@ -250,9 +252,6 @@
 		46C876A3E453B6AED68D8F6C /* Pods-UIProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB045A6E1FBBA2D7546D596 /* Pods-UIProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIProject/Pods-UIProject.release.xcconfig"; sourceTree = "<group>"; };
 		D148C0058C63BBB5EBED6561 /* libPods-UIProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6067FC41D24C4D900047022 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
-		D6067FC51D24C4D900047022 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
-		D6067FC61D24C4D900047022 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		D60D6FFE1D2C9B81006CE7B4 /* SecretModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretModel.h; sourceTree = "<group>"; };
 		D60D6FFF1D2C9B81006CE7B4 /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
 		D60D70011D2C9B90006CE7B4 /* SongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongModel.h; sourceTree = "<group>"; };
@@ -375,6 +374,9 @@
 		D658290B1D20D0960095A091 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		D658290C1D20D0960095A091 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		D658290D1D20D0960095A091 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D65DC8991D2F32BC003D9BBA /* ConnectMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectMobileViewController.h; sourceTree = "<group>"; };
+		D65DC89A1D2F32BC003D9BBA /* ConnectMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectMobileViewController.m; sourceTree = "<group>"; };
+		D65DC89B1D2F32BC003D9BBA /* ConnectMobileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectMobileViewController.xib; sourceTree = "<group>"; };
 		D65FA99E1D1D786D00D0CC3E /* where1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = where1.png; sourceTree = "<group>"; };
 		D65FA99F1D1D786D00D0CC3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		D65FA9A01D1D786D00D0CC3E /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -526,6 +528,8 @@
 		D69611581D2692D400B173AF /* ChangeUserNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeUserNameController.h; sourceTree = "<group>"; };
 		D69611591D2692D400B173AF /* ChangeUserNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeUserNameController.m; sourceTree = "<group>"; };
 		D696115A1D2692D400B173AF /* ChangeUserNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeUserNameController.xib; sourceTree = "<group>"; };
+		D69783301D2DE51900616872 /* newBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newBack.jpg; sourceTree = "<group>"; };
+		D69783321D2DE57B00616872 /* bottomBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottomBack.jpg; sourceTree = "<group>"; };
 		D6A0F6C51D21012D0057CE15 /* imageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageDownloader.h; sourceTree = "<group>"; };
 		D6A0F6C61D21012D0057CE15 /* imageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageDownloader.m; sourceTree = "<group>"; };
 		D6A3F41D1D2CE1C30093718D /* leimu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leimu.jpg; sourceTree = "<group>"; };
@@ -1143,6 +1147,8 @@
 			isa = PBXGroup;
 			children = (
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
+				D69783321D2DE57B00616872 /* bottomBack.jpg */,
+				D69783301D2DE51900616872 /* newBack.jpg */,
 				D6A3F41F1D2CE1C80093718D /* 334.jpg */,
 				D6A3F41D1D2CE1C30093718D /* leimu.jpg */,
 				D68E02341D2CB0D600A93775 /* batMan.jpg */,
@@ -1305,6 +1311,9 @@
 				D69611581D2692D400B173AF /* ChangeUserNameController.h */,
 				D69611591D2692D400B173AF /* ChangeUserNameController.m */,
 				D696115A1D2692D400B173AF /* ChangeUserNameController.xib */,
+				D65DC8991D2F32BC003D9BBA /* ConnectMobileViewController.h */,
+				D65DC89A1D2F32BC003D9BBA /* ConnectMobileViewController.m */,
+				D65DC89B1D2F32BC003D9BBA /* ConnectMobileViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1374,6 +1383,7 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = EY7N86J2FE;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1406,6 +1416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65694701D2BAA50008865BC /* TravelViewController.xib in Resources */,
+				D65DC89D1D2F32BC003D9BBA /* ConnectMobileViewController.xib in Resources */,
 				D67702881D2609D300A75F8F /* TravelMenuController.xib in Resources */,
 				D69611571D26640000B173AF /* registBackground.png in Resources */,
 				D677F3111D23AA3E00C6AC26 /* ImageCell.xib in Resources */,
@@ -1454,6 +1465,7 @@
 				D65694641D2BA531008865BC /* 景点.png in Resources */,
 				D696115C1D2692D400B173AF /* ChangeUserNameController.xib in Resources */,
 				D6F456A81D1D846800C957B9 /* head1.jpg in Resources */,
+				D69783311D2DE51900616872 /* newBack.jpg in Resources */,
 				D670EFC91D2698C6001A4E83 /* MenuTableViewCell.xib in Resources */,
 				D65FA9A41D1D786D00D0CC3E /* where1.png in Resources */,
 				D64E58AB1D23F9A600E96257 /* HealthTableViewCell.xib in Resources */,
@@ -1500,6 +1512,7 @@
 				D6A3F4201D2CE1C80093718D /* 334.jpg in Resources */,
 				D6A3F41E1D2CE1C30093718D /* leimu.jpg in Resources */,
 				D64E58791D23F98A00E96257 /* SecretViewController.xib in Resources */,
+				D69783331D2DE57B00616872 /* bottomBack.jpg in Resources */,
 				D65FA9B71D1D78ED00D0CC3E /* where.png in Resources */,
 				D65FA9A71D1D786D00D0CC3E /* go.png in Resources */,
 				D65FA9B61D1D78ED00D0CC3E /* weather1.jpeg in Resources */,
@@ -1595,6 +1608,7 @@
 				D64E58A61D23F9A600E96257 /* CollectionViewCell.m in Sources */,
 				D65694541D2BA4A8008865BC /* TravelAddressCell.m in Sources */,
 				D67F0C341D22223E004B10DC /* EGORefreshTableHeaderView.m in Sources */,
+				D65DC89C1D2F32BC003D9BBA /* ConnectMobileViewController.m in Sources */,
 				D670EFC81D2698C6001A4E83 /* MenuTableViewCell.m in Sources */,
 				D68E01CF1D2CAA9400A93775 /* RecommendDailyViewCell.m in Sources */,
 				D68AC7DE1D1BB58300EBB00B /* RootViewController.m in Sources */,
@@ -1799,7 +1813,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1832,7 +1846,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
