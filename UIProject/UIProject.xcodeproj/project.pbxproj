@@ -1198,13 +1198,10 @@
 			isa = PBXGroup;
 			children = (
 				D68E02321D2CB0CC00A93775 /* Images.xcassets */,
-<<<<<<< HEAD
 				D69783321D2DE57B00616872 /* bottomBack.jpg */,
 				D69783301D2DE51900616872 /* newBack.jpg */,
-=======
 				D6E22C701D2F38BF004B71BD /* tabbarWere.png */,
 				D6E22C721D2F39FB004B71BD /* tabbarWhere.png */,
->>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				D6A3F41F1D2CE1C80093718D /* 334.jpg */,
 				D6A3F41D1D2CE1C30093718D /* leimu.jpg */,
 				D68E02341D2CB0D600A93775 /* batMan.jpg */,
@@ -1446,11 +1443,8 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
-<<<<<<< HEAD
 						DevelopmentTeam = EY7N86J2FE;
-=======
 						DevelopmentTeam = Y8M8DT4EYR;
->>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1894,11 +1888,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-<<<<<<< HEAD
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-=======
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
->>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1931,11 +1921,7 @@
 					"$(PROJECT_DIR)/UIProject/classes/APIStoreSDK",
 				);
 				INFOPLIST_FILE = UIProject/Info.plist;
-<<<<<<< HEAD
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-=======
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
->>>>>>> 2b56008f36cc6a2e3b33c01d8cbadb55ea70b62f
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
