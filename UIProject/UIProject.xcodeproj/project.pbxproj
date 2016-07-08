@@ -231,6 +231,9 @@
 		D6D011A11D1AAC050076477D /* ArchiverHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A01D1AAC050076477D /* ArchiverHandle.m */; };
 		D6D011A51D1AAF570076477D /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A41D1AAF570076477D /* Model.m */; };
 		D6D011A81D1AD3090076477D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D011A71D1AD3090076477D /* AppDelegate.m */; };
+		D6D8DC9C1D2E5AE2006FED52 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */; };
+		D6D8DC9E1D2E5B02006FED52 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */; };
+		D6D8DCA01D2E5B11006FED52 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */; };
 		D6F456A71D1D846800C957B9 /* bigger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A01D1D846800C957B9 /* bigger.jpg */; };
 		D6F456A81D1D846800C957B9 /* head1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A11D1D846800C957B9 /* head1.jpg */; };
 		D6F456A91D1D846800C957B9 /* head2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6F456A21D1D846800C957B9 /* head2.jpg */; };
@@ -597,6 +600,9 @@
 		D6D011A41D1AAF570076477D /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		D6D011A61D1AD3090076477D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6D011A71D1AD3090076477D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		D6F456A01D1D846800C957B9 /* bigger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigger.jpg; sourceTree = "<group>"; };
 		D6F456A11D1D846800C957B9 /* head1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head1.jpg; sourceTree = "<group>"; };
 		D6F456A21D1D846800C957B9 /* head2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head2.jpg; sourceTree = "<group>"; };
@@ -641,25 +647,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */,
-				D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */,
-				D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */,
+				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
+				D6D8DCA01D2E5B11006FED52 /* libstdc++.tbd in Frameworks */,
+				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
+				D6D8DC9E1D2E5B02006FED52 /* libsqlite3.tbd in Frameworks */,
+				D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */,
 				D68AEEC11D1FF3DF00C7127D /* SystemConfiguration.framework in Frameworks */,
+				D6D8DC9C1D2E5AE2006FED52 /* libiconv.tbd in Frameworks */,
+				D6C2A5F01D24AC200092BC3D /* Security.framework in Frameworks */,
+				D6C2A5F21D24AC370092BC3D /* JavaScriptCore.framework in Frameworks */,
+				D6C2A5EE1D24AC190092BC3D /* libstdc++.6.0.9.tbd in Frameworks */,
 				D68AEEC71D1FF40600C7127D /* AVFoundation.framework in Frameworks */,
 				D6C2A5EC1D24ABF00092BC3D /* MediaPlayer.framework in Frameworks */,
 				D6ABDDE21D2BCF38007B173D /* libbaiduNaviSDK.a in Frameworks */,
-				D68AEEC91D1FF41100C7127D /* CoreTelephony.framework in Frameworks */,
 				D68AEECB1D1FF42300C7127D /* CoreLocation.framework in Frameworks */,
 				D6C2A5EA1D24ABD50092BC3D /* CoreMotion.framework in Frameworks */,
 				D6C2A5E81D24ABCC0092BC3D /* ImageIO.framework in Frameworks */,
 				D68AEEC31D1FF3EB00C7127D /* AudioToolbox.framework in Frameworks */,
-				D68AEECD1D1FF42B00C7127D /* libz.tbd in Frameworks */,
 				D68AEEC51D1FF3FE00C7127D /* AddressBook.framework in Frameworks */,
 				D6ABDDE11D2BCF38007B173D /* libBaiduMobStat.a in Frameworks */,
 				D68AEEBF1D1FF3D400C7127D /* QuartzCore.framework in Frameworks */,
 				D68AEEBD1D1FF3CB00C7127D /* UIKit.framework in Frameworks */,
 				D68AEEBB1D1FF3C100C7127D /* Foundation.framework in Frameworks */,
-				D68AEEB91D1FF3B900C7127D /* CoreGraphics.framework in Frameworks */,
 				D68AEEB71D1FEF8100C7127D /* iflyMSC.framework in Frameworks */,
 				888747F673A017F33C64B30A /* libPods-UIProject.a in Frameworks */,
 				D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */,
@@ -672,6 +681,9 @@
 		43C9EF205169BA820B42A223 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6D8DC9F1D2E5B11006FED52 /* libstdc++.tbd */,
+				D6D8DC9D1D2E5B02006FED52 /* libsqlite3.tbd */,
+				D6D8DC9B1D2E5AE2006FED52 /* libiconv.tbd */,
 				D6C2A5F11D24AC370092BC3D /* JavaScriptCore.framework */,
 				D6C2A5EF1D24AC200092BC3D /* Security.framework */,
 				D6C2A5ED1D24AC190092BC3D /* libstdc++.6.0.9.tbd */,
@@ -1414,6 +1426,7 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NVY98T645T;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;

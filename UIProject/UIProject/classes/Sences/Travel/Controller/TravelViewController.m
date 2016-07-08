@@ -64,10 +64,14 @@
 
 @implementation TravelViewController
 
-
+-(void)viewDidAppear:(BOOL)animated {
+    if (self.isSpeeching == YES) {
+        [self tapAction:nil];
+    }
+    self.isSpeeching = NO;
+}
 -(void)viewWillAppear:(BOOL)animated {
     self.tabBarController.tabBar.hidden = NO;
-    
 }
 
 - (void)viewDidLoad {

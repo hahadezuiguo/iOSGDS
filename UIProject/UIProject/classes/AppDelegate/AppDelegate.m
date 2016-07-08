@@ -25,6 +25,11 @@
 //引入导航
 #import "BNCoreServices.h"
 
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaSSOHandler.h"
+
 @interface AppDelegate ()
 @property (nonatomic, strong) BMKMapManager *mapManager;
 @end
@@ -67,19 +72,42 @@
     [BNCoreServices_Instance initServices:@"8FLG8Yv5Ap1hH0VWq8iIwZ54BnUzAT0P"];
     [BNCoreServices_Instance startServicesAsyn:nil fail:nil];
 #pragma mark - 第一次出现
-//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
-//        
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
-//        
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
-//    }
-//    else{
-//        
-//        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
-//    }
+
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+    }
+    else{
+        
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    }
+
+    
+    //设置友盟社会化组件appkey
+    [UMSocialData setAppKey:@"577ca1e4e0f55a085f0002b5"];
+    //设置微信AppId、appSecret，分享url
+    [UMSocialWechatHandler setWXAppId:@"wx346f7d141c8a0aa3" appSecret:@"3bd1d3c3c1db68b9aaa58051503a30fd" url:@"http://www.umeng.com/social"];
+    //设置手机QQ 的AppId，Appkey，和分享URL，需要#import "UMSocialQQHandler.h"
+    [UMSocialQQHandler setQQWithAppId:@"1105524404" appKey:@"UroHv8aa3OBIx97M" url:@"http://www.baidu.com"];
+    //打开新浪微博的SSO开关，设置新浪微博回调地址，这里必须要和你在新浪微博后台设置的回调地址一致。需要 #import "UMSocialSinaSSOHandler.h"
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3525723822"
+                                              secret:@"9cc0eefd77b17e9e258d6898ac28c6a9"
+                                         RedirectURL:@"http://www.baidu.com"];
+
 
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
 }
 #pragma mark - MPPlayer
 

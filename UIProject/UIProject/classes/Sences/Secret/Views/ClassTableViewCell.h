@@ -12,11 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageV;
 
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *shareAction;
-
 
 @end

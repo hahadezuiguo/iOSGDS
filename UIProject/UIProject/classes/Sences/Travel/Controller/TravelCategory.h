@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface TravelCategory : UITableViewController
 //上一页传过来的index
 @property (nonatomic, assign) NSInteger index;

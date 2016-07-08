@@ -10,6 +10,8 @@
 #import "DB_URL.h"
 #import <MBProgressHUD.h>
 
+#import "ShareFunction.h"
+
 @interface ClassDetailViewController ()
 
 @property (nonatomic, strong) UIWebView *showView;
@@ -29,6 +31,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
    
     [self initLayout];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shares)];
     
 }
 
@@ -44,6 +47,15 @@
     [self.showView loadRequest:request];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     
+}
+
+- (void)shares{
+    
+    NSString *ID = [NSString stringWithFormat:@"%@", self.model.ID];
+    NSString *str = [CLASS_BASE_URL stringByAppendingString:ID];
+    
+    [ShareFunction sharetitle:self.model.title image:self.model.thumb viewController:self content:str];
+  
 }
 
 - (void)didReceiveMemoryWarning {

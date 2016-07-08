@@ -7,7 +7,7 @@
 //
 
 #import "MapViewController.h"
-
+#import "TravelMenuController.h"
 #import <BaiduMapAPI_Location/BMKLocationService.h>
 #import <BaiduMapAPI_Search/BMKPoiSearch.h>
 #import <BaiduMapAPI_Search/BMKPoiSearch.h>
@@ -74,7 +74,7 @@
 }
 
 
--(void)rightAction:(UIBarButtonItem *)sender {
+-(void)rightAction:(NSString *)address{
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:1.0f animations:^{
         if (weakSelf.naviView == nil) {
@@ -90,17 +90,17 @@
     [self.naviView.cancelButton addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 //检索输入的地址
--(void)naviButtonAction:(UIButton *)sender {
+-(void)naviButtonAction:(NSString *)address {
+     if (self.naviView.addressTF.text) {
     //关闭定位
     [self.locService stopUserLocationService];
-    if (self.naviView.addressTF.text) {
         //初始化检索对象
         _searcher =[[BMKGeoCodeSearch alloc]init];
         _searcher.delegate = self;
         BMKGeoCodeSearchOption *geoCodeSearchOption = [[BMKGeoCodeSearchOption alloc]init];
+    
         //上个页面传过来的地址
         geoCodeSearchOption.address = self.naviView.addressTF.text;
-        
         BOOL flag = [_searcher geoCode:geoCodeSearchOption];
         
         
@@ -112,10 +112,17 @@
         {
             NSLog(@"geo检索发送失败");
         }
-
+         
     }
-    
-    
+}
+
+//详情页跳转过来走的方法
+-(void)naviAction:(NSString *)address {
+    if (address) {
+        self.naviView = [[NaviView alloc]init];
+        self.naviView.addressTF.text = address;
+        [self naviButtonAction:nil];
+    }
 }
 
 //检索地址
@@ -135,9 +142,7 @@
         //添加大头针
         // 添加一个PointAnnotation
         BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-        
         annotation.coordinate = result.location;
-    
         self.location = result.location;
         annotation.title = self.naviView.addressTF.text;
         [_mapView addAnnotation:annotation];
@@ -258,7 +263,6 @@ static BOOL isOpen = YES;
     
     self.userLocation = userLocation;
     
-    NSLog(@"******************************%lf",userLocation.location.coordinate.latitude);
     //搜索的关键字
     option.keyword = self.searchString;
     
@@ -394,7 +398,6 @@ static BOOL isOpen = YES;
 }
     else {
         
-        NSLog(@"检索失败--");
         //启动LocationService
         [_locService startUserLocationService];
         //展示定位
@@ -402,8 +405,6 @@ static BOOL isOpen = YES;
         NaviViewController *naviVC = [[NaviViewController alloc]init];
         naviVC.startLocation = self.userLocation;
         naviVC.endLocation = self.location;
-        NSLog(@"%lf====%lf",self.userLocation.location.coordinate.latitude,self.location.latitude);
-        
         [self.navigationController pushViewController:naviVC animated:YES];
     }
 
@@ -414,6 +415,14 @@ static BOOL isOpen = YES;
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.naviView.addressTF resignFirstResponder];
     return YES;
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    if (self.haveAddress == YES) {
+        [self naviAction:self.searchAddress];
+    }
+    self.haveAddress = NO;
 }
 
 - (void)didReceiveMemoryWarning {

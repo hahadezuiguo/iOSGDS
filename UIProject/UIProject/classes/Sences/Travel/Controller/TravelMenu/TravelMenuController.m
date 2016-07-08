@@ -28,7 +28,7 @@
 #import "TravelAddressController.h"
 #import "WeatherViewController.h"
 
-
+#import "Travel.h"
 //请求天气
 #import "Weather.h"
 #import "APIStoreSDK.h"
@@ -231,8 +231,8 @@
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
     
-    NSLog(@"%@", userLocation);
     self.userLocation = userLocation;
+    [Travel shareTravel].userLocation = userLocation;
     [self getGeoCode];
 }
 
@@ -271,7 +271,6 @@
         NSString *str = [string substringToIndex:string.length - 1];
         self.city = str;
         self.result = result;
-        NSLog(@"%@",self.city);
         [self requestWeather];
         
     }
@@ -307,7 +306,7 @@
         //旋转动画
         CABasicAnimation *basicAnimation3 = [CABasicAnimation animation];
         basicAnimation3.keyPath = @"transform.rotation";
-        basicAnimation3.toValue = @(300 * M_PI);
+        basicAnimation3.toValue = @(100 * M_PI);
         //需要创建管理各个动画的动画组
         CAAnimationGroup *group = [CAAnimationGroup animation];
         group.animations = @[basicAnimation1,basicAnimation2,basicAnimation3];
@@ -418,7 +417,6 @@
     
     self.weather = [[Weather alloc]init];
     callBack.onSuccess = ^(long status, NSString* responseString) {
-        NSLog(@"%@", responseString);
         if(responseString != nil) {
             
             NSDictionary *dic = [NSString parseJSONStringToNSDictionary:responseString];
