@@ -1467,7 +1467,7 @@
 				TargetAttributes = {
 					D632F4B01D1A961E00F51C6F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = Y8M8DT4EYR;
+						DevelopmentTeam = EY7N86J2FE;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1935,7 +1935,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e3b0414-f831-4d6c-acf8-375ce11832a5";
+				PROVISIONING_PROFILE = "1a03645d-0e13-430e-bf32-a278a3946a00";
 			};
 			name = Debug;
 		};
@@ -1969,7 +1969,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e3b0414-f831-4d6c-acf8-375ce11832a5";
+				PROVISIONING_PROFILE = "1a03645d-0e13-430e-bf32-a278a3946a00";
 			};
 			name = Release;
 		};
