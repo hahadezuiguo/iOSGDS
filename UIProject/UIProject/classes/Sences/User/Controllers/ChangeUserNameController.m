@@ -8,7 +8,7 @@
 
 #import "ChangeUserNameController.h"
 
-@interface ChangeUserNameController ()
+@interface ChangeUserNameController ()<UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -22,7 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.textField.delegate = self;
+    
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    //    回收键盘,取消第一响应者
+    [self.textField resignFirstResponder];
+
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.textField resignFirstResponder];
+
+}
+
+
 
 - (IBAction)sureAction:(id)sender {
     if (self.textField.text.length > 0) {

@@ -14,7 +14,7 @@
 #import "UserViewController.h"
 
 #import "UserFileHandle.h"
-@interface MobileViewController ()
+@interface MobileViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *telephoneTextfield;
 
@@ -35,8 +35,27 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = YES;
     // Do any additional setup after loading the view from its nib.
+    self.telephoneTextfield.delegate = self;
+    self.messageTextfield.delegate = self;
    
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    //    回收键盘,取消第一响应者
+    [self.telephoneTextfield resignFirstResponder];
+    [self.messageTextfield resignFirstResponder];
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.telephoneTextfield resignFirstResponder];
+    [self.messageTextfield resignFirstResponder];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

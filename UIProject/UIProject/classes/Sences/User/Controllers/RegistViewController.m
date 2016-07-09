@@ -11,7 +11,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
  
-@interface RegistViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface RegistViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate>
 //用户名
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 //密码
@@ -35,8 +35,37 @@
 //    self.navigationController.navigationBar.translucent = NO;
     self.imagePicker = [[UIImagePickerController alloc] init];
     _imagePicker.delegate = self;
+    self.userNameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    self.repasswordTextField.delegate = self;
+    self.emailAddressTextField.delegate = self;
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    //    回收键盘,取消第一响应者
+    [self.userNameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.repasswordTextField resignFirstResponder];
+    [self.emailAddressTextField resignFirstResponder];
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.userNameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.repasswordTextField resignFirstResponder];
+    [self.emailAddressTextField resignFirstResponder];
+}
+
+
+
+
+
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
