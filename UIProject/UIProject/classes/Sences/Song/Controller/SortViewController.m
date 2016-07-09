@@ -28,20 +28,7 @@
     self.sortView = [[SortView alloc] init];
     self.view = _sortView;
 }
-- (void)viewWillAppear:(BOOL)animated{
-    // 设置UINavigationBar的颜色
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"headView"]]];
-    // 改变NavigationBar的title的颜色属性方法
-    NSDictionary *texrArrtributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
-    [self.navigationController.navigationBar setTitleTextAttributes:texrArrtributes];
-}
-- (void)viewWillDisappear:(BOOL)animated{
-    // 设置UINavigationBar的颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-    // 改变NavigationBar的title的颜色属性方法
-    NSDictionary *texrArrtributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
-    [[UINavigationBar appearance] setTitleTextAttributes:texrArrtributes];
-}
+
 - (void)viewDidLoad {
     self.view.backgroundColor = [UIColor cyanColor];
     self.reachabilityManager = [Reachability reachabilityForInternetConnection];

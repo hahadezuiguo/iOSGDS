@@ -45,7 +45,7 @@
     
     self.window.rootViewController = [[RootViewController alloc] init];
     
-//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar5.jpg"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar5.jpg"] forBarMetrics:UIBarMetricsDefault];
     
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
