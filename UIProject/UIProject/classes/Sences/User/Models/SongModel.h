@@ -18,6 +18,7 @@
 @property (nonatomic,strong)NSString *time;
 // 创建属性 存放视频详细信息,在点击收藏跳转时传给详情页面
 @property (nonatomic,strong)NSString *myDescription;
+@property (nonatomic,strong)NSString *objectId;
 
 
 
