@@ -65,21 +65,33 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.tabBarController.tabBar.hidden = NO;
-#pragma mark - navigation的颜色
-    // 设置UINavigationBar的颜色
-    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
-    [self loadData];
-    if ([UserFileHandle selectUserInfo].userName.length > 0) {
-        //显示用户
-        self.userNameLabel.text = [AVUser currentUser].username;
-        NSData *data = [[AVUser currentUser] objectForKey:@"userPhoto"];
-            self.userPhotoImage.image = [UIImage imageWithData:data];
- 
+    
+    if ([UserFileHandle selectUserInfo].isLogin == YES) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        self.tabBarController.tabBar.hidden = NO;
         
+        [self loadData];
+        self.index = self.allSongArray.count;
+        
+        self.ViewHeight.constant = (200 + (self.index + 2) % 3 * 180);
+        if ([UserFileHandle selectUserInfo].userName.length > 0) {
+            //显示用户
+            self.userNameLabel.text = [AVUser currentUser].username;
+            NSData *data = [[AVUser currentUser] objectForKey:@"userPhoto"];
+            self.userPhotoImage.image = [UIImage imageWithData:data];
+            
+            
+        }
+
     }
- }
+//    NSLog(@"********%@",[AVUser currentUser].username);
+//    self.allSongArray = [NSMutableArray array];
+//    [self viewDidLoad];
+//    if ([AVUser currentUser].username == NULL) {
+//        self.allSongArray = [NSMutableArray array];
+//    }
+    
+    }
 
 
 - (void)viewDidLoad {
@@ -105,9 +117,8 @@
     
     NSLog(@"%lf",self.colView.bounds.origin.y);
     [self.collectionSegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    self.index = self.allSongArray.count;
-    
-   self.ViewHeight.constant = (250 + (self.index - 1) / 3 * 170);
+
+   
 
 
     
@@ -126,7 +137,7 @@
     AVUser *currentUser = [AVUser currentUser];
     //    NSLog(@"***%@",currentUser.username);
     
-    if ([currentUser.username isEqualToString:@""]) {
+    if ([UserFileHandle selectUserInfo].isLogin == NO) {
         NSLog(@"用户未登录");
     }
     else {
@@ -152,8 +163,8 @@
                     model.category = [oneObject objectForKey:@"category"];
                     model.time = [oneObject objectForKey:@"time"];
                     model.myDescription = [oneObject objectForKey:@"myDescription"];
-                    model.objectId = [oneObject objectForKey:@"objectId"];
-                    NSLog(@"<%@>",model.objectId);
+
+                  
                     [self.allSongArray addObject:model];
                 }
                 

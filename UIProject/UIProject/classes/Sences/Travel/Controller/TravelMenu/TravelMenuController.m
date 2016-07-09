@@ -43,10 +43,10 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuViewWidth;
 @property (weak, nonatomic) IBOutlet UIView *rootView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rootViewWidth;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewWidth;
 
 
 //定位
@@ -88,9 +88,6 @@
     [self.menuTableView registerNib:[UINib nibWithNibName:@"MenuTableViewCell" bundle:nil] forCellReuseIdentifier:@"tableCell"];
     
     menuViewOn = NO;
-    self.rootViewWidth.constant = self.view.frame.size.width;
-    self.viewWidth.constant = self.view.frame.size.width;
-    self.menuViewWidth.constant = 0;
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.translucent = NO;
     
@@ -144,6 +141,8 @@
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.rootView addSubview:self.collectionView];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(collectionViewAction)];
+    [self.collectionView addGestureRecognizer:tap];
 }
 
 //读取数据
@@ -295,21 +294,17 @@
         
         //平移动画
         CABasicAnimation *basicAnimation1 = [CABasicAnimation animation];
-        basicAnimation1.keyPath = @"transform.translation";
+        basicAnimation1.keyPath = @"transform.translation.x";
         basicAnimation1.fromValue = @(10);
-        basicAnimation1.toValue = @(200);
+        basicAnimation1.toValue = @(20);
         //设置成缩放动画
         CABasicAnimation *basicAnimation2 = [CABasicAnimation animation];
         basicAnimation2.keyPath = @"transform.scale";
         basicAnimation2.fromValue = @(0.1);
         basicAnimation2.toValue = @(0.8);
-        //旋转动画
-        CABasicAnimation *basicAnimation3 = [CABasicAnimation animation];
-        basicAnimation3.keyPath = @"transform.rotation";
-        basicAnimation3.toValue = @(1 * M_PI);
         //需要创建管理各个动画的动画组
         CAAnimationGroup *group = [CAAnimationGroup animation];
-        group.animations = @[basicAnimation1,basicAnimation2,basicAnimation3];
+        group.animations = @[basicAnimation1,basicAnimation2];
         
         group.duration = 0.4f;
         [self.menuTableView.layer addAnimation:group forKey:@"groupAnimatiom"];
@@ -317,10 +312,10 @@
         [UIView animateWithDuration:0.4f delay:0.1f usingSpringWithDamping:0.1 initialSpringVelocity:10 options:(UIViewAnimationOptionTransitionFlipFromLeft) animations:^{
             
             weakSelf.menuTableView.alpha = 1.0f;
-            weakSelf.menuViewWidth.constant = weakSelf.view.frame.size.width / 3;
+            weakSelf.tableViewWidth.constant = [UIScreen mainScreen].bounds.size.width / 3;
         } completion:^(BOOL finished) {
-            weakSelf.rootViewWidth.constant = weakSelf.view.frame.size.width;
-            weakSelf.viewWidth.constant = weakSelf.rootViewWidth.constant + weakSelf.menuViewWidth.constant;
+            weakSelf.viewWidth.constant = self.menuTableView.frame.size.width;
+            
         }];
         menuViewOn = YES;
         
@@ -328,11 +323,17 @@
         
         
         [self.navigationItem.leftBarButtonItem setImage:[[UIImage imageNamed:@"down"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        
+        //平移动画
+        CABasicAnimation *basicAnimation1 = [CABasicAnimation animation];
+        basicAnimation1.keyPath = @"transform.translation.x";
+        basicAnimation1.fromValue = @(100);
+        basicAnimation1.toValue = @(20);
+        basicAnimation1.duration = 0.2f;
+        [self.view.layer addAnimation:basicAnimation1 forKey:@"transform.translation"];
+        self.tableViewWidth.constant = 0;
+        self.viewWidth.constant = 0;
         menuViewOn = NO;
-        self.rootViewWidth.constant = self.view.frame.size.width;
-        self.viewWidth.constant = self.view.frame.size.width;
-        self.menuViewWidth.constant = 0;
+        
         
     }
     
@@ -344,7 +345,7 @@
 //改变行的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 110;
+    return [UIScreen mainScreen].bounds.size.height / 5;
 }
 //返回TableView中有多少数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -439,6 +440,10 @@
     };
     
 
+}
+
+-(void)collectionViewAction {
+    [self leftBarButtonItemAction:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,7 +13,7 @@
 
 #import "ShareFunction.h"
 
-@interface CookDetailViewController ()
+@interface CookDetailViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *showView;
 
 @end
@@ -37,18 +37,22 @@
 - (void)initLayout{
     
     self.showView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.showView.delegate = self;
     [self.view addSubview:self.showView];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"努力加载中，稍等片刻...";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.model.weburl]];
     [self.showView loadRequest:request];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 }
 - (void)shares{
    
-    [ShareFunction sharetitle:self.model.title image:self.model.weburl viewController:self content:nil];
+    [ShareFunction sharetitle:self.model.title image:nil viewController:self content:self.model.weburl];
     
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

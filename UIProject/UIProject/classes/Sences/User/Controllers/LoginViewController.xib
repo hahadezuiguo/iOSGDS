@@ -160,6 +160,18 @@
                         <action selector="hidenPassword:" destination="-1" eventType="touchUpInside" id="4I0-Ha-20V"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umk-9S-PU9">
+                    <rect key="frame" x="8" y="271" width="35" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Fwv-Q9-9AZ"/>
+                        <constraint firstAttribute="width" constant="35" id="P3v-nK-3eY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="ejf-7X-NkR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -170,6 +182,8 @@
                 <constraint firstItem="AZj-A2-a7D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="CTQ-0M-04t"/>
                 <constraint firstItem="2BI-qQ-hNe" firstAttribute="top" secondItem="AZj-A2-a7D" secondAttribute="bottom" constant="70" id="GMO-RU-JRT"/>
                 <constraint firstAttribute="bottom" secondItem="oKT-Fa-aKf" secondAttribute="bottom" constant="70" id="GzA-z6-JX3"/>
+                <constraint firstItem="umk-9S-PU9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="IFq-0G-A5f"/>
+                <constraint firstItem="6Sr-uP-l1j" firstAttribute="top" secondItem="umk-9S-PU9" secondAttribute="top" id="QZJ-s1-PZh"/>
                 <constraint firstItem="6Sr-uP-l1j" firstAttribute="top" secondItem="AZj-A2-a7D" secondAttribute="bottom" id="SG0-Ud-Ww7"/>
                 <constraint firstItem="VTp-K0-uV4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d1s-vw-Sov"/>
                 <constraint firstItem="19M-gK-ls2" firstAttribute="top" secondItem="AZj-A2-a7D" secondAttribute="bottom" constant="70" id="dKo-W9-8HR"/>

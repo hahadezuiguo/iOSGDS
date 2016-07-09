@@ -59,10 +59,10 @@
                                     </connections>
                                 </button>
                                 <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-jh-jx5">
-                                    <rect key="frame" x="0.0" y="240" width="320" height="169"/>
+                                    <rect key="frame" x="0.0" y="228" width="320" height="181"/>
                                     <gestureRecognizers/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="gqf-jh-jx5" secondAttribute="height" multiplier="53:28" id="lZu-16-bwQ"/>
+                                        <constraint firstAttribute="width" secondItem="gqf-jh-jx5" secondAttribute="height" multiplier="53:30" id="lZu-16-bwQ"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="28"/>
