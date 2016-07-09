@@ -20,7 +20,7 @@
 #import "MobileViewController.h"
 
 #import "UserViewController.h"
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 //用户名
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 //密码
@@ -37,9 +37,26 @@
     self.tabBarController.tabBar.hidden = YES;
     // Do any additional setup after loading the view from its nib.
     self.passwordField.secureTextEntry = YES;
+    self.passwordField.delegate = self;
+    self.userNameField.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
     
+//    回收键盘,取消第一响应者
+    [self.userNameField resignFirstResponder];
+    [self.passwordField resignFirstResponder];
+    return YES;
     
 }
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.passwordField resignFirstResponder];
+    [self.userNameField resignFirstResponder];
+}
+
 
 #pragma mark - 登录
 

@@ -11,7 +11,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
 
-@interface FindPasswordController ()
+@interface FindPasswordController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
@@ -24,7 +24,23 @@
     [super viewDidLoad];
       [self.navigationController setNavigationBarHidden:NO animated:YES];
     // Do any additional setup after loading the view from its nib.
+    self.emailTextField.delegate = self;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    //    回收键盘,取消第一响应者
+    [self.emailTextField resignFirstResponder];
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.emailTextField resignFirstResponder];
+}
+
 
 #pragma mark - 根据邮箱找回密码
 

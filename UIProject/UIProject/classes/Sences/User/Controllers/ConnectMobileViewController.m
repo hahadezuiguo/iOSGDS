@@ -11,7 +11,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
 
-@interface ConnectMobileViewController ()
+@interface ConnectMobileViewController ()<UITextFieldDelegate>
 //手机号码
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextfield;
 //验证码输入
@@ -25,7 +25,27 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = YES;
     // Do any additional setup after loading the view from its nib.
+    self.mobileTextfield.delegate = self;
+    self.checkingTextfield.delegate = self;
 }
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    //    回收键盘,取消第一响应者
+    [self.mobileTextfield resignFirstResponder];
+    [self.checkingTextfield resignFirstResponder];
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.mobileTextfield resignFirstResponder];
+    [self.checkingTextfield resignFirstResponder];
+}
+
 
 #pragma mark - 获取验证码
 - (IBAction)checkAction:(id)sender {
