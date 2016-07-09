@@ -1935,7 +1935,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d9bdf8f-f7fa-4ee6-a122-7635011213de";
+				PROVISIONING_PROFILE = "3e3b0414-f831-4d6c-acf8-375ce11832a5";
 			};
 			name = Debug;
 		};
@@ -1969,7 +1969,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.south.TallBigHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d9bdf8f-f7fa-4ee6-a122-7635011213de";
+				PROVISIONING_PROFILE = "3e3b0414-f831-4d6c-acf8-375ce11832a5";
 			};
 			name = Release;
 		};
