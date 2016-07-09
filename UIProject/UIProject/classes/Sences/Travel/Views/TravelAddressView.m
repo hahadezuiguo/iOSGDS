@@ -25,7 +25,7 @@
     self.myFolwLayout = [[UICollectionViewFlowLayout alloc] init];
     //设置属性
     //2.给定item的大小
-    self.myFolwLayout.itemSize = CGSizeMake((self.bounds.size.width - 40.00000000001)/3 , 120);
+    self.myFolwLayout.itemSize = CGSizeMake((self.bounds.size.width - 40.00000000001)/3 , self.frame.size.height/2.8);
     //每两个item的最小间隙(垂直)
     self.myFolwLayout.minimumInteritemSpacing = 10;
     //每两个item的最小间隙(水平)

@@ -13,7 +13,7 @@
 
 #import "ShareFunction.h"
 
-@interface HealthDetailViewController ()
+@interface HealthDetailViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *showView;
 @end
 
@@ -42,13 +42,17 @@
 - (void)initLayout{
     
     self.showView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.showView.delegate = self;
     [self.view addSubview:self.showView];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"努力加载中，稍等片刻...";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.model.wurl]];
     [self.showView loadRequest:request];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

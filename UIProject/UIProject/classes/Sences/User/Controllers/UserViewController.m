@@ -22,6 +22,8 @@
 #import "UserDetailViewController.h"
 #import "SongModel.h"
 #import "UIImageView+WebCache.h"
+
+#import "DetailViewController.h"
 @interface UserViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 
 ///收藏栏
@@ -115,6 +117,7 @@
     
     NSLog(@"%lf",self.colView.bounds.origin.y);
     [self.collectionSegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+
    
 
 
@@ -154,12 +157,14 @@
                     SongModel *model = [[SongModel alloc] init];
                     model.userName = [oneObject objectForKey:@"userName"];
                     model.title = [oneObject objectForKey:@"title"];
-                    NSLog(@"*****%@",model.title);
+//                    NSLog(@"*****%@",model.title);
                     model.imageUrl = [oneObject objectForKey:@"imageUrl"];
                     model.playUrl = [oneObject objectForKey:@"playUrl"];
+//                    NSLog(@"______%@",model.playUrl);
                     model.category = [oneObject objectForKey:@"category"];
                     model.time = [oneObject objectForKey:@"time"];
                     model.myDescription = [oneObject objectForKey:@"myDescription"];
+
                   
                     [self.allSongArray addObject:model];
                 }
@@ -237,6 +242,30 @@
 }
 
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    // 创建Model类实现跳转
+    SongModel *model = self.allSongArray[indexPath.row];
+    detailVC.passPlayUrl = model.playUrl;
+    detailVC.passTitle = model.title;
+    detailVC.passDescription = model.myDescription;
+    detailVC.passImageUrl = model.imageUrl;
+    detailVC.passCategory = model.category;
+//    SortDetailModel *model = self.allSongArray[indexPath.row];
+//        detailVC.passImageUrl = model.coverForDetail;
+//        detailVC.passTitle = model.title;
+//        detailVC.passDescription = model.videoInformation;
+//        detailVC.passPlayUrl = model.playUrl;
+//        detailVC.passCategory = model.category;
+//        detailVC.passTime = self.timeStr;
+    
+//    detailVC.myBlock = ^ {
+//        [self loadData];
+//    };
+    [self.navigationController pushViewController:detailVC animated:YES];
+
+}
+
 
 #pragma mark - 点击进入用户信息详情界面
 
@@ -250,7 +279,7 @@
                                            // 跳转到首页
                         UserDetailViewController *detailVC = [[UserDetailViewController alloc] init];
                         //    detailVC.
-                        
+        
                         [self.navigationController pushViewController:detailVC animated:YES];
                         
                     } else {

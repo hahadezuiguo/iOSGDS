@@ -24,9 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-  
-    
+
     //创建四个跟视图控制器
     [self createChildViewController];
     // 加载引导试图方法
@@ -62,13 +60,13 @@
     }];
 }
 - (void)createChildViewController {
-    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"esoterica2.png" selectorImage:@"esoterica.png"];
+    [self addOneChildViewController:[[SecretViewController alloc] init] title:@"育儿秘籍" normalImage:@"esoterica.png" selectorImage:@"esoterica2.png"];
     
-    [self addOneChildViewController:[[SortViewController alloc] init] title:@"family一起看" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[SortViewController alloc] init] title:@"family一起看" normalImage:@"familyWEi1" selectorImage:@"familyWEi"];
     
     [self addOneChildViewController:[[TravelMenuController alloc] init] title:@"宝贝去哪儿？" normalImage:@"tabbarWere" selectorImage:@"tabbarWhere"];
     
-    [self addOneChildViewController:[[UserViewController alloc] init] title:@"妈咪空间" normalImage:@"" selectorImage:@""];
+    [self addOneChildViewController:[[UserViewController alloc] init] title:@"妈咪空间" normalImage:@"userNan1" selectorImage:@"userNan"];
     
 }
 

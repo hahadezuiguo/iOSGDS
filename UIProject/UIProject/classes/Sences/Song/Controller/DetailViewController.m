@@ -14,7 +14,14 @@
 #import "UMSocial.h"
 #import "ShareFunction.h"
 #import <AVOSCloud/AVOSCloud.h>
+typedef NS_ENUM(NSUInteger, ColMode) {
+    YesCol,//收藏
+    NoCol,//未收藏
+};
 @interface DetailViewController ()<UMSocialUIDelegate>
+{
+    ColMode _colMode;
+}
 @property (nonatomic,strong)DetailView *detailView;
 @end
 
@@ -25,11 +32,14 @@
     self.detailView = [[DetailView alloc] init];
     self.view = _detailView;
 }
+#warning will
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBar.translucent = YES;
+    // 设置UINavigationBar的颜色
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"headView"]]];
 
-- (void)viewDidDisappear:(BOOL)animated{
-
-    self.view.backgroundColor = [UIColor whiteColor];
 }
+
 
 
 - (void)viewDidLoad {
@@ -54,6 +64,7 @@
 #pragma mark Button方法
 - (void)leftBarButtonAction:(UIBarButtonItem *)sender{
     
+//    self.myBlock();
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
@@ -63,10 +74,10 @@
 
 - (void)initLayout{
 
-    NSURL *urlStr = [NSURL URLWithString:self.sortdetailemodel.coverForDetail];
+    NSURL *urlStr = [NSURL URLWithString:self.passImageUrl];
     [self.detailView.myImageView sd_setImageWithURL:urlStr];//
-    self.detailView.titleLabel.text = self.sortdetailemodel.title;
-    self.detailView.informationLabel.text = self.sortdetailemodel.videoInformation;
+    self.detailView.titleLabel.text = self.passTitle;
+    self.detailView.informationLabel.text = self.passDescription;
     
 //    // 模糊处理
 //    CIContext *context = [CIContext contextWithOptions:nil];
@@ -93,80 +104,70 @@
     }];
     [alertView addAction:alertAction1];
     [self presentViewController:alertView animated:YES completion:nil];
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//    [alertView show];
 }
 #pragma mark - 收藏
-- (void)collectionButtonAction:(UIButton *)sender{
 
+- (void)collectionButtonAction:(UIButton *)sender{
+    
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {
-        
         // 判断用户是否已经收藏过了
-        
         AVQuery *query = [AVQuery queryWithClassName:@"Collection"];
         // 查询 先查询是否有这个用户名,在查询这个用户是否收藏过这个,如果两个条件同时成立则不能收藏
         [query whereKey:@"userName" equalTo:currentUser.username];
-        [query whereKey:@"title" containsString:self.sortdetailemodel.title];
+        [query whereKey:@"title" containsString:self.passTitle];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
             // error是指在查询的过程中是否遇到了异常(如服务器关闭)
-            if (!error) {
                 // 返回的是数组,应该判断数组的个数,如果数组有值那么就说明查询成功!
                 if (objects.count > 0) {
-                    [self alertViewWithTitle:@"收藏失败" message:@"您已收藏过了"];
+                    NSLog(@"判断收藏");
+
+                    [AVQuery doCloudQueryInBackgroundWithCQL:[NSString stringWithFormat:@"delete from Collection where objectId = '%@'",self.passObjectId] callback:^(AVCloudQueryResult *result, NSError *error) {
+                        NSLog(@"passobjectid = %@",self.passObjectId);
+                             //如果 error 为空，说明保存成功
+                        NSLog(@"qweqweqwe");
+                        if (!error) {
+                            [self alertViewWithTitle:@"取消收藏" message:@"取消成功"];
+                        }else{
+                            NSLog(@"%@",error);
+                        }
+                    }];
                 }else{
-                    
                     AVObject *collection = [AVObject objectWithClassName:@"Collection"];
-                    
-                    //        NSData *imageData = [currentUser objectForKey:@"userImage"];
-                    //        NSData *imageDataTemp = UIImageJPEGRepresentation([UIImage imageWithData:imageData], 0.1);
-                    //        [collection setObject:imageDataTemp forKey:@"collectionImage"];
-                    
                     [collection setObject:currentUser.username forKey:@"userName"];
-                    [collection setObject:self.sortdetailemodel.coverForDetail forKey:@"imageUrl"];
-                    [collection setObject:self.sortdetailemodel.title forKey:@"title"];
-                    [collection setObject:self.sortdetailemodel.category forKey:@"category"];
+                    [collection setObject:self.passImageUrl forKey:@"imageUrl"];
+                    [collection setObject:self.passTitle forKey:@"title"];
+                    [collection setObject:self.passCategory forKey:@"category"];
                     [collection setObject:self.passTime forKey:@"time"];
-                    [collection setObject:self.sortdetailemodel.playUrl forKey:@"playUrl"];
+                    [collection setObject:self.passPlayUrl forKey:@"playUrl"];
                     // 收藏时将详细信息收藏 再收藏页面并不展示,为的是由收藏页面转向详情页面时传值
-                    [collection setObject:self.sortdetailemodel.videoInformation forKey:@"myDescription"];
+                    [collection setObject:self.passDescription forKey:@"myDescription"];
+                    [collection saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (succeeded) {
+                            self.passObjectId = collection.objectId;
+                            NSLog(@">>>>%@",self.passObjectId);
+                        }else{
+                            
+                        }
+                    }];
                     // 存储
                     [collection save];
                     [self alertViewWithTitle:@"收藏成功" message:@"您可以到我的收藏中查看了"];
+                    _colMode = YesCol;
+                    
                 }
-                
-            }else{
-            
-                // 说明在查询的过程中遇到了问题
-                [self alertViewWithTitle:@"服务器不给力" message:@"请稍后再试"];
-            
-            }
-            
-            
         }];
-
-        
     }else{
-    
         [self alertViewWithTitle:@"请登录" message:@"您尚未登录,无法收藏哦~"];
-        
     }
     
-    
+
 }
 
 - (void)playButtonAction:(UIButton *)sender{
 
-//    NSLog(@"开始播放");
-//    VideoPlayerController *videoPlayer = [[VideoPlayerController alloc] init];
-//    // 跳转到播放页面之前先把url传入
-//    videoPlayer.receiveUrl = self.passPlayUrl;
-//    
-//    [self.navigationController pushViewController:videoPlayer animated:YES];
-    
     PlayerViewController *playerVC = [[PlayerViewController alloc] init];
-    playerVC.movieUrlString = self.sortdetailemodel.playUrl;
+    playerVC.movieUrlString = self.passPlayUrl;
     [self.navigationController pushViewController:playerVC animated:YES];
     
     
@@ -176,7 +177,7 @@
     
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {
-        [ShareFunction sharetitle:nil image:self.sortdetailemodel.coverForDetail viewController:self content:self.sortdetailemodel.playUrl];
+        [ShareFunction sharetitle:nil image:self.passImageUrl viewController:self content:self.passPlayUrl];
         [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"headView"]]];
 
     }else{
@@ -186,8 +187,6 @@
     }
     
 }
-
-
 
 
 
