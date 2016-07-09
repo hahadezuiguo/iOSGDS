@@ -15,4 +15,6 @@
 @property (nonatomic,assign)NSString *duration;//时长
 @property (nonatomic,copy)NSString *videoInformation; //影片详细信息
 @property (nonatomic,copy)NSString *playUrl; // 播放网址
+// 是否被收藏
+@property (nonatomic, assign) BOOL isFavorite;
 @end
