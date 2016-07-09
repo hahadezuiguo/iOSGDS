@@ -112,6 +112,7 @@
 		D65FA9CD1D1D7D2D00D0CC3E /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */; };
 		D6645DF01D2F718300327520 /* esoterica.png in Resources */ = {isa = PBXBuildFile; fileRef = D6645DEE1D2F718300327520 /* esoterica.png */; };
 		D6645DF11D2F718300327520 /* esoterica2.png in Resources */ = {isa = PBXBuildFile; fileRef = D6645DEF1D2F718300327520 /* esoterica2.png */; };
+		D664971E1D30C96300852A5F /* baobaobao.png in Resources */ = {isa = PBXBuildFile; fileRef = D664971D1D30C96300852A5F /* baobaobao.png */; };
 		D66F07231D224E5D0072B3C5 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */; };
 		D66F07241D224E5D0072B3C5 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */; };
 		D670EFA51D264CB3001A4E83 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = D670EFA41D264CB3001A4E83 /* down.png */; };
@@ -430,6 +431,7 @@
 		D65FA9CC1D1D7D2D00D0CC3E /* libAPIStoreSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAPIStoreSDK.a; sourceTree = "<group>"; };
 		D6645DEE1D2F718300327520 /* esoterica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esoterica.png; sourceTree = "<group>"; };
 		D6645DEF1D2F718300327520 /* esoterica2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = esoterica2.png; sourceTree = "<group>"; };
+		D664971D1D30C96300852A5F /* baobaobao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baobaobao.png; sourceTree = "<group>"; };
 		D66F07201D224E5D0072B3C5 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		D66F07211D224E5D0072B3C5 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		D66F07221D224E5D0072B3C5 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
@@ -1211,6 +1213,7 @@
 		D6D011971D1AAB3D0076477D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D664971D1D30C96300852A5F /* baobaobao.png */,
 				D6645DEE1D2F718300327520 /* esoterica.png */,
 				D6645DEF1D2F718300327520 /* esoterica2.png */,
 				D628B2911D2F9F6C003C6655 /* userNan.png */,
@@ -1535,6 +1538,7 @@
 				D65694671D2BA531008865BC /* 演出展览.png in Resources */,
 				D6B63F531D24C81400D4CF5E /* timg.jpg in Resources */,
 				D6B7F9431D2CF9940026E1F3 /* WeatherCell.xib in Resources */,
+				D664971E1D30C96300852A5F /* baobaobao.png in Resources */,
 				D6B7F9551D2D52C50026E1F3 /* 霾.jpg in Resources */,
 				D6F8F1F81D1CE8B700D39982 /* UserViewController.xib in Resources */,
 				D670EFA51D264CB3001A4E83 /* down.png in Resources */,
