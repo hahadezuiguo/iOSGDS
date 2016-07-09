@@ -376,9 +376,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(indexPath.row == 0) {
-         WhereViewController *viewController = [[WhereViewController alloc]init];
-//        TravelViewController *viewController = [[TravelViewController alloc]init];
-//        viewController.weather = self.weather;
+        TravelViewController *viewController = [[TravelViewController alloc]init];
+        viewController.weather = self.weather;
         [self.navigationController pushViewController:viewController animated:YES];
     } else if(indexPath.row == 1){
         
