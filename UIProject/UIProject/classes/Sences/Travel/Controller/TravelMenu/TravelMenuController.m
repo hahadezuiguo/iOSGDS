@@ -287,7 +287,7 @@
 }
 
 -(void)leftBarButtonItemAction:(UIBarButtonItem *)sender {
-    
+    [self requestWeather];
     if (menuViewOn == NO) {
         
         [self.navigationItem.leftBarButtonItem setImage:[[UIImage imageNamed:@"up"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -376,14 +376,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(indexPath.row == 0) {
-        
-        TravelViewController *viewController = [[TravelViewController alloc]init];
-        
+         WhereViewController *viewController = [[WhereViewController alloc]init];
+//        TravelViewController *viewController = [[TravelViewController alloc]init];
+//        viewController.weather = self.weather;
         [self.navigationController pushViewController:viewController animated:YES];
     } else if(indexPath.row == 1){
         
-        TravelViewController  *controller = [[TravelViewController alloc] init];
-        controller.isSpeeching = YES;
+       WeatherViewController *controller = [[WeatherViewController alloc] init];
         controller.weather = self.weather;
         [self.navigationController pushViewController:controller animated:YES];
         

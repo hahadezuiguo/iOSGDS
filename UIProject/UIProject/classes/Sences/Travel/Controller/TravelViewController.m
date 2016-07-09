@@ -62,10 +62,9 @@
 }
 
 - (void)viewDidLoad {
-    
-  
-    [super viewDidLoad];
+      [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self requestWeather];
     [self addWeatherImageView];
        //创建文字识别对象
     [self createSynthesizer];
